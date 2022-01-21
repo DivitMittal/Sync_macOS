@@ -1,0 +1,13 @@
+turn off optimised battery charging
+increase scaling
+increase contrast
+enable three finger drag
+configure keyboard shortcuts
+configure hotcorners
+configure dock
+configure menubar
+configure screensaver
+diable screentime
+remap control and caps lock key modifiers
+Configure finder preferences
+Configure finder appearance

@@ -1,0 +1,85 @@
+{
+	"terminal.integrated.inheritEnv": false,
+	"editor.wordWrap": "on",
+	"diffEditor.wordWrap": "on",
+	"diffEditor.ignoreTrimWhitespace": true,
+	"editor.inlayHints.enabled": false,
+	"editor.inlineSuggest.enabled": true,
+	"telemetry.telemetryLevel": "off",
+	"files.autoSave": "afterDelay",
+	"workbench.startupEditor": "none",
+	"security.workspace.trust.enabled": false,
+
+	//Github CoPilot - Extension
+	"github.copilot.enable": {
+		"*": true,
+		"yaml": true,
+		"plaintext": true,
+		"markdown": true
+	},
+
+	//Code Spell Checker - Extension
+	"cSpell.enableFiletypes": ["gas"],
+	"cSpell.userWords": [
+		"asciz",
+		"cmpq",
+		"decq",
+		"divitmittal",
+		"dotenv",
+		"dtype",
+		"leaq",
+		"movq",
+		"mulq",
+		"popq",
+		"printf",
+		"pushq",
+		"scanf",
+		"shlq",
+		"shrq",
+		"syscall"
+	],
+
+	// Appearance
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": "active",
+	"breadcrumbs.enabled": false,
+	"workbench.sideBar.location": "right",
+	"workbench.view.alwaysShowHeaderActions": true,
+	"editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
+	"editor.fontSize": 16,
+	"editor.fontLigatures": true,
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.colorTheme": "Noctis High Contrast",
+	"editor.renderIndentGuides": true,
+	"workbench.colorCustomizations": {
+		"editor.lineHighlightBackground": "#1073cf2d",
+		"editor.lineHighlightBorder": "#9fced11f"
+	},
+
+	//Vim
+	"editor.lineNumbers": "relative",
+	"vim.surround": true,
+	"vim.easymotion": true,
+	"vim.insertModeKeyBindings": [
+		{
+			"before": ["k", "j"],
+			"after": ["<Esc>"]
+		}
+	],
+
+	//Python
+	"python.defaultInterpreterPath": "/usr/local/bin/python3",
+	"python.pythonPath": "/usr/local/Caskroom/miniconda/base/envs/discord_bot/bin/python",
+	"python.linting.pylintEnabled": true,
+	"python.linting.enabled": true,
+
+	"jupyter.allowUnauthorizedRemoteConnection": true,
+	"jupyter.alwaysScrollOnNewCell": true,
+
+	//Prettier - Extension
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true
+}

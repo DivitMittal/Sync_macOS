@@ -1,0 +1,9 @@
+! 2021-10-23 https://www.geeksforgeeks.org
+www.geeksforgeeks.org##.login-modal-div > .modal-content
+www.geeksforgeeks.org##.login-modal-div
+
+! 2022-01-01 https://www.wikiwand.com
+www.wikiwand.com##.wikiwand_footer
+www.wikiwand.com##.navbar_opaque.menu
+www.wikiwand.com###body_wrapp > .ng-scope.unselectable
+

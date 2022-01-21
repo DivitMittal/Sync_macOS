@@ -1,0 +1,57 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+[user]
+	name = Divit Mittal
+	email = mittaldivit@gmail.com
+
+[core]
+	editor = nvim
+	autocrlf = input
+    ignorecase = false
+	excludesfile = /Users/divitmittal/.gitignore
+
+[init]
+    defaultBranch = main
+
+[push]
+    default = simple
+    followTags = true
+
+[fetch]
+    prune = true
+
+[grep]
+    lineNumber = true
+
+[help]
+    autocorrect = 1
+
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22

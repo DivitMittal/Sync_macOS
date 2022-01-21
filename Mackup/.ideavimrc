@@ -2,6 +2,9 @@
 set number
 set relativenumber
 
+" Make vim more useful
+set nocompatible
+
 " Smart IdeaVim Features
 set idearefactormode = keep
 set ideajoin

@@ -1,0 +1,2 @@
+GitHub CoPilot
+Packer.nvim

@@ -1,7 +1,6 @@
 turn off optimised battery charging
 increase scaling
 increase contrast
-enable three finger drag
 configure keyboard shortcuts
 configure hotcorners
 configure dock

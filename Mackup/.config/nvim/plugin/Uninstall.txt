@@ -1,0 +1,1 @@
+brew uninstall neovim && rm -rf .local/share/nvim/ && rm -rf .config/nvim

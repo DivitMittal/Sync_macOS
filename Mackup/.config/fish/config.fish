@@ -10,9 +10,9 @@ fish_add_path (brew --prefix ed)/bin
 fish_add_path (brew --prefix grep)/libexec/gnubin
 
 # Uses vim as manpager
-set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
+set -x MANPAGER 'nvim +Man!'
 
-# Removes the default fish greeting 
+# Removes the default fish greeting
 set fish_greeting
 
 # Sets the default editor to neovim
@@ -22,7 +22,7 @@ set VISUAL "nvim"
 ### Aliases ####
 # Changing "ls" to "exa"
 alias ll='exa -al --icons --color=always --group-directories-first --header' # long format
-alias la='exa -a --icons --color=always --group-directories-first'  # all 
+alias la='exa -a --icons --color=always --group-directories-first'  # all
 alias ls='exa --icons --color=always --group-directories-first'  # prefered
 alias lt='exa -aT --icons --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
@@ -44,7 +44,7 @@ alias path='echo $PATH'
 alias week='date +%V'
 
 # Brew ultimate alias
-alias brew-ultimate='brew update && brew upgrade && brew autoremove && brew cleanup - s && brew bundle dump --force && rm -rf (brew --cache)'
+alias brew-ultimate='brew update && brew upgrade && brew autoremove && brew cleanup - s && brew bundle dump --file=~/.Brewfile --force && rm -rf (brew --cache)'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -61,7 +61,7 @@ alias cp='cp -I'
 alias mv='mv -I'
 alias rm='rm -I'
 
-# Typing Test and you must have Lemnos/tt installed 
+# Typing Test and you must have Lemnos/tt installed
 alias tt="command tt -t 30 -n 50 --theme homebrew"
 
 # navigation

@@ -2,5 +2,4 @@ Microsoft OneNote
 PDFExpert
 EthanSK/Menu-Bar-Dock
 Lemnos/tt
-
-
+dexterleng/vimac

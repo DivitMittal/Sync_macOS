@@ -211,6 +211,12 @@ _G.packer_plugins = {
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["pop-punk.vim"] = {
+    config = { " require('plugins/pop-punk') " },
+    loaded = true,
+    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/pop-punk.vim",
+    url = "https://github.com/bignimbus/pop-punk.vim"
+  },
   ["popup.nvim"] = {
     loaded = true,
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/popup.nvim",
@@ -260,86 +266,90 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
- require('plugins/telescope_nvim') 
-time([[Config for telescope.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
- require('plugins/nvim-autopairs') 
-time([[Config for nvim-autopairs]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
- require('plugins/nvim-lspconfig') 
-time([[Config for nvim-lspconfig]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
- require('plugins/trouble_nvim') 
-time([[Config for trouble.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
- require('plugins/nvim-tree_lua') 
-time([[Config for nvim-tree.lua]], false)
--- Config for: vim-floaterm
-time([[Config for vim-floaterm]], true)
- require('plugins/vim-floaterm') 
-time([[Config for vim-floaterm]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
- require('plugins/nvim-treesitter') 
-time([[Config for nvim-treesitter]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
  require('plugins/Comment_nvim') 
 time([[Config for Comment.nvim]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
- require('plugins/indent-blankline_nvim') 
-time([[Config for indent-blankline.nvim]], false)
--- Config for: LuaSnip
-time([[Config for LuaSnip]], true)
- require('plugins/LuaSnip') 
-time([[Config for LuaSnip]], false)
--- Config for: lspkind-nvim
-time([[Config for lspkind-nvim]], true)
- require('plugins/lspkind-nvim') 
-time([[Config for lspkind-nvim]], false)
--- Config for: nvim-lsp-installer
-time([[Config for nvim-lsp-installer]], true)
- require('plugins/nvim-lsp-installer') 
-time([[Config for nvim-lsp-installer]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
- require('plugins/lualine')
-time([[Config for lualine.nvim]], false)
--- Config for: null-ls.nvim
-time([[Config for null-ls.nvim]], true)
- require('plugins/null-ls_nvim') 
-time([[Config for null-ls.nvim]], false)
--- Config for: rooter.nvim
-time([[Config for rooter.nvim]], true)
- require('plugins/rooter_nvim') 
-time([[Config for rooter.nvim]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
- require('plugins/nvim-cmp') 
-time([[Config for nvim-cmp]], false)
 -- Config for: surround.nvim
 time([[Config for surround.nvim]], true)
  require('plugins/surround_nvim') 
 time([[Config for surround.nvim]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
- require('plugins/nvim-colorizer_lua') 
-time([[Config for nvim-colorizer.lua]], false)
+-- Config for: LuaSnip
+time([[Config for LuaSnip]], true)
+ require('plugins/LuaSnip') 
+time([[Config for LuaSnip]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+ require('plugins/nvim-treesitter') 
+time([[Config for nvim-treesitter]], false)
 -- Config for: nvim-web-devicons
 time([[Config for nvim-web-devicons]], true)
  require('plugins/nvim-web-devicons') 
 time([[Config for nvim-web-devicons]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+ require('plugins/nvim-lspconfig') 
+time([[Config for nvim-lspconfig]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+ require('plugins/telescope_nvim') 
+time([[Config for telescope.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+ require('plugins/nvim-tree_lua') 
+time([[Config for nvim-tree.lua]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+ require('plugins/trouble_nvim') 
+time([[Config for trouble.nvim]], false)
+-- Config for: vim-floaterm
+time([[Config for vim-floaterm]], true)
+ require('plugins/vim-floaterm') 
+time([[Config for vim-floaterm]], false)
 -- Config for: vim-maximizer
 time([[Config for vim-maximizer]], true)
  require('plugins/vim-maximizer') 
 time([[Config for vim-maximizer]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+ require('plugins/nvim-autopairs') 
+time([[Config for nvim-autopairs]], false)
+-- Config for: lspkind-nvim
+time([[Config for lspkind-nvim]], true)
+ require('plugins/lspkind-nvim') 
+time([[Config for lspkind-nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+ require('plugins/lualine')
+time([[Config for lualine.nvim]], false)
+-- Config for: pop-punk.vim
+time([[Config for pop-punk.vim]], true)
+ require('plugins/pop-punk') 
+time([[Config for pop-punk.vim]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+ require('plugins/null-ls_nvim') 
+time([[Config for null-ls.nvim]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+ require('plugins/nvim-colorizer_lua') 
+time([[Config for nvim-colorizer.lua]], false)
+-- Config for: rooter.nvim
+time([[Config for rooter.nvim]], true)
+ require('plugins/rooter_nvim') 
+time([[Config for rooter.nvim]], false)
+-- Config for: nvim-lsp-installer
+time([[Config for nvim-lsp-installer]], true)
+ require('plugins/nvim-lsp-installer') 
+time([[Config for nvim-lsp-installer]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+ require('plugins/nvim-cmp') 
+time([[Config for nvim-cmp]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+ require('plugins/indent-blankline_nvim') 
+time([[Config for indent-blankline.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads

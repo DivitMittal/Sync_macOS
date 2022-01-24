@@ -1,141 +1,170 @@
-add_newline = false
-command_timeout = 800
+#######################################################
+# Starship Preferences
+#######################################################
 
+# Prompt
+#######################################################
+
+# Left prompt format
 format = """
-[╭─accounts─➜⇉❯>](bold blue) $username$gcloud$aws$kubernetes
-[┣─system───➜⇉❯>](bold yellow) $time$status$cmd_duration$shell$hostname$jobs$battery
-[┣─project──➜⇉❯>](bold red) $directory$rust$conda$package$git_branch$git_status$golang$terraform$docker_context
-[╰─cmd─➜⇉❯> ](bold green)
+[ ╭─account─➜⇉❯>](bold blue) $username$sudo$time
+[ ┣─system───➜⇉❯>](bold yellow) $shell$status$cmd_duration$jobs$docker_context$hostname$battery
+[ ┣─project──➜⇉❯>](bold red) $directory$git_branch$git_status
+[ ╰─cmd─➜⇉❯](bold green) $character
 """
+# Right prompt format
+right_format = """$lua$rust$java$kotlin$dart$python$golang$swift$nodejs$php$conda$package """
 
-[character]                            
+# Adds a new line after the prompt
+add_newline = true
+# Max time for the prompt commands to run in milliseconds
+command_timeout = 800
+# Max time for scaning files in the current directory in milliseconds
+scan_timeout = 50
+
+# System
+####################################################################
+
+[character]
+disabled = false
 success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+vicmd_symbol = "[V](bold blue)"
+format = "$symbol "
 
 [cmd_duration]
+disabled = false
 show_milliseconds = true
 format = "took [$duration](bold yellow) "
 
-[kubernetes]
-format = 'context: [⎈ $context \($namespace\)](bold cyan) '
-disabled = false
-[kubernetes.context_aliases]
-"dev.local.cluster.k8s" = "dev"
-
-[gcloud]
-style = "blue"
-format = '[$symbol$account(\($project\))]($style) '
-symbol = "️G⅁:☁️"
-[gcloud.region_aliases]
-us-central1 = "uc1"
-asia-northeast1 = "an1"
-
-[aws]
-format = '[$symbol$profile(\($region\))]($style) '
-style = "bold yellow"
-symbol = "∀⍵₷☁️☁️"
-[aws.region_aliases]
-ap-southeast-2 = "au"
-us-east-1 = "va"
-
 [package]
-format = " package: [🎁 $version](208 bold) "
-
-[docker_context]
-format = "docker: [🐋 $context](blue bold)"
 disabled = false
+format = "[🎁 $version](208 bold) "
 
 [shell]
+disabled = false
 fish_indicator = "🐠"
 powershell_indicator = "_"
 unknown_indicator = "❓"
 bash_indicator = "🐑"
 zsh_indicator = "🦓"
-disabled = false
-format = "with [$indicator]($style) "
-style = "white"
+format = "shell:$indicator "
 
 [directory]
-truncation_length = 10 
+disabled = false
+truncation_length = 10
 truncation_symbol = "…/"
 truncate_to_repo = false
+home_symbol = "🏡"
+style = "white"
 
 [username]
-style_user = "blue bold"
-style_root = "red bold"
-format = "user: [$user]($style) "
 disabled = false
+style_user = "italic bright-purple"
+style_root = "red bold"
+format = "user:[$user]($style) "
 show_always = true
+
+[sudo]
+disabled = false
+style = "bold green"
+symbol = "🧙"
+format = "as $symbol "
 
 [time]
 disabled = false
-format = '[\[ $time \]]($style) '
+format = 'at ⏰:[\[$time\]](bold yellow) '
 
 [hostname]
+disabled = false
 ssh_only = false
 format = 'on [$hostname](bold red) '
 trim_at = "."
-disabled = false
 
 [status]
+disabled = false
 style = "red"
 symbol = "💥 "
 format = '[\[$symbol$status\]]($style) '
+
+# Battery
+[battery]
 disabled = false
+full_symbol = "💪"
+unknown_symbol = "💡"
+charging_symbol = "⚡️"
+discharging_symbol = "💦"
+format = "🔋:$symbol "
+[[battery.display]]
+threshold = 100
 
-[git_branch]
-symbol = "🌱 "
-
-[git_status]
-ahead = "⇡🏎💨${count}"
-diverged = "⇕⇡😵${ahead_count}⇣${behind_count}"
-behind = "⇣😰${count}"
-conflicted = "⚔️ "
-untracked = "🤷‍"
-stashed = "📦"
-modified = "📝"
-staged = '[++\($count\)](green)'
-renamed = "📛"
-deleted = "🗑"
-
-[rust]
-format = "rust: [🦀 $version](red bold)"
-
-[golang]
-format = "go: [🏎💨 $version](bold cyan) "
-
-[helm]
-format = "helm: [⎈ $version](bold white) "
-
+#Jobs
 [jobs]
+disabled = false
 symbol = "+ "
 threshold = 4
 format = "background [$symbol$number]($style) "
 
-[terraform]
-format = "[🏎💨 $version$workspace]($style) "
+# Services
+##############################################################################
 
-[battery]
-full_symbol = "💪"
-unknown_symbol = "💡"
-charging_symbol = "⚡️"
-discharging_symbol = "💀"
-format = "[$symbol]($style)"
+[git_branch]
+disabled = false
+always_show_remote = true
+symbol = "🌱 "
+style = "bold blue"
 
-[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
-threshold = 10
-style = "bold red"
+[git_status]
+disabled = false
+ahead = "⇡🏎💨${count}"
+diverged = "⇕⇡😵${ahead_count}⇣${behind_count}"
+behind = "⇣😰${count}"
+conflicted = "🤺"
+untracked = "🤷"
+modified = "📝"
+stashed = "📦"
+staged = '[++\($count\)](green)'
+renamed = "📛"
+deleted = "🚮"
 
-[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
-threshold = 30
-style = "bold yellow"
+[docker_context]
+disabled = false
 
-[[battery.display]]
-threshold = 100
-style = "bold green"
-
-# Displays current conda environment 
 # To supress anaconda's own prompt moddifer, run,  conda config --set changeps1 False
 [conda]
+disabled = false
 format = "in [$symbol$environment](dimmed green) "
 ignore_base = true
-symbol = "🐍"
+
+# Programming Languages and Frameworks
+#############################################################################
+[lua]
+disabled = false
+
+[java]
+disabled = false
+
+[kotlin]
+disabled = false
+
+[dart]
+disabled = false
+
+[golang]
+disabled = false
+
+[nodejs]
+disabled = false
+
+[python]
+disabled = false
+
+[rust]
+disabled = false
+
+[swift]
+disabled = false
+
+[php]
+disabled = false
+

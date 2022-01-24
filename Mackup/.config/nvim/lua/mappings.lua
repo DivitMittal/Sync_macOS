@@ -17,9 +17,9 @@ local silent	= {silent = true}
 cmd([[ autocmd BufEnter * nmap silent <buffer> <Leader>q :bd<CR> ]])
 
 -- exit mode
-keymap('n', 'kj', '<Esc>', options)
-keymap('i', 'kj', '<Esc>', options)
-keymap('v', 'kj', '<Esc>', options)
+keymap('n', 'ii', '<Esc>', options)
+keymap('i', 'ii', '<Esc>', options)
+keymap('v', 'ii', '<Esc>', options)
 
 
 -- move selected line(s) up or down

@@ -1,36 +1,59 @@
-### ADDING TO THE PATH
-# First line removes the path; second line sets it.  Without the first line,
-# your path gets massive and fish becomes very slow.
+## ADDING TO THE PATH
 set --erase fish_user_paths
-set --universal fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 fish_add_path (brew --prefix coreutils)/libexec/gnubin
 fish_add_path /usr/local/bin
 fish_add_path (brew --prefix file-formula)/bin
 fish_add_path (brew --prefix ed)/bin
 fish_add_path (brew --prefix grep)/libexec/gnubin
+fish_add_path $HOME/Commands
 
-# Uses vim as manpager
+# Uses neovim as manpager
 set -x MANPAGER 'nvim +Man!'
 
 # Removes the default fish greeting
 set fish_greeting
+
+# Turns on Vi bindings
+function fish_user_key_bindings
+
+    # The argument specifies the initial mode (insert, "default" or visual).
+    fish_vi_key_bindings insert
+
+	# Cleans up the written line
+	bind -M insert \cc kill-whole-line repaint
+
+end
+
+# Turns off command cursor based on vi mode
+function fish_vi_cursor; end
+
+# Turns off fish right command
+function fish_right_prompt; end
+
+# Turns off fish vi cursor
+function fish_mode_prompt; end
 
 # Sets the default editor to neovim
 set EDITOR "nvim"
 set VISUAL "nvim"
 
 ### Aliases ####
-# Changing "ls" to "exa"
+# Changing "ls" to "exa" ( must have exa installed )
 alias ll='exa -al --icons --color=always --group-directories-first --header' # long format
 alias la='exa -a --icons --color=always --group-directories-first'  # all
 alias ls='exa --icons --color=always --group-directories-first'  # prefered
-alias lt='exa -aT --icons --color=always --group-directories-first' # tree listing
+alias lt='exa -aT --icons --level=1 --color=always --group-directories-first' # tree listing
+alias lt2='exa -aT --icons --level=2 --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+
+# Editor
+alias vim='nvim'
+alias vi='nvim'
 
 # Shortcuts
 alias dt='cd ~/Desktop'
@@ -40,11 +63,16 @@ alias dl='cd ~/Downloads'
 alias paths='echo "Found "(count $PATH)" paths in PATH env var"'
 alias path='echo $PATH'
 
+# Unified cheat sheet - http://cht.sh/
+function cht
+    curl -ssL "https://cheat.sh/$argv"
+end
+
 # Get week number
 alias week='date +%V'
 
 # Brew ultimate alias
-alias brew-ultimate='brew update && brew upgrade && brew autoremove && brew cleanup - s && brew bundle dump --file=~/.Brewfile --force && rm -rf (brew --cache)'
+alias brew-ultimate='brew update && brew upgrade && brew autoremove && brew cleanup - s && brew bundle dump --file=~/.Brewfile --force && rm -rf (brew --cache) && brew cleanup'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -64,27 +92,27 @@ alias rm='rm -I'
 # Typing Test and you must have Lemnos/tt installed
 alias tt="command tt -t 30 -n 50 --theme homebrew"
 
-# navigation
+# Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
-# switch between shells
-# Not recommend switching default SHELL from bash
+# Switch between shells
 alias tobash="sudo chsh -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh -s /usr/local/bin/fish && echo 'Now log out.'"
 
+# Conda - miniconda (python package and environment manager)
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 eval /usr/local/Caskroom/miniconda/base/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
-# Run Neofetch
+# Run Neofetch - keep it second last command to run
 neofetch
 
-# Starship custom prompt
+# Starship custom prompt - keep it the last command to run
 starship init fish | source
 

@@ -19,7 +19,6 @@ local fn = vim.fn    -- call Vim functions
 -- local b     = vim.bo            -- buffer-scoped options
 -- local w     = vim.wo            -- windows-scoped options
 
-cmd('colorscheme luinnar')
 set.termguicolors = true -- Enable GUI colors for the terminal to get truecolor
 set.list = true -- show whitespace
 set.listchars = {
@@ -81,7 +80,7 @@ set.autoindent = true -- maintain indent of current line
 set.expandtab = false -- don't expand tabs into spaces
 set.shiftround = true
 
-set.shell = 'fish' -- shell to use for `!`, `:!`, `system()` etc.
+set.shell = 'bash' -- shell to use for `!`, `:!`, `system()` etc.
 set.lazyredraw = true -- faster scrolling
 set.inccommand = 'split' -- live preview of :s results
 

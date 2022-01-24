@@ -12,16 +12,21 @@ if not ok then return end
 -- plugins
 return packer.startup {
 	function()
-		-- Packer can manage itself
-		use 'wbthomason/packer.nvim'
+		use { -- Packer can manage itself
+			'wbthomason/packer.nvim'
+		}
 
-		-- Improve Start-UP time
 		use { -- Speed up loading Lua modules in Neovim to improve startup time.
 			'lewis6991/impatient.nvim'
 		}
 
 		use { -- Easily speed up your neovim startup time!. A faster version of filetype.vim
 			'nathom/filetype.nvim'
+		}
+
+		use { -- Theme or Colorscheme
+			'bignimbus/pop-punk.vim',
+			config = [[ require('plugins/pop-punk') ]]
 		}
 
 		use { -- A collection of common configurations for Neovim's built-in language server client

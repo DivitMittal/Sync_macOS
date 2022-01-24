@@ -1,4 +1,3 @@
-
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 -- ───────────────────────────────────────────────── --
 --   Plugin:    nvim-tree.lua
@@ -6,21 +5,13 @@
 -- ───────────────────────────────────────────────── --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 
-
-
-
-
--- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
--- ━━━━━━━━━━━━━━━━━━━❰ configs ❱━━━━━━━━━━━━━━━━━━━ --
--- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
-
 local gl = vim.g
 local keymap = vim.api.nvim_set_keymap
 local options = {noremap = true, silent = true}
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 local cmd = vim.cmd -- execute Vim commands
-cmd('autocmd ColorScheme * highlight highlight NvimTreeBg guibg=None')
-cmd('autocmd FileType NvimTree setlocal winhighlight=Normal:NvimTreeBg')
+--cmd('autocmd ColorScheme * highlight highlight NvimTreeBg guibg=None')
+--cmd('autocmd FileType NvimTree setlocal winhighlight=Normal:NvimTreeBg')
 
 -- gl.nvim_tree_ignore                = { '.git', 'node_modules', '.cache' }   --empty by default
 -- gl.nvim_tree_gitignore             = 1   --0 by default
@@ -72,18 +63,6 @@ require'nvim-tree'.setup {
 		hide_root_folder = false,
 		side = 'left',
 		auto_resize = true,
-
--- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
--- ━━━━━━━━━━━━━━━━━❰ end configs ❱━━━━━━━━━━━━━━━━━ --
--- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
-
-
-
-
--- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
--- ━━━━━━━━━━━━━━━━━━━❰ Mappings ❱━━━━━━━━━━━━━━━━━━ --
--- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
-
 		mappings = {
 			custom_only = false,
 			list = {
@@ -126,8 +105,4 @@ require'nvim-tree'.setup {
 
 -- Toggle Nvim-Tree
 keymap('n', '<leader>f', ':NvimTreeToggle<CR>', options)
-
--- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
--- ━━━━━━━━━━━━━━━━━❰ end Mappings ❱━━━━━━━━━━━━━━━━ --
--- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 

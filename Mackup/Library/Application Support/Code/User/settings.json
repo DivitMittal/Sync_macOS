@@ -60,6 +60,8 @@
 	"editor.lineNumbers": "relative",
 	"vim.surround": true,
 	"vim.easymotion": true,
+	"vim.neovimPath": "/usr/local/bin/nvim",
+	"vim.enableNeovim": true,
 	"vim.insertModeKeyBindings": [
 		{
 			"before": ["k", "j"],
@@ -81,5 +83,7 @@
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
 	"prettier.tabWidth": 4,
-	"prettier.useTabs": true
+	"prettier.useTabs": true,
+	"window.zoomLevel": 1,
+	"vscode-edge-devtools.mirrorEdits": true
 }

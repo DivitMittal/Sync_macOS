@@ -2,7 +2,7 @@
 -- ────────────────❰ Leader Mapping ❱─────────────── --
 -- mapping leader here. it will work for every mapped
 
-vim.g.mapleader = ','
+vim.g.mapleader = ';'
 vim.g.maplocalleader = '|'
 -- ───────────────────────────────────────────────── --
 

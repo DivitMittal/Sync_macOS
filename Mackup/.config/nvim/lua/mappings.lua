@@ -17,10 +17,9 @@ local silent	= {silent = true}
 cmd([[ autocmd BufEnter * nmap silent <buffer> <Leader>q :bd<CR> ]])
 
 -- exit mode
-keymap('n', 'ii', '<Esc>', options)
-keymap('i', 'ii', '<Esc>', options)
-keymap('v', 'ii', '<Esc>', options)
-
+keymap('n', 'qi', '<Esc>', options)
+keymap('i', 'qi', '<Esc>', options)
+keymap('v', 'qi', '<Esc>', options)
 
 -- move selected line(s) up or down
 keymap('v', 'J', ":m '>+1<CR>gv=gv", options)
@@ -47,8 +46,8 @@ keymap('n', ',h', ':vertical resize -3 <CR>', options)
 -- clear Search Results
 keymap('n', '//', ':noh <CR>', silent)
 
--- number line enable
-keymap('n', '<leader>n', ':set rnu! <CR>', silent)
+-- number line enable ( To toggle between relative line numbers and absolute line number)
+-- keymap('n', '<leader>n', ':set rnu! <CR>', silent)
 
 -- going back to normal mode which works even in vim's terminal
 -- you will need this if you use floaterm to escape terminal

@@ -12,9 +12,9 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-#################################################
+###############################################################
 # System
-#################################################
+###############################################################
 
 # set default macOS metrics
 defaults write NSGlobalDomain AppleLanguages -array "en"
@@ -24,6 +24,18 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Disable Sudden Motion Sensor
 sudo pmset -a sms 0
+
+# Sleep the display in minutes
+sudo pmset -a displaysleep 10
+
+# Machine sleep while charging in minutes
+sudo pmset -c sleep 30
+
+# Set machine sleep on battery in minutes
+sudo pmset -b sleep 15
+
+# Seconds after which the screen saver shows up
+defaults -currentHost write com.apple.screensaver idleTime 300
 
 ###################################################
 # Screenshots
@@ -213,11 +225,11 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
-# Finder: Don't show path bar
-defaults write com.apple.finder ShowPathbar -bool false
+# Finder: Show path bar
+defaults write com.apple.finder ShowPathbar -bool true
 
-# Finder: Don't show status bar
-defaults write com.apple.finder ShowStatusBar -bool false
+# Finder: Show show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
 
 # Show the ~/Library folder
 chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
@@ -287,7 +299,7 @@ defaults write com.apple.dock autohide -bool true && killall Dock
 defaults write com.apple.dock autohide-delay -float 5 && killall Dock
 
 # Disables application bouncing animation
-defaults write com.apple.dock no-bouncing -bool TRUE && killall Dock
+defaults write com.apple.dock no-bouncing -bool true && killall Dock
 
 # Don't show recently used applications in the Dock
 defaults write com.Apple.Dock show-recents -bool false
@@ -358,7 +370,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 
 # Enable Debug Menu in the Mac App Store
-# Turn Spotlight Off
+# Turn Spotlight Off using Raycast instead
 sudo mdutil -a -i off
 # Also, disable all spotlight indexing and add root directory as an exception from System Preferences
 

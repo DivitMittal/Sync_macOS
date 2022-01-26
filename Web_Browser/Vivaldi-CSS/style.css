@@ -1,0 +1,9 @@
+/* Vivaldi-CSS
+	Turn on experimental CSS styling in Vivaldi
+ */
+
+/* Removes Title Bar */
+#header {
+	display: none !important;
+}
+

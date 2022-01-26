@@ -1,5 +1,7 @@
 {
 	"terminal.integrated.inheritEnv": false,
+	"editor.tabSize": 4,
+
 	"editor.wordWrap": "on",
 	"diffEditor.wordWrap": "on",
 	"diffEditor.ignoreTrimWhitespace": true,
@@ -9,6 +11,12 @@
 	"files.autoSave": "afterDelay",
 	"workbench.startupEditor": "none",
 	"security.workspace.trust.enabled": false,
+
+	// Customize UI
+	"workbench.useExperimentalGridLayout": true,
+	"customizeUI.activityBar": "bottom",
+	"customizeUI.titleBar": "inline",
+	"window.titleBarStyle": "native",
 
 	//Github CoPilot - Extension
 	"github.copilot.enable": {
@@ -42,7 +50,6 @@
 	// Appearance
 	"editor.bracketPairColorization.enabled": true,
 	"editor.guides.bracketPairs": "active",
-	"breadcrumbs.enabled": false,
 	"workbench.sideBar.location": "right",
 	"workbench.view.alwaysShowHeaderActions": true,
 	"editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
@@ -64,7 +71,7 @@
 	"vim.enableNeovim": true,
 	"vim.insertModeKeyBindings": [
 		{
-			"before": ["k", "j"],
+			"before": ["i", "i"],
 			"after": ["<Esc>"]
 		}
 	],
@@ -75,6 +82,7 @@
 	"python.linting.pylintEnabled": true,
 	"python.linting.enabled": true,
 
+	//Jupyter IPython Notebooksk
 	"jupyter.allowUnauthorizedRemoteConnection": true,
 	"jupyter.alwaysScrollOnNewCell": true,
 
@@ -85,5 +93,19 @@
 	"prettier.tabWidth": 4,
 	"prettier.useTabs": true,
 	"window.zoomLevel": 1,
-	"vscode-edge-devtools.mirrorEdits": true
+	"vscode-edge-devtools.mirrorEdits": true,
+	"editor.cursorBlinking": "smooth",
+	"editor.minimap.renderCharacters": false,
+	"editor.minimap.maxColumn": 100,
+	"editor.quickSuggestionsDelay": 5,
+	"files.eol": "\n",
+	"files.insertFinalNewline": true,
+	"files.trimTrailingWhitespace": true,
+	"files.trimFinalNewlines": true,
+	"files.simpleDialog.enable": true,
+	"workbench.enableExperiments": false,
+	"workbench.activityBar.iconClickBehavior": "focus",
+	"workbench.tips.enabled": false,
+	"workbench.editor.untitled.hint": "hidden",
+	"editor.accessibilitySupport": "off"
 }

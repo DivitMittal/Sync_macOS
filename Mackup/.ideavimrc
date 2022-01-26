@@ -20,8 +20,8 @@ set noerrorbells
 set encoding=utf-8
 
 " Most important setting for Vim
-inoremap kj <Esc>
-noremap kj <Esc>
+inoremap ii <Esc>
+noremap ii <Esc>
 
 " Emulated Plugins
 set surround

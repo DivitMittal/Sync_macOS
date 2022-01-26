@@ -5,7 +5,6 @@ fish_add_path /usr/local/bin
 fish_add_path (brew --prefix file-formula)/bin
 fish_add_path (brew --prefix ed)/bin
 fish_add_path (brew --prefix grep)/libexec/gnubin
-fish_add_path $HOME/Commands
 
 # Uses neovim as manpager
 set -x MANPAGER 'nvim +Man!'
@@ -15,22 +14,19 @@ set fish_greeting
 
 # Turns on Vi bindings
 function fish_user_key_bindings
-
     # The argument specifies the initial mode (insert, "default" or visual).
     fish_vi_key_bindings insert
-
 	# Cleans up the written line
 	bind -M insert \cc kill-whole-line repaint
-
 end
 
 # Turns off command cursor based on vi mode
 function fish_vi_cursor; end
 
-# Turns off fish right command
+# Turns off fish right prompt
 function fish_right_prompt; end
 
-# Turns off fish vi cursor
+# Turns off fish vi mode left prompt
 function fish_mode_prompt; end
 
 # Sets the default editor to neovim
@@ -72,7 +68,7 @@ end
 alias week='date +%V'
 
 # Brew ultimate alias
-alias brew-ultimate='brew update && brew upgrade && brew autoremove && brew cleanup - s && brew bundle dump --file=~/.Brewfile --force && rm -rf (brew --cache) && brew cleanup'
+alias brew-ultimate='brew update; and brew upgrade; and brew autoremove; and brew cleanup - s; and brew bundle dump --file=~/.Brewfile --force; and rm -rf (brew --cache); and brew cleanup'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -94,7 +90,7 @@ alias tt="command tt -t 30 -n 50 --theme homebrew"
 
 # Navigation
 alias ..='cd ..'
-alias ...='cd ../..'
+alias .2='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'

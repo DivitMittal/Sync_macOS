@@ -1,0 +1,123 @@
+{
+	"title": "Use right_option + h/j/k/l/;/'/i/o to switch current tab/window/application",
+	"rules": [
+		{
+			"description": "Use right_option + ;/' to cycle through running applications (like command+tab).",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "quote",
+						"modifiers": { "mandatory": ["right_option"] }
+					},
+					"to": [{ "key_code": "tab", "modifiers": ["left_command"] }]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "semicolon",
+						"modifiers": { "mandatory": ["right_option"] }
+					},
+					"to": [
+						{
+							"key_code": "tab",
+							"modifiers": ["left_command", "left_shift"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Use right_option + h/l to switch tabs in an application.",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "l",
+						"modifiers": { "mandatory": ["right_option"] }
+					},
+					"to": [{ "key_code": "tab", "modifiers": ["left_control"] }]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "h",
+						"modifiers": { "mandatory": ["right_option"] }
+					},
+					"to": [
+						{
+							"key_code": "tab",
+							"modifiers": ["left_control", "left_shift"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Use right_option + j/k to switch windows of the foreground application.",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "k",
+						"modifiers": { "mandatory": ["right_option"] }
+					},
+					"to": [
+						{
+							"key_code": "grave_accent_and_tilde",
+							"modifiers": ["left_command"]
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "j",
+						"modifiers": { "mandatory": ["right_option"] }
+					},
+					"to": [
+						{
+							"key_code": "grave_accent_and_tilde",
+							"modifiers": ["left_command", "left_shift"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "Use right_option + i/o to cycle through windows of any application in the current desktop space.",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "o",
+						"modifiers": { "mandatory": ["right_option"] }
+					},
+					"to": [
+						{
+							"key_code": "w",
+							"modifiers": ["left_command", "left_control"]
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "i",
+						"modifiers": { "mandatory": ["right_option"] }
+					},
+					"to": [
+						{
+							"key_code": "w",
+							"modifiers": [
+								"left_command",
+								"left_control",
+								"left_shift"
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

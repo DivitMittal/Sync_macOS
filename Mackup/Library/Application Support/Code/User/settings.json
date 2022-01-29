@@ -71,15 +71,15 @@
 	"vim.enableNeovim": true,
 	"vim.insertModeKeyBindings": [
 		{
-			"before": ["i", "i"],
+			"before": ["q", "i"],
 			"after": ["<Esc>"]
 		}
 	],
 
 	//Python
 	"python.defaultInterpreterPath": "/usr/local/bin/python3",
-	"python.pythonPath": "/usr/local/Caskroom/miniconda/base/envs/discord_bot/bin/python",
-	"python.linting.pylintEnabled": true,
+	"python.pythonPath": "/usr/local/Caskroom/miniconda/base/envs/gen__env/bin/python",
+	"python.linting.pylintEnabled": false,
 	"python.linting.enabled": true,
 
 	//Jupyter IPython Notebooksk
@@ -98,6 +98,9 @@
 	"editor.minimap.renderCharacters": false,
 	"editor.minimap.maxColumn": 100,
 	"editor.quickSuggestionsDelay": 5,
+
+	"terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
+	"terminal.integrated.fontSize": 14,
 	"files.eol": "\n",
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
@@ -107,5 +110,8 @@
 	"workbench.activityBar.iconClickBehavior": "focus",
 	"workbench.tips.enabled": false,
 	"workbench.editor.untitled.hint": "hidden",
-	"editor.accessibilitySupport": "off"
+	"editor.accessibilitySupport": "off",
+	"python.linting.flake8Enabled": false,
+	"python.linting.banditEnabled": true,
+	"terminal.integrated.defaultProfile.osx": "fish"
 }

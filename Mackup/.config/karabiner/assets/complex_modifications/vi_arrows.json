@@ -1,0 +1,94 @@
+{
+	"title": "Vi Style Arrows",
+	"rules": [
+		{
+			"description": "Change Right Command + h/j/k/l to Arrows",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "h",
+						"modifiers": {
+							"mandatory": ["right_command"],
+							"optional": [
+								"left_control",
+								"left_command",
+								"left_option",
+								"left_shift",
+								"fn"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "left_arrow"
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "j",
+						"modifiers": {
+							"mandatory": ["right_command"],
+							"optional": [
+								"left_control",
+								"left_command",
+								"left_option",
+								"left_shift",
+								"fn"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "down_arrow"
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "k",
+						"modifiers": {
+							"mandatory": ["right_command"],
+							"optional": [
+								"left_control",
+								"left_command",
+								"left_option",
+								"left_shift",
+								"fn"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "up_arrow"
+						}
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "l",
+						"modifiers": {
+							"mandatory": ["right_command"],
+							"optional": [
+								"left_control",
+								"left_command",
+								"left_option",
+								"left_shift",
+								"fn"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "right_arrow"
+						}
+					]
+				}
+			]
+		}
+	]
+}

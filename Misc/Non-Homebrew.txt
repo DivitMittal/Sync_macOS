@@ -1,6 +1,5 @@
 Microsoft OneNote		# To annotate and jot down ideas
 PDFExpert				# Alternative PDF viewer for macOS
-EthanSK/Menu-Bar-Dock	# To remove the need for the Dock and display active applications in the menu Menu Bar.
 Lemnos/tt				# To have a typing test in the terminal
 dexterleng/vimac		# To have Vimium-FF like navigation all across macOS
 

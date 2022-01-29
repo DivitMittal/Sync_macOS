@@ -47,7 +47,7 @@ keymap('n', ',h', ':vertical resize -3 <CR>', options)
 keymap('n', '//', ':noh <CR>', silent)
 
 -- number line enable ( To toggle between relative line numbers and absolute line number)
--- keymap('n', '<leader>n', ':set rnu! <CR>', silent)
+keymap('n', '<leader>n', ':set rnu! <CR>', silent)
 
 -- going back to normal mode which works even in vim's terminal
 -- you will need this if you use floaterm to escape terminal

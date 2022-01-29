@@ -1,0 +1,39 @@
+{
+	"title": "Change Quote and Backspace Key",
+	"rules": [
+		{
+			"description": "left_control+' -> '; left_shift + ' -> \"; ' ->  del",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": { "key_code": "quote" },
+					"to": [
+						{ "repeat": true, "key_code": "delete_or_backspace" }
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"modifiers": { "mandatory": ["left_control"] },
+						"key_code": "quote"
+					},
+					"to": [{ "repeat": true, "key_code": "quote" }]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"modifiers": { "mandatory": ["left_shift"] },
+						"key_code": "quote"
+					},
+					"to": [
+						{
+							"repeat": true,
+							"key_code": "quote",
+							"modifiers": ["left_shift"]
+						}
+					]
+				}
+			]
+		}
+	]
+}

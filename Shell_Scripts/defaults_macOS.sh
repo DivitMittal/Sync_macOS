@@ -37,6 +37,9 @@ sudo pmset -b sleep 15
 # Seconds after which the screen saver shows up
 defaults -currentHost write com.apple.screensaver idleTime 300
 
+# Don't reduce transpareacy for the current user system-wide
+defaults write com.apple.universalaccess reduceTransparency 0
+
 ###################################################
 # Screenshots
 ###################################################
@@ -293,13 +296,13 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 #################################################################
 
 # Enable Autohide Dock
-defaults write com.apple.dock autohide -bool true && killall Dock
+defaults write com.apple.dock autohide -bool true
 
-# Induces a 5 sec delay in appearance of the dock
-defaults write com.apple.dock autohide-delay -float 5 && killall Dock
+# Time in seconds it takes for the Dock to appear, if auto-hidden.
+defaults write com.apple.dock autohide-delay -float 0
 
 # Disables application bouncing animation
-defaults write com.apple.dock no-bouncing -bool true && killall Dock
+defaults write com.apple.dock no-bouncing -bool true
 
 # Don't show recently used applications in the Dock
 defaults write com.Apple.Dock show-recents -bool false
@@ -314,7 +317,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.dock launchanim -bool false
 
 # System Preferences > Dock > Size:
-defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock tilesize -int 30
 
 # System Preferences > Dock > Magnification:
 defaults write com.apple.dock magnification -bool true
@@ -335,6 +338,12 @@ defaults write com.apple.dock persistent-apps -array
 
 # Show only open applications in the Dock
 defaults write com.apple.dock static-only -bool true
+
+# Change Dock orientation to right
+defaults write com.apple.dock orientation right
+
+# For changes made above to take effect
+killall Dock
 
 ###############################################################################
 # Activity monitor, TextEdit, DiskUtility, Photos, AppStore

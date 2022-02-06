@@ -1,22 +1,19 @@
+// Visual Studio Code Settings
 {
-	"terminal.integrated.inheritEnv": false,
-	"editor.tabSize": 4,
-
-	"editor.wordWrap": "on",
+	//Diff Editor
 	"diffEditor.wordWrap": "on",
 	"diffEditor.ignoreTrimWhitespace": true,
-	"editor.inlayHints.enabled": false,
-	"editor.inlineSuggest.enabled": true,
-	"telemetry.telemetryLevel": "off",
-	"files.autoSave": "afterDelay",
-	"workbench.startupEditor": "none",
+
+	//Security
 	"security.workspace.trust.enabled": false,
 
-	// Customize UI
-	"workbench.useExperimentalGridLayout": true,
+	//Telemetry
+	"telemetry.telemetryLevel": "off",
+
+	//Customize UI - Extension
 	"customizeUI.activityBar": "bottom",
-	"customizeUI.titleBar": "inline",
-	"window.titleBarStyle": "native",
+	"customizeUI.titleBar": "frameless",
+	"customizeUI.listRowHeight": 20,
 
 	//Github CoPilot - Extension
 	"github.copilot.enable": {
@@ -47,28 +44,68 @@
 		"syscall"
 	],
 
-	// Appearance
-	"editor.bracketPairColorization.enabled": true,
-	"editor.guides.bracketPairs": "active",
-	"workbench.sideBar.location": "right",
-	"workbench.view.alwaysShowHeaderActions": true,
-	"editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
-	"editor.fontSize": 16,
-	"editor.fontLigatures": true,
-	"workbench.iconTheme": "material-icon-theme",
-	"workbench.colorTheme": "Noctis High Contrast",
-	"editor.renderIndentGuides": true,
-	"workbench.colorCustomizations": {
-		"editor.lineHighlightBackground": "#1073cf2d",
-		"editor.lineHighlightBorder": "#9fced11f"
-	},
-
-	//Vim
-	"editor.lineNumbers": "relative",
+	//VSCodeVim - Extension
 	"vim.surround": true,
 	"vim.easymotion": true,
+	"vim.sneak": true,
+	"vim.sneakUseIgnorecaseAndSmartcase": true,
+	"vim.useSystemClipboard": true,
+	"vim.ignorecase": true,
+	"vim.smartcase": true,
+	"vim.camelCaseMotion.enable": true,
+	"vim.hlsearch": true,
+	"vim.leader": ";",
+	"vim.highlightedyank.enable": true,
+	"vim.incsearch": true,
+	"vim.showmodename": true,
+	"vim.showcmd": true,
+	"vim.useCtrlKeys": true,
 	"vim.neovimPath": "/usr/local/bin/nvim",
-	"vim.enableNeovim": true,
+	"vim.enableNeovim": false,
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": ["<leader>", "T"],
+			"commands": ["workbench.action.terminal.toggleTerminal"]
+		},
+		{
+			"before": ["/", "/"],
+			"commands": [":nohlsearch"]
+		},
+		{
+			"before": ["<leader>", "t"],
+			"commands": [":tabnew"]
+		},
+		{
+			"before": ["J"],
+			"after": ["5", "j"]
+		},
+		{
+			"before": ["K"],
+			"after": ["5", "k"]
+		},
+		{
+			"before": ["<leader>", "j"],
+			"after": ["J"]
+		},
+		{
+			"before": ["<leader>", "b"],
+			"commands": ["editor.debug.action.toggleBreakpoint"]
+		},
+		{
+			"before": ["<leader>", "f"],
+			"commands": ["workbench.view.explorer"]
+		}
+	],
+	"vim.visualModeKeyBindings": [
+		{
+			"before": [">"],
+			"commands": ["editor.action.indentLines"]
+		},
+		{
+			"before": ["<"],
+			"commands": ["editor.action.outdentLines"]
+		}
+	],
 	"vim.insertModeKeyBindings": [
 		{
 			"before": ["q", "i"],
@@ -76,42 +113,84 @@
 		}
 	],
 
-	//Python
-	"python.defaultInterpreterPath": "/usr/local/bin/python3",
-	"python.pythonPath": "/usr/local/Caskroom/miniconda/base/envs/gen__env/bin/python",
+	//Python - Extension
+	"python.defaultInterpreterPath": "/usr/local/Caskroom/miniconda/base/envs/gen__env/bin/python",
 	"python.linting.pylintEnabled": false,
 	"python.linting.enabled": true,
+	"python.linting.flake8Enabled": false,
+	"python.linting.banditEnabled": true,
 
-	//Jupyter IPython Notebooksk
+	//Jupyter IPython Notebook - Extension
 	"jupyter.allowUnauthorizedRemoteConnection": true,
 	"jupyter.alwaysScrollOnNewCell": true,
 
 	//Prettier - Extension
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnPaste": true,
-	"editor.formatOnSave": true,
 	"prettier.tabWidth": 4,
 	"prettier.useTabs": true,
-	"window.zoomLevel": 1,
 	"vscode-edge-devtools.mirrorEdits": true,
-	"editor.cursorBlinking": "smooth",
-	"editor.minimap.renderCharacters": false,
-	"editor.minimap.maxColumn": 100,
-	"editor.quickSuggestionsDelay": 5,
 
-	"terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
-	"terminal.integrated.fontSize": 14,
+	//Window
+	"window.zoomLevel": 1,
+	"window.titleBarStyle": "native",
+
+	//Files
 	"files.eol": "\n",
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
 	"files.trimFinalNewlines": true,
 	"files.simpleDialog.enable": true,
+	"files.autoSave": "afterDelay",
+	"files.exclude": {
+		"**/.classpath": true,
+		"**/.project": true,
+		"**/.settings": true,
+		"**/.factorypath": true
+	},
+
+	//Terminal
+	"terminal.integrated.defaultProfile.osx": "fish",
+	"terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.inheritEnv": false,
+	"terminal.external.osxExec": "kitty.app",
+
+	//Workbench
 	"workbench.enableExperiments": false,
 	"workbench.activityBar.iconClickBehavior": "focus",
 	"workbench.tips.enabled": false,
 	"workbench.editor.untitled.hint": "hidden",
+	"workbench.sideBar.location": "right",
+	"workbench.view.alwaysShowHeaderActions": true,
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.colorTheme": "Noctis High Contrast",
+	"workbench.startupEditor": "none",
+	"workbench.colorCustomizations": {
+		"editor.lineHighlightBackground": "#1073cf2d",
+		"editor.lineHighlightBorder": "#9fced11f"
+	},
+
+	//Editor
+	"editor.lineNumbers": "relative",
+	"editor.cursorBlinking": "smooth",
+	"editor.minimap.renderCharacters": false,
+	"editor.minimap.maxColumn": 100,
+	"editor.quickSuggestionsDelay": 5,
+	"editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
+	"editor.fontSize": 16,
+	"editor.fontLigatures": true,
+	"editor.tabSize": 4,
+	"editor.wordWrap": "on",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
 	"editor.accessibilitySupport": "off",
-	"python.linting.flake8Enabled": false,
-	"python.linting.banditEnabled": true,
-	"terminal.integrated.defaultProfile.osx": "fish"
+	"editor.inlayHints.enabled": false,
+	"editor.inlineSuggest.enabled": true,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": "active",
+	"editor.tabCompletion": "on",
+	"editor.stickyTabStops": true,
+
+	//Explorer
+	"explorer.confirmDelete": false
 }

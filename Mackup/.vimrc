@@ -1,17 +1,22 @@
 " Mapping of escape key in all modes
-inoremap kj <Esc>
-noremap kj <Esc>
+inoremap qi <Esc>
+noremap qi <Esc>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Make Vim more useful
 set nocompatible
 
 " Set line numbers
 set number
 set relativenumber
+
+" Set cursor highlighting
+set cursorline
+set cursorcolumn
+
+" Show editing mode
 set showmode
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -42,7 +47,7 @@ au FocusGained,BufEnter * checktime
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
+let mapleader = ";"
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -54,10 +59,6 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Don’t show the intro message when starting Vim
-set shortmess=atI
-
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
@@ -90,7 +91,7 @@ set smartcase
 " Highlight search results
 set hlsearch
 
-" Makes search act like search in modern browsers
+" Makes search act like search in modern browsers,i.e., searches are done after every character in the regex query typed
 set incsearch
 
 " Don't redraw while executing macros (good performance config)
@@ -122,7 +123,6 @@ set nostartofline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Enable syntax highlighting
 syntax enable
 
@@ -155,7 +155,6 @@ set ffs=unix,dos,mac
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
 set nowb
@@ -164,11 +163,10 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Use spaces instead of tabs
-set expandtab
+"set expandtab
 
-" Be smart when using tabs ;)
+" Be smart when using tabs
 set smarttab
 
 " 1 tab == 4 spaces
@@ -186,7 +184,6 @@ set wrap "Wrap lines
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
-
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
@@ -195,7 +192,6 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <C-space> ?
@@ -250,7 +246,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
-
 " Always show the status line
 set laststatus=2
 
@@ -260,7 +255,6 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
@@ -294,7 +288,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
@@ -307,7 +300,6 @@ map <leader>s? z=
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
@@ -324,7 +316,6 @@ map <leader>pp :setlocal paste!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Returns true if paste mode is enabled
 function! HasPaste()
     if &paste

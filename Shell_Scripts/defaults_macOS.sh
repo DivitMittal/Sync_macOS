@@ -37,8 +37,13 @@ sudo pmset -b sleep 15
 # Seconds after which the screen saver shows up
 defaults -currentHost write com.apple.screensaver idleTime 300
 
-# Don't reduce transpareacy for the current user system-wide
+# Don't reduceTransparency the current user system-wide
 defaults write com.apple.universalaccess reduceTransparency 0
+# set value to 1 to reduceTransparency
+
+# Disable Auto-boot on lid-open and power connection
+sudo nvram AutoBoot=%00
+# Reset nvram or run this command ( sudo nvram AutoBoot=%03 ) to revert changes made by above command
 
 ###################################################
 # Screenshots
@@ -91,6 +96,9 @@ defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 1
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# to restore above settings changed above
+# defaults delete -g ApplePressAndHoldEnabled                                           # If necessary, reset global default
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
@@ -292,13 +300,16 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 defaults write com.apple.CrashReporter DialogType -string "none"
 
 #################################################################
-# Dock
+# Dock & Menu Bar
 #################################################################
 
-# Enable Autohide Dock
-defaults write com.apple.dock autohide -bool true
+# To Enable Autohide Dock
+# defaults write com.apple.dock autohide -bool true
 
-# Time in seconds it takes for the Dock to appear, if auto-hidden.
+# To Autohide Menu Bar
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+
+# Make dock appear instantaneously, if hidden
 defaults write com.apple.dock autohide-delay -float 0
 
 # Disables application bouncing animation
@@ -317,13 +328,13 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.dock launchanim -bool false
 
 # System Preferences > Dock > Size:
-defaults write com.apple.dock tilesize -int 30
+defaults write com.apple.dock tilesize -int 8
 
 # System Preferences > Dock > Magnification:
 defaults write com.apple.dock magnification -bool true
 
 # System Preferences > Dock > Size (magnified):
-defaults write com.apple.dock largesize -int 54
+defaults write com.apple.dock largesize -int 64
 
 # System Preferences > Dock > Minimize windows using: Scale effect
 defaults write com.apple.dock mineffect -string "scale"

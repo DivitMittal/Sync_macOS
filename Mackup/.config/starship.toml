@@ -101,8 +101,6 @@ threshold = 100
 #Jobs
 [jobs]
 disabled = false
-symbol = "+ "
-threshold = 4
 format = "background [$symbol$number]($style) "
 
 # Services

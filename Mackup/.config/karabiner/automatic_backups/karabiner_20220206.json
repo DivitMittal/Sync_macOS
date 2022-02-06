@@ -103,9 +103,7 @@
                                     "modifiers": {
                                         "optional": [
                                             "caps_lock",
-                                            "fn",
-                                            "command",
-                                            "left_option"
+                                            "fn"
                                         ]
                                     }
                                 },

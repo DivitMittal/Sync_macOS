@@ -2,7 +2,7 @@
 	"title": "right_command+v to paste without formatting",
 	"rules": [
 		{
-			"description": "right_command+v does special paste without formatting, equivalent to, cmd+opt+shift+v.",
+			"description": "right_command+v does special paste without formatting",
 			"manipulators": [
 				{
 					"type": "basic",
@@ -10,7 +10,8 @@
 					"from": {
 						"key_code": "v",
 						"modifiers": {
-							"mandatory": ["right_command"]
+							"mandatory": ["right_command"],
+							"optional": ["any"]
 						}
 					},
 

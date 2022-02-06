@@ -2,35 +2,21 @@
 set number
 set relativenumber
 
-" Make vim more useful
-set nocompatible
-
 " Smart IdeaVim Features
-set idearefactormode = keep
+set idearefactormode=keep
+set ideastatusicon
 set ideajoin
+set ideavimsupport
+set ideamarks
 
 " Shows mode of editing at the bottom of the screen
 set showmode
 
 " Turn off annoying bells
 set visualbell
-set noerrorbells
-
-" Sets default encoding to UTF-8
-set encoding=utf-8
-
-" Most important setting for Vim
-inoremap ii <Esc>
-noremap ii <Esc>
-
-" Emulated Plugins
-set surround
 
 " Copy to system clipboard as well
-set clipboard+=unnamed
-
-" Always show current position
-set ruler
+set clipboard
 
 " Ignore case when searching
 set ignorecase
@@ -41,34 +27,15 @@ set smartcase
 " Highlight search results
 set hlsearch
 
-" Makes search act like search in modern browsers
+" Makes regex search for characters typed as far as you type
 set incsearch
-
-" Don't redraw while executing macros (good performance config)
-set lazyredraw
-
-" For regular expressions turn magic on
-set magic
-
-" Show matching brackets when text indicator is over them
-set showmatch
-
-" How many tenths of a second to blink when matching brackets
-set mat=2
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
+let mapleader=";"
 
 " Fast saving
 nmap <leader>w :w!<cr>
-
-" :W sudo saves the file
-" (useful for handling the permission-denied error)
-command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
-
-" Multiple cursors support
-set multiple-cursors
 
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
@@ -83,38 +50,31 @@ map Q gq
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-if has("mac") || has("macunix")
-  nmap <D-j> <M-j>
-  nmap <D-k> <M-k>
-  vmap <D-j> <M-j>
-  vmap <D-k> <M-k>
-endif
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git etc. anyway...
-set nobackup
-set nowb
-set noswapfile
-
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
-map \r <Action>(ReformatCode)
+map <leader>r <Action>(ReformatCode)
 
 "" Map <leader>d to start debug
 map <leader>d <Action>(Debug)
 
 "" Map \b to toggle the breakpoint on the current line
-map \b <Action>(ToggleLineBreakpoint)
+map <leader>b <Action>(ToggleLineBreakpoint)
 
 " Terminal
 map <leader>T <Action>(ActivateTerminalToolWindow)<cr>
 
 " Find more examples here: https://jb.gg/share-ideavimrc
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'machakann/vim-highlightedyank'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'easymotion/vim-easymotion'
+Plug 'tommcdo/vim-exchange'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'chrisbra/matchit'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -58,6 +58,7 @@ set.wrap = false -- don't automatically wrap on load
 set.showmatch = true -- show the matching part of the pair for [] {} and ()
 
 set.cursorline = true -- highlight current line
+set.cursorcolumn = true -- highlight current column
 set.number = true -- show line numbers
 set.relativenumber = true -- show relative line number
 

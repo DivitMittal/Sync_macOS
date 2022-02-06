@@ -1,0 +1,29 @@
+{
+	"title": "mod_tab",
+	"rules": [
+		{
+			"description": "Change tab to fn if pressed with other keys, to horizontal tab (\\t) if pressed alone",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "tab",
+						"modifiers": {
+							"optional": ["any"]
+						}
+					},
+					"to": [
+						{
+							"key_code": "fn"
+						}
+					],
+					"to_if_alone": [
+						{
+							"key_code": "tab"
+						}
+					]
+				}
+			]
+		}
+	]
+}

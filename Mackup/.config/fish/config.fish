@@ -47,10 +47,6 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# Editor
-alias vim='nvim'
-alias vi='nvim'
-
 # Shortcuts
 alias dt='cd ~/Desktop'
 alias dl='cd ~/Downloads'
@@ -95,7 +91,7 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
-# Switch between shells
+# Switch between shells on macOS only
 alias tobash="sudo chsh -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh -s /usr/local/bin/fish && echo 'Now log out.'"

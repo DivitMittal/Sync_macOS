@@ -6,7 +6,10 @@
 			"manipulators": [
 				{
 					"type": "basic",
-					"from": { "key_code": "quote" },
+					"from": {
+						"modifiers": { "optional": ["caps_lock", "fn", "command", "left_option"] },
+						"key_code": "quote"
+					},
 					"to": [
 						{ "repeat": true, "key_code": "delete_or_backspace" }
 					]
@@ -14,7 +17,10 @@
 				{
 					"type": "basic",
 					"from": {
-						"modifiers": { "mandatory": ["left_control"] },
+						"modifiers": {
+							"mandatory": ["left_control"],
+							"optional": ["caps_lock"]
+						},
 						"key_code": "quote"
 					},
 					"to": [{ "repeat": true, "key_code": "quote" }]
@@ -22,7 +28,10 @@
 				{
 					"type": "basic",
 					"from": {
-						"modifiers": { "mandatory": ["left_shift"] },
+						"modifiers": {
+							"mandatory": ["left_shift"],
+							"optional": ["caps_lock"]
+						},
 						"key_code": "quote"
 					},
 					"to": [

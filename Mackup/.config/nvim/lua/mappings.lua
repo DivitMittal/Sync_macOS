@@ -46,7 +46,7 @@ keymap('n', ',h', ':vertical resize -3 <CR>', options)
 -- clear Search Results
 keymap('n', '//', ':noh <CR>', silent)
 
--- number line enable ( To toggle between relative line numbers and absolute line number)
+-- To toggle between relative line numbers and absolute line number
 keymap('n', '<leader>n', ':set rnu! <CR>', silent)
 
 -- going back to normal mode which works even in vim's terminal
@@ -56,13 +56,8 @@ keymap('t', '<Esc>', '<c-\\><c-n>', options)
 -- scroll window up/down
 keymap('i', '<C-e>', '<ESC><C-e>', silent)
 keymap('i', '<C-y>', '<ESC><C-y>', silent)
+-- to scroll horizontally use <C-h>, <C-l> in normal mode
 
--- scroll window horizontally (scroll-horizontal)
--- < reference: https://unix.stackexchange.com/questions/110251/how-to-put-current-line-at-top-center-bottom-of-screen-in-vim
-keymap('n', '<C-h>', 'zh', silent) -- left
-keymap('n', '<C-l>', 'zl', silent) -- right
-
--- keymap('n', '<Leader>q',':q <CR>',      options)
 -- to save file
 keymap('i', '<C-s>', '<ESC>ma<ESC>:w <CR>`a', options)
 keymap('n', '<C-s>', '<ESC>ma<ESC>:w <CR>`a', options)

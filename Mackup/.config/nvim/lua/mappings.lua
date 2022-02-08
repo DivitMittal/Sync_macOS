@@ -62,3 +62,7 @@ keymap('i', '<C-y>', '<ESC><C-y>', silent)
 keymap('i', '<C-s>', '<ESC>ma<ESC>:w <CR>`a', options)
 keymap('n', '<C-s>', '<ESC>ma<ESC>:w <CR>`a', options)
 
+-- start of line
+keymap('n', '0', '^', options)
+
+

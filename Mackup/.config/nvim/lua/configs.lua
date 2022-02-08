@@ -65,12 +65,12 @@ set.relativenumber = true -- show relative line number
 set.incsearch = true -- incremental search
 set.hlsearch = true -- highlighted search results
 set.ignorecase = true -- ignore case sensetive while searching
-set.smartcase = true
+set.smartcase = true -- being smart about ignoring case when using ignorecase
 
 set.scrolloff = 1 -- when scrolling, keep cursor 1 lines away from screen border
 set.sidescrolloff = 2 -- keep 30 columns visible left and right of the cursor at all times
 set.backspace = 'indent,start,eol' -- make backspace behave like normal again
-set.mouse		= "a"  		-- turn on mouse interaction
+set.mouse = 'a'		-- turn on mouse interaction
 set.updatetime = 500 -- CursorHold interval
 
 set.softtabstop = 4
@@ -81,7 +81,7 @@ set.autoindent = true -- maintain indent of current line
 set.expandtab = false -- don't expand tabs into spaces
 set.shiftround = true
 
-set.shell = 'bash' -- shell to use for `!`, `:!`, `system()` etc.
+set.shell = '/bin/bash' -- shell to use for `!`, `:!`, `system()` etc.
 set.lazyredraw = true -- faster scrolling
 set.inccommand = 'split' -- live preview of :s results
 

@@ -210,18 +210,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # Disable disk image verification
-defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
-
-# Keep folders on top when sorting by name
-defaults write com.apple.finder _FXSortFoldersFirst -bool true
-
-# Disable disk image verification
-defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
-
-# Keep folders on top when sorting by name
-defaults write com.apple.finder _FXSortFoldersFirst -bool true
-
-# Disable disk image verification
 defaults write com.apple.frameworks.diskimages skip-verify -bool true
 defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
 defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
@@ -239,8 +227,8 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # Finder: Show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Finder: Show show status bar
-defaults write com.apple.finder ShowStatusBar -bool true
+# Finder: Hide show status bar
+defaults write com.apple.finder ShowStatusBar -bool false
 
 # Show the ~/Library folder
 chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
@@ -395,4 +383,3 @@ sudo mdutil -a -i off
 # Also, disable all spotlight indexing and add root directory as an exception from System Preferences
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
-

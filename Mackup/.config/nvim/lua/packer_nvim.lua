@@ -24,7 +24,7 @@ return packer.startup {
 			'nathom/filetype.nvim'
 		}
 
-		use { -- Theme or Colorscheme
+		use { -- Theme/Colorscheme
 			'bignimbus/pop-punk.vim',
 			config = [[ require('plugins/pop-punk') ]]
 		}
@@ -140,15 +140,20 @@ return packer.startup {
 			config = [[ require('plugins/trouble_nvim') ]]
 		}
 
-		use { -- A File Explorer For Neovim Written In Lua
+		use { -- File Explorer
 			'kyazdani42/nvim-tree.lua',
 			config = [[ require('plugins/nvim-tree_lua') ]]
 		}
 
-		use {
+		use { -- Status Line
 			'nvim-lualine/lualine.nvim',
 			requires = { 'kyazdani42/nvim-web-devicons', opt = true },
 			config = [[ require('plugins/lualine')]]
+		}
+
+		use { -- Github Co-Pilot
+			'github/copilot.vim',
+			config = [[ require('plugins/copilot') ]]
 		}
 
 	end,

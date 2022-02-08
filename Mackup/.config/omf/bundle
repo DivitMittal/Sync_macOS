@@ -1,5 +1,5 @@
 package bass
 package brew
-package https://github.com/jorgebucaran/autopair.fish
 package osx
+package pisces
 theme default

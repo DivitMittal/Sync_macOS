@@ -52,7 +52,6 @@
 	"vim.useSystemClipboard": true,
 	"vim.ignorecase": true,
 	"vim.smartcase": true,
-	"vim.camelCaseMotion.enable": true,
 	"vim.hlsearch": true,
 	"vim.leader": ";",
 	"vim.highlightedyank.enable": true,
@@ -94,6 +93,18 @@
 		{
 			"before": ["<leader>", "f"],
 			"commands": ["workbench.view.explorer"]
+		},
+		{
+			"before": ["<leader>", "m"],
+			"commands": ["bookmarks.toggle"]
+		},
+		{
+			"before": ["<leader>", "m", "l"],
+			"commands": ["bookmarks.list"]
+		},
+		{
+			"before": ["0"],
+			"after": ["^"]
 		}
 	],
 	"vim.visualModeKeyBindings": [
@@ -104,6 +115,14 @@
 		{
 			"before": ["<"],
 			"commands": ["editor.action.outdentLines"]
+		},
+		{
+			"before": ["J"],
+			"commands": ["editor.action.moveLinesDownAction"]
+		},
+		{
+			"before": ["K"],
+			"commands": ["editor.action.moveLinesUpAction"]
 		}
 	],
 	"vim.insertModeKeyBindings": [
@@ -127,6 +146,8 @@
 	//Prettier - Extension
 	"prettier.tabWidth": 4,
 	"prettier.useTabs": true,
+
+	//Edge Dev Tools - Extension
 	"vscode-edge-devtools.mirrorEdits": true,
 
 	//Window
@@ -192,5 +213,69 @@
 	"editor.stickyTabStops": true,
 
 	//Explorer
-	"explorer.confirmDelete": false
+	"explorer.confirmDelete": false,
+
+	//TODOTree - Extension
+	"todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
+	"todo-tree.highlights.defaultHighlight": {
+		"icon": "alert",
+		"type": "text-and-comment",
+		"foreground": "black",
+		"background": "white",
+		"opacity": 50,
+		"iconColour": "blue",
+		"gutterIcon": true
+	},
+	"todo-tree.highlights.customHighlight": {
+		"TODO": {
+			"icon": "check",
+			"foreground": "black",
+			"background": "white",
+			"iconColour": "white"
+		},
+		"NOTE": {
+			"icon": "note",
+			"foreground": "white",
+			"background": "gray",
+			"iconColour": "gray"
+		},
+		"COMMENT": {
+			"icon": "note",
+			"foreground": "white",
+			"background": "gray",
+			"iconColour": "gray"
+		},
+		"FIXME": {
+			"foreground": "black",
+			"background": "yellow",
+			"iconColour": "yellow"
+		},
+		"BUG": {
+			"foreground": "black",
+			"background": "red",
+			"iconColour": "red"
+		},
+		"[ ]": {
+			"icon": "check",
+			"foreground": "black",
+			"background": "white",
+			"iconColour": "yellow"
+		},
+		"[x]": {
+			"icon": "check",
+			"foreground": "white",
+			"background": "green",
+			"iconColour": "green"
+		}
+	},
+	"todo-tree.general.tags": [
+		"BUG",
+		"HACK",
+		"FIXME",
+		"TODO",
+		"NOTE",
+		"COMMENT",
+		"[ ]",
+		"[x]"
+	]
 }

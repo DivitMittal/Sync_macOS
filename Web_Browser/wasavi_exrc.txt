@@ -1,0 +1,27 @@
+" exrc for wasavi
+
+" Theme/Colorscheme
+set theme='matrix'
+
+set number
+set relativenumber
+
+set nolaunchbell
+set noerrorbells
+set novisualbell
+set bellvolume=0
+
+set cursorcolumn
+set cursorline
+set cursorblink
+
+set ignorecase
+set smartcase
+set searchincr
+
+set autoindent
+set showmode
+set showmatch
+
+set smooth
+

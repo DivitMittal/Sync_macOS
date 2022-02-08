@@ -68,11 +68,12 @@ map <leader>T <Action>(ActivateTerminalToolWindow)<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set sneak
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'dbakker/vim-paragraph-motion'
 Plug 'easymotion/vim-easymotion'
 Plug 'tommcdo/vim-exchange'
 Plug 'michaeljsmith/vim-indent-object'

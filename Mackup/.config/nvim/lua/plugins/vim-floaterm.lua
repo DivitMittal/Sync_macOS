@@ -6,11 +6,6 @@
 -- ───────────────────────────────────────────────── --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 
-
-
-
-
--- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━━❰ Configs ❱━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 
@@ -37,9 +32,6 @@ vim.g.floaterm_height = 0.7
 -- ━━━━━━━━━━━━━━━━━❰ end Configs ❱━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 
-
-
-
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━❰ Mappings ❱━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
@@ -48,8 +40,8 @@ local keymap = vim.api.nvim_set_keymap
 local g = vim.g
 
 g.floaterm_keymap_toggle = 'tt' -- toggle open/close floaterm
-g.floaterm_keymap_prev = 'tk' -- go to previous floaterm window
-g.floaterm_keymap_next = 'tj' -- go to next floaterm window
+g.floaterm_keymap_prev = 'th' -- go to previous floaterm window
+g.floaterm_keymap_next = 'tl' -- go to next floaterm window
 -- g.floaterm_keymap_new    = 'tn'         -- create new terminal
 -- g.floaterm_keymap_kill   = 'tq'         -- quit current terminal
 -- create new floaterm window
@@ -97,7 +89,6 @@ nnoremap <Leader>O :w <CR><bar> :FloatermNew
 ]]
 -- ━━━━━━━━━━━━━━━━❰ end Build/Run ❱━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
-
 
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━❰ end Mappings ❱━━━━━━━━━━━━━━━━━ --

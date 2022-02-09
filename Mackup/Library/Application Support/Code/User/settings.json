@@ -6,6 +6,9 @@
 
 	//Security
 	"security.workspace.trust.enabled": false,
+	"security.workspace.trust.banner": "never",
+	"security.workspace.trust.emptyWindow": false,
+	"security.workspace.trust.startupPrompt": "never",
 
 	//Telemetry
 	"telemetry.telemetryLevel": "off",
@@ -43,6 +46,9 @@
 		"shrq",
 		"syscall"
 	],
+
+	//VSCode NeoVim - Extension
+	"vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
 
 	//VSCodeVim - Extension
 	"vim.surround": true,
@@ -187,7 +193,9 @@
 	"workbench.startupEditor": "none",
 	"workbench.colorCustomizations": {
 		"editor.lineHighlightBackground": "#1073cf2d",
-		"editor.lineHighlightBorder": "#9fced11f"
+		"editor.lineHighlightBorder": "#9fced11f",
+		"editorCursor.foreground": "#ff0000",
+		"terminalCursor.foreground": "#ff0000"
 	},
 
 	//Editor
@@ -211,6 +219,7 @@
 	"editor.guides.bracketPairs": "active",
 	"editor.tabCompletion": "on",
 	"editor.stickyTabStops": true,
+	"editor.scrollBeyondLastLine": false,
 
 	//Explorer
 	"explorer.confirmDelete": false,
@@ -270,12 +279,15 @@
 	},
 	"todo-tree.general.tags": [
 		"BUG",
-		"HACK",
 		"FIXME",
 		"TODO",
 		"NOTE",
 		"COMMENT",
 		"[ ]",
 		"[x]"
-	]
+	],
+
+	//Update
+	"update.mode": "manual",
+	"update.showReleaseNotes": false
 }

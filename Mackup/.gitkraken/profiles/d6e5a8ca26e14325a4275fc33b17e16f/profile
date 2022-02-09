@@ -1,0 +1,35 @@
+{
+  "tabInfo": {
+    "permanentTabs": {
+      "PROJECTS": {
+        "selectedProject": null,
+        "closed": true
+      }
+    },
+    "selectedTabId": "9974f240-66d2-4433-a1ae-ac733f4644d3",
+    "tabs": [
+      {
+        "id": "9974f240-66d2-4433-a1ae-ac733f4644d3",
+        "type": "REPO",
+        "repoName": "Sync_macOS",
+        "repoPath": "/Users/divitmittal/Sync_macOS/"
+      }
+    ]
+  },
+  "profileIcon": "Keiflo-Ren.png",
+  "profileName": "dm",
+  "userEmail": "d.mittal-1@student.tudelft.nl",
+  "userName": "Divit Mittal",
+  "gpg": {
+    "commitGpgSign": false,
+    "tagForceSignAnnotated": false
+  },
+  "organizationId": null,
+  "editor": {
+    "fontFamily": "Monaco"
+  },
+  "cli": {
+    "fontFamily": "Monaco"
+  },
+  "projects": {}
+}

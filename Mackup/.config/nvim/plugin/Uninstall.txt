@@ -1,1 +1,2 @@
-brew uninstall neovim && rm -rf .local/share/nvim/ && rm -rf .config/nvim
+#!/usr/local/bin/fish
+brew uninstall neovim; and rm -rf .local/share/nvim/; and rm -rf .config/nvim

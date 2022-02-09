@@ -44,8 +44,6 @@ require('Comment').setup({
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 
 
-
-
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━━❰ Mappings ❱━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
@@ -61,8 +59,8 @@ require('Comment').setup({
 	---LHS of toggle mapping in NORMAL
 	---@type table
 	toggler = {
-		line = 'cc', ---line-comment keymap
-		block = 'gcb', ---block-comment keymap
+		line = 'gcc', ---line-comment keymap
+		block = 'gbc', ---block-comment keymap
 	},
 
 	---LHS of operator-pending mapping in VISUAL mode
@@ -71,6 +69,17 @@ require('Comment').setup({
 		line = 'gc', ---line-comment keymap
 		block = 'gb', ---block-comment keymap
 	},
+
+    ---LHS of extra mappings
+    ---@type table
+    extra = {
+        ---Add comment on the line above
+        above = 'gcO',
+        ---Add comment on the line below
+        below = 'gco',
+        ---Add comment at the end of line
+        eol = 'gcA',
+    },
 })
 
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --

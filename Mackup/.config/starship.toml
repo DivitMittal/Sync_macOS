@@ -13,7 +13,7 @@ format = """
 [ ╰─cmd─➜⇉❯](bold green) $character
 """
 # Right prompt format
-right_format = """$lua$rust$java$kotlin$dart$python$golang$swift$nodejs$php$conda$package """
+right_format = """$lua$rust$java$kotlin$dart$python$golang$swift$nodejs$php$conda${custom.docker}$package${custom.giturl} """
 
 # Adds a new line after the prompt
 add_newline = true
@@ -87,7 +87,6 @@ style = "red"
 symbol = "💥 "
 format = '[\[$symbol$status\]]($style) '
 
-# Battery
 [battery]
 disabled = false
 full_symbol = "💪"
@@ -98,7 +97,6 @@ format = "🔋:$symbol "
 [[battery.display]]
 threshold = 100
 
-#Jobs
 [jobs]
 disabled = false
 format = "background [$symbol$number]($style) "
@@ -106,24 +104,36 @@ format = "background [$symbol$number]($style) "
 # Services
 ##############################################################################
 
+# [git_commit]
+
 [git_branch]
 disabled = false
 always_show_remote = true
 symbol = "🌱 "
 style = "bold blue"
+format = "on [$symbol]($style)local:[$branch]($style) remote:[$remote_name/$remote_branch]($style) "
 
 [git_status]
 disabled = false
-ahead = "⇡🏎💨${count}"
-diverged = "⇕⇡😵${ahead_count}⇣${behind_count}"
-behind = "⇣😰${count}"
-conflicted = "🤺"
-untracked = "🤷"
+ahead = '🏃\([$count](bold blue)\)'
+diverged = '😵\(🏃[$ahead_count]\)🐌\([$behind_count]\)(bold blue)'
+behind = '🐌\([$count](bold blue)\)'
+conflicted = "🤔"
+untracked = "👀"
 modified = "📝"
 stashed = "📦"
-staged = '[++\($count\)](green)'
-renamed = "📛"
+staged = '🎤\([$count](bold blue)\)'
+renamed = "🐣"
 deleted = "🚮"
+
+[custom.giturl]
+disabled = false
+description = "Display symbol for remote Git server"
+command = "git ls-remote --get-url"
+when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
+shell = ["bash", "--noprofile", "--norc"]
+format = "at [$output]($style) "
+style = "bold blue"
 
 [docker_context]
 disabled = false
@@ -165,4 +175,11 @@ disabled = false
 
 [php]
 disabled = false
+
+[custom.docker]
+disabled = false
+description = "Shows the docker symbol if the current directory has Dockerfile or docker-compose.yml files"
+files = ["Dockerfile", "docker-compose.yml", "docker-compose.yaml"]
+symbol = "🐳"
+format = "with $symbol "
 

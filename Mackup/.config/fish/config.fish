@@ -26,7 +26,6 @@ function fish_user_key_bindings
 
 	# Copy paste to system clipboard
 	bind yy fish_clipboard_copy
-	bind Y fish_clipboard_copy
 	bind p fish_clipboard_paste
 end
 

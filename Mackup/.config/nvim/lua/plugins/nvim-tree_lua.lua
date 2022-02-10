@@ -33,7 +33,7 @@ gl.nvim_tree_highlight_opened_files = 1 -- 0 by default, will enable folder and 
 -- gl.nvim_tree_group_empty           = 1   -- 0 by default, compact folders that only contain a single folder into one node in the file tree
 -- gl.nvim_tree_lsp_diagnostics       = 0   --0 by default, will show lsp diagnostics in the signcolumn. See :help nvim_tree_lsp_diagnostics
 -- gl.nvim_tree_disable_window_picker = 1   --0 by default, will disable the window picker.
-gl.nvim_tree_hijack_cursor         = 1   --1 by default, when moving cursor in the tree, will position the cursor at the start of the file on the current line
+-- gl.nvim_tree_hijack_cursor         = 1   --1 by default, when moving cursor in the tree, will position the cursor at the start of the file on the current line
 -- gl.nvim_tree_icon_padding          = ' '   --one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
 -- gl.nvim_tree_update_cwd            = 1   --0 by default, will update the tree cwd when changing nvim's directory (DirChanged event). Behaves strangely with autochdir set.
 

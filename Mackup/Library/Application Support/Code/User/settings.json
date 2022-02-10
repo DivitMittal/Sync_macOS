@@ -1,294 +1,294 @@
 // Visual Studio Code Settings
 {
-	//Diff Editor
-	"diffEditor.wordWrap": "on",
-	"diffEditor.ignoreTrimWhitespace": true,
+    //Diff Editor
+    "diffEditor.wordWrap": "on",
+    "diffEditor.ignoreTrimWhitespace": true,
 
-	//Security
-	"security.workspace.trust.enabled": false,
-	"security.workspace.trust.banner": "never",
-	"security.workspace.trust.emptyWindow": false,
-	"security.workspace.trust.startupPrompt": "never",
+    //Security
+    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.emptyWindow": false,
+    "security.workspace.trust.startupPrompt": "never",
 
-	//Telemetry
-	"telemetry.telemetryLevel": "off",
+    //Telemetry
+    "telemetry.telemetryLevel": "off",
 
-	//Customize UI - Extension
-	"customizeUI.activityBar": "bottom",
-	"customizeUI.titleBar": "frameless",
-	"customizeUI.listRowHeight": 20,
-	"customizeUI.stylesheet": {
-		".monaco-workbench .part.statusbar>.items-container": "font-size: 14px;"
-	},
+    //Customize UI - Extension
+    "customizeUI.activityBar": "bottom",
+    "customizeUI.titleBar": "frameless",
+    "customizeUI.listRowHeight": 20,
+    "customizeUI.stylesheet": {
+        ".monaco-workbench .part.statusbar>.items-container": "font-size: 14px;"
+    },
 
-	//Github CoPilot - Extension
-	"github.copilot.enable": {
-		"*": true,
-		"yaml": true,
-		"plaintext": true,
-		"markdown": true
-	},
+    //Github CoPilot - Extension
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": true
+    },
 
-	//Code Spell Checker - Extension
-	"cSpell.enableFiletypes": ["gas"],
-	"cSpell.userWords": [
-		"asciz",
-		"cmpq",
-		"decq",
-		"divitmittal",
-		"dotenv",
-		"dtype",
-		"leaq",
-		"movq",
-		"mulq",
-		"popq",
-		"printf",
-		"pushq",
-		"scanf",
-		"shlq",
-		"shrq",
-		"syscall"
-	],
+    //Code Spell Checker - Extension
+    "cSpell.enableFiletypes": ["gas"],
+    "cSpell.userWords": [
+        "asciz",
+        "cmpq",
+        "decq",
+        "divitmittal",
+        "dotenv",
+        "dtype",
+        "leaq",
+        "movq",
+        "mulq",
+        "popq",
+        "printf",
+        "pushq",
+        "scanf",
+        "shlq",
+        "shrq",
+        "syscall"
+    ],
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",
+    //VSCodeVim - Extension
+    "vim.surround": false,
+    "vim.useSystemClipboard": true,
+    "vim.ignorecase": true,
+    "vim.smartcase": true,
+    "vim.hlsearch": true,
+    "vim.leader": ";",
+    "vim.highlightedyank.enable": true,
+    "vim.incsearch": true,
+    "vim.showmodename": true,
+    "vim.showcmd": true,
+    "vim.useCtrlKeys": true,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.enableNeovim": true,
+    "vim.neovimUseConfigFile": true,
+    "vim.neovimConfigPath": "/Users/divitmittal/.config/nvim/init.lua",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "T"],
+            "commands": ["workbench.action.terminal.toggleTerminal"]
+        },
+        {
+            "before": ["/", "/"],
+            "commands": [":nohlsearch"]
+        },
+        {
+            "before": ["<leader>", "t"],
+            "commands": [":tabnew"]
+        },
+        {
+            "before": ["J"],
+            "after": ["5", "j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["5", "k"]
+        },
+        {
+            "before": ["<leader>", "j"],
+            "after": ["J"]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "commands": ["editor.debug.action.toggleBreakpoint"]
+        },
+        {
+            "before": ["<leader>", "f"],
+            "commands": ["workbench.view.explorer"]
+        },
+        {
+            "before": ["<leader>", "m"],
+            "commands": ["bookmarks.toggle"]
+        },
+        {
+            "before": ["<leader>", "m", "l"],
+            "commands": ["bookmarks.list"]
+        },
+        {
+            "before": ["0"],
+            "after": ["^"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        },
+        {
+            "before": ["J"],
+            "commands": ["editor.action.moveLinesDownAction"]
+        },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.moveLinesUpAction"]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["q", "i"],
+            "after": ["<Esc>"]
+        }
+    ],
 
-	"vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    //Python - Extension
+    "python.defaultInterpreterPath": "/usr/local/Caskroom/miniconda/base/envs/gen__env/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.banditEnabled": true,
 
-	//VSCodeVim - Extension
-	"vim.surround": false,
-	"vim.useSystemClipboard": true,
-	"vim.ignorecase": true,
-	"vim.smartcase": true,
-	"vim.hlsearch": true,
-	"vim.leader": ";",
-	"vim.highlightedyank.enable": true,
-	"vim.incsearch": true,
-	"vim.showmodename": true,
-	"vim.showcmd": true,
-	"vim.useCtrlKeys": true,
-	"vim.neovimPath": "/usr/local/bin/nvim",
-	"vim.enableNeovim": true,
-	"vim.neovimUseConfigFile": true,
-	"vim.neovimConfigPath": "/Users/divitmittal/.config/nvim/init.lua",
-	"vim.normalModeKeyBindingsNonRecursive": [
-		{
-			"before": ["<leader>", "T"],
-			"commands": ["workbench.action.terminal.toggleTerminal"]
-		},
-		{
-			"before": ["/", "/"],
-			"commands": [":nohlsearch"]
-		},
-		{
-			"before": ["<leader>", "t"],
-			"commands": [":tabnew"]
-		},
-		{
-			"before": ["J"],
-			"after": ["5", "j"]
-		},
-		{
-			"before": ["K"],
-			"after": ["5", "k"]
-		},
-		{
-			"before": ["<leader>", "j"],
-			"after": ["J"]
-		},
-		{
-			"before": ["<leader>", "b"],
-			"commands": ["editor.debug.action.toggleBreakpoint"]
-		},
-		{
-			"before": ["<leader>", "f"],
-			"commands": ["workbench.view.explorer"]
-		},
-		{
-			"before": ["<leader>", "m"],
-			"commands": ["bookmarks.toggle"]
-		},
-		{
-			"before": ["<leader>", "m", "l"],
-			"commands": ["bookmarks.list"]
-		},
-		{
-			"before": ["0"],
-			"after": ["^"]
-		}
-	],
-	"vim.visualModeKeyBindings": [
-		{
-			"before": [">"],
-			"commands": ["editor.action.indentLines"]
-		},
-		{
-			"before": ["<"],
-			"commands": ["editor.action.outdentLines"]
-		},
-		{
-			"before": ["J"],
-			"commands": ["editor.action.moveLinesDownAction"]
-		},
-		{
-			"before": ["K"],
-			"commands": ["editor.action.moveLinesUpAction"]
-		}
-	],
-	"vim.insertModeKeyBindings": [
-		{
-			"before": ["q", "i"],
-			"after": ["<Esc>"]
-		}
-	],
+    //Jupyter IPython Notebook - Extension
+    "jupyter.allowUnauthorizedRemoteConnection": true,
+    "jupyter.alwaysScrollOnNewCell": true,
 
-	//Python - Extension
-	"python.defaultInterpreterPath": "/usr/local/Caskroom/miniconda/base/envs/gen__env/bin/python",
-	"python.linting.pylintEnabled": false,
-	"python.linting.enabled": true,
-	"python.linting.flake8Enabled": false,
-	"python.linting.banditEnabled": true,
+    //Prettier - Extension
+    "prettier.tabWidth": 4,
 
-	//Jupyter IPython Notebook - Extension
-	"jupyter.allowUnauthorizedRemoteConnection": true,
-	"jupyter.alwaysScrollOnNewCell": true,
+    //Edge Dev Tools - Extension
+    "vscode-edge-devtools.mirrorEdits": true,
 
-	//Prettier - Extension
-	"prettier.tabWidth": 4,
-	"prettier.useTabs": true,
+    //Window
+    "window.zoomLevel": 1,
+    "window.titleBarStyle": "native",
 
-	//Edge Dev Tools - Extension
-	"vscode-edge-devtools.mirrorEdits": true,
+    //Files
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.simpleDialog.enable": true,
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
 
-	//Window
-	"window.zoomLevel": 1,
-	"window.titleBarStyle": "native",
+    //Terminal
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.inheritEnv": false,
+    "terminal.external.osxExec": "kitty.app",
 
-	//Files
-	"files.eol": "\n",
-	"files.insertFinalNewline": true,
-	"files.trimTrailingWhitespace": true,
-	"files.trimFinalNewlines": true,
-	"files.simpleDialog.enable": true,
-	"files.autoSave": "afterDelay",
-	"files.exclude": {
-		"**/.classpath": true,
-		"**/.project": true,
-		"**/.settings": true,
-		"**/.factorypath": true
-	},
+    //Workbench
+    "workbench.enableExperiments": false,
+    "workbench.activityBar.iconClickBehavior": "focus",
+    "workbench.tips.enabled": false,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.sideBar.location": "right",
+    "workbench.view.alwaysShowHeaderActions": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Noctis High Contrast",
+    "workbench.startupEditor": "none",
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#1073cf2d",
+        "editor.lineHighlightBorder": "#9fced11f",
+        "editorCursor.foreground": "#ff0000",
+        "terminalCursor.foreground": "#ff0000"
+    },
 
-	//Terminal
-	"terminal.integrated.defaultProfile.osx": "fish",
-	"terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
-	"terminal.integrated.fontSize": 14,
-	"terminal.integrated.inheritEnv": false,
-	"terminal.external.osxExec": "kitty.app",
+    //Editor
+    "editor.lineNumbers": "relative",
+    "editor.cursorBlinking": "smooth",
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 100,
+    "editor.quickSuggestionsDelay": 5,
+    "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true,
+    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.accessibilitySupport": "off",
+    "editor.inlayHints.enabled": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.tabCompletion": "on",
+    "editor.stickyTabStops": true,
+    "editor.scrollBeyondLastLine": false,
+    "editor.renderWhitespace": "boundary",
 
-	//Workbench
-	"workbench.enableExperiments": false,
-	"workbench.activityBar.iconClickBehavior": "focus",
-	"workbench.tips.enabled": false,
-	"workbench.editor.untitled.hint": "hidden",
-	"workbench.sideBar.location": "right",
-	"workbench.view.alwaysShowHeaderActions": true,
-	"workbench.iconTheme": "material-icon-theme",
-	"workbench.colorTheme": "Noctis High Contrast",
-	"workbench.startupEditor": "none",
-	"workbench.colorCustomizations": {
-		"editor.lineHighlightBackground": "#1073cf2d",
-		"editor.lineHighlightBorder": "#9fced11f",
-		"editorCursor.foreground": "#ff0000",
-		"terminalCursor.foreground": "#ff0000"
-	},
+    //Explorer
+    "explorer.confirmDelete": false,
 
-	//Editor
-	"editor.lineNumbers": "relative",
-	"editor.cursorBlinking": "smooth",
-	"editor.minimap.renderCharacters": false,
-	"editor.minimap.maxColumn": 100,
-	"editor.quickSuggestionsDelay": 5,
-	"editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
-	"editor.fontSize": 16,
-	"editor.fontLigatures": true,
-	"editor.tabSize": 4,
-	"editor.wordWrap": "on",
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnPaste": true,
-	"editor.formatOnSave": true,
-	"editor.accessibilitySupport": "off",
-	"editor.inlayHints.enabled": false,
-	"editor.inlineSuggest.enabled": true,
-	"editor.bracketPairColorization.enabled": true,
-	"editor.guides.bracketPairs": "active",
-	"editor.tabCompletion": "on",
-	"editor.stickyTabStops": true,
-	"editor.scrollBeyondLastLine": false,
+    //TODOTree - Extension
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
+    "todo-tree.highlights.defaultHighlight": {
+        "icon": "alert",
+        "type": "text-and-comment",
+        "foreground": "black",
+        "background": "white",
+        "opacity": 50,
+        "iconColour": "blue",
+        "gutterIcon": true
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "check",
+            "foreground": "black",
+            "background": "white",
+            "iconColour": "white"
+        },
+        "NOTE": {
+            "icon": "note",
+            "foreground": "white",
+            "background": "gray",
+            "iconColour": "gray"
+        },
+        "COMMENT": {
+            "icon": "note",
+            "foreground": "white",
+            "background": "gray",
+            "iconColour": "gray"
+        },
+        "FIXME": {
+            "foreground": "black",
+            "background": "yellow",
+            "iconColour": "yellow"
+        },
+        "BUG": {
+            "foreground": "black",
+            "background": "red",
+            "iconColour": "red"
+        },
+        "[ ]": {
+            "icon": "check",
+            "foreground": "black",
+            "background": "white",
+            "iconColour": "yellow"
+        },
+        "[x]": {
+            "icon": "check",
+            "foreground": "white",
+            "background": "green",
+            "iconColour": "green"
+        }
+    },
+    "todo-tree.general.tags": [
+        "BUG",
+        "FIXME",
+        "TODO",
+        "NOTE",
+        "COMMENT",
+        "[ ]",
+        "[x]"
+    ],
 
-	//Explorer
-	"explorer.confirmDelete": false,
-
-	//TODOTree - Extension
-	"todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
-	"todo-tree.highlights.defaultHighlight": {
-		"icon": "alert",
-		"type": "text-and-comment",
-		"foreground": "black",
-		"background": "white",
-		"opacity": 50,
-		"iconColour": "blue",
-		"gutterIcon": true
-	},
-	"todo-tree.highlights.customHighlight": {
-		"TODO": {
-			"icon": "check",
-			"foreground": "black",
-			"background": "white",
-			"iconColour": "white"
-		},
-		"NOTE": {
-			"icon": "note",
-			"foreground": "white",
-			"background": "gray",
-			"iconColour": "gray"
-		},
-		"COMMENT": {
-			"icon": "note",
-			"foreground": "white",
-			"background": "gray",
-			"iconColour": "gray"
-		},
-		"FIXME": {
-			"foreground": "black",
-			"background": "yellow",
-			"iconColour": "yellow"
-		},
-		"BUG": {
-			"foreground": "black",
-			"background": "red",
-			"iconColour": "red"
-		},
-		"[ ]": {
-			"icon": "check",
-			"foreground": "black",
-			"background": "white",
-			"iconColour": "yellow"
-		},
-		"[x]": {
-			"icon": "check",
-			"foreground": "white",
-			"background": "green",
-			"iconColour": "green"
-		}
-	},
-	"todo-tree.general.tags": [
-		"BUG",
-		"FIXME",
-		"TODO",
-		"NOTE",
-		"COMMENT",
-		"[ ]",
-		"[x]"
-	],
-
-	//Update
-	"update.mode": "manual",
-	"update.showReleaseNotes": false
+    //Update
+    "update.mode": "manual",
+    "update.showReleaseNotes": false
 }

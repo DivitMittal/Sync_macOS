@@ -15,7 +15,7 @@
 	excludesfile = /Users/divitmittal/.gitignore
 
 [init]
-    defaultBranch = main
+    defaultBranch = master
 
 [push]
     default = simple

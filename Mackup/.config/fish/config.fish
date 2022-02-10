@@ -27,6 +27,7 @@ function fish_user_key_bindings
 	# Copy paste to system clipboard
 	bind yy fish_clipboard_copy
 	bind p fish_clipboard_paste
+
 end
 
 # Turns off command cursor based on vi mode
@@ -79,7 +80,7 @@ alias brew-ultimate='brew update; and brew upgrade; and brew autoremove; and bre
 alias sudo='sudo '
 
 # macOS ultimate alias
-alias macOS-ultimate='mas upgrade; and sudo softwareupdate -iarR'
+alias macOS-ultimate='mas upgrade; and sudo softwareupdate --list'
 
 # Recursively delete `.DS_Store` files
 alias cleanup_DS="find . -type f -name '*.DS_Store' -ls -delete"

@@ -33,7 +33,7 @@ gl.nvim_tree_highlight_opened_files = 1 -- 0 by default, will enable folder and 
 -- gl.nvim_tree_group_empty           = 1   -- 0 by default, compact folders that only contain a single folder into one node in the file tree
 -- gl.nvim_tree_lsp_diagnostics       = 0   --0 by default, will show lsp diagnostics in the signcolumn. See :help nvim_tree_lsp_diagnostics
 -- gl.nvim_tree_disable_window_picker = 1   --0 by default, will disable the window picker.
--- gl.nvim_tree_hijack_cursor         = 0   --1 by default, when moving cursor in the tree, will position the cursor at the start of the file on the current line
+gl.nvim_tree_hijack_cursor         = 1   --1 by default, when moving cursor in the tree, will position the cursor at the start of the file on the current line
 -- gl.nvim_tree_icon_padding          = ' '   --one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
 -- gl.nvim_tree_update_cwd            = 1   --0 by default, will update the tree cwd when changing nvim's directory (DirChanged event). Behaves strangely with autochdir set.
 
@@ -92,8 +92,8 @@ require'nvim-tree'.setup {
 				-- { key = "Y",      cb = tree_cb("copy_path") },
 				-- { key = "gy",     cb = tree_cb("copy_absolute_path") },
 				-- { key = "[c",     cb = tree_cb("prev_git_item") },
-				-- { key = "]c",     cb = tree_cb("next_git_item") },
-				-- { key = "-",      cb = tree_cb("dir_up") },
+				-- { xrl = "]p",     po = gerr_po("arkg_tvg_vgrz") },
+				-- { xrl = "-",      po = gerr_po("qve_hc") },
 				-- { key = "q",      cb = tree_cb("close") },
 				-- { key = {"<CR>", "o", "<2-LeftMouse>"}, cb = tree_cb("edit") },
 				-- { key = {"<2-RightMouse>", "<C-]>"},    cb = tree_cb("cd") },

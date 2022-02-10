@@ -8,7 +8,6 @@
 		configs for plugins are in "lua/plugins" directory and each plugin has
 		it's own config file. some settings are already default in neovim so you
 		don't need to define explicitly but it won't make any difference
-    :end of NOTE
 --]]
 
 local exec = vim.api.nvim_exec -- execute Vimscript
@@ -43,7 +42,7 @@ if root then
 else
 	local backup_dir = fn.expand('~/.cache/nvim')
 	set.backup = true -- make backups before writing
-	set.undofile = false -- persistent undos - undo after you re-open the file
+	set.undofile = true -- persistent undos - undo after you re-open the file
 	set.writebackup = true -- Make backup before overwriting the current buffer
 	set.backupcopy = 'yes' -- Overwrite the original backup file
 	set.directory = backup_dir .. '/swap' -- directory to place swap files in

@@ -109,14 +109,13 @@ format = "background [$symbol$number]($style) "
 [git_branch]
 disabled = false
 always_show_remote = true
-symbol = "🌱 "
 style = "bold blue"
-format = "on [$symbol]($style)local:[$branch]($style) remote:[$remote_name/$remote_branch]($style) "
+format = "on 🌱:[$branch]($style) 🎋:[$remote_name/$remote_branch]($style) "
 
 [git_status]
 disabled = false
 ahead = '🏃\([$count](bold blue)\)'
-diverged = '😵\(🏃[$ahead_count]\)🐌\([$behind_count]\)(bold blue)'
+diverged = '😵\(\(🏃[$ahead_count](bold blue)\);🐌\([$behind_count](bold blue)\)\)'
 behind = '🐌\([$count](bold blue)\)'
 conflicted = "🤔"
 untracked = "👀"
@@ -132,7 +131,7 @@ description = "Display symbol for remote Git server"
 command = "git ls-remote --get-url"
 when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
 shell = ["bash", "--noprofile", "--norc"]
-format = "at [$output]($style) "
+format = "remote:[$output]($style) "
 style = "bold blue"
 
 [docker_context]

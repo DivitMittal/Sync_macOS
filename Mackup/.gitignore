@@ -3,7 +3,7 @@
 
 # Folder view configuration files
 .DS_Store
-Desktop.ini
+Desktop.inia
 
 # Shell_history
 .bash_history
@@ -11,6 +11,8 @@ Desktop.ini
 
 # Editor_Files
 .viminfo
+.idea/
+.vscode/
 
 # Thumbnail cache files
 ._*
@@ -25,16 +27,10 @@ log/
 logs/
 *.log
 
-# JetBrains
-.idea/
-
 # Temp
 *.tmp
 *.temp
 
 # Docker
 .dockerignore
-
-# VSCode
-.vscode/
 

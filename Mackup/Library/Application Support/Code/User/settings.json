@@ -17,6 +17,9 @@
 	"customizeUI.activityBar": "bottom",
 	"customizeUI.titleBar": "frameless",
 	"customizeUI.listRowHeight": 20,
+	"customizeUI.stylesheet": {
+		".monaco-workbench .part.statusbar>.items-container": "font-size: 14px;"
+	},
 
 	//Github CoPilot - Extension
 	"github.copilot.enable": {
@@ -47,14 +50,10 @@
 		"syscall"
 	],
 
-	//VSCode NeoVim - Extension
 	"vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
 
 	//VSCodeVim - Extension
-	"vim.surround": true,
-	"vim.easymotion": true,
-	"vim.sneak": true,
-	"vim.sneakUseIgnorecaseAndSmartcase": true,
+	"vim.surround": false,
 	"vim.useSystemClipboard": true,
 	"vim.ignorecase": true,
 	"vim.smartcase": true,
@@ -66,7 +65,9 @@
 	"vim.showcmd": true,
 	"vim.useCtrlKeys": true,
 	"vim.neovimPath": "/usr/local/bin/nvim",
-	"vim.enableNeovim": false,
+	"vim.enableNeovim": true,
+	"vim.neovimUseConfigFile": true,
+	"vim.neovimConfigPath": "/Users/divitmittal/.config/nvim/init.lua",
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
 			"before": ["<leader>", "T"],

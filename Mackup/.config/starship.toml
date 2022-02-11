@@ -8,7 +8,7 @@
 # Left prompt format
 format = """
 [ ╭─account─➜⇉❯>](bold blue) $username$sudo$time
-[ ┣─system───➜⇉❯>](bold yellow) $shell$status$cmd_duration$jobs$docker_context$hostname$battery
+[ ┣─system───➜⇉❯>](bold yellow) $shell$status$cmd_duration$docker_context$hostname$battery
 [ ┣─project──➜⇉❯>](bold red) $directory$git_branch$git_status
 [ ╰─cmd─➜⇉❯](bold green) $character
 """
@@ -48,7 +48,7 @@ powershell_indicator = "_"
 unknown_indicator = "❓"
 bash_indicator = "🐑"
 zsh_indicator = "🦓"
-format = "shell:$indicator "
+format = "🐚:$indicator "
 
 [directory]
 disabled = false
@@ -62,7 +62,7 @@ style = "white"
 disabled = false
 style_user = "italic bright-purple"
 style_root = "red bold"
-format = "user:[$user]($style) "
+format = "👤:[$user]($style) "
 show_always = true
 
 [sudo]
@@ -97,14 +97,10 @@ format = "🔋:$symbol "
 [[battery.display]]
 threshold = 100
 
-[jobs]
-disabled = false
-format = "background [$symbol$number]($style) "
-
 # Services
 ##############################################################################
 
-# [git_commit]
+#[git_commit]
 
 [git_branch]
 disabled = false

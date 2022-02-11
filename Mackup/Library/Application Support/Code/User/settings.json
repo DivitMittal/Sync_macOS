@@ -49,9 +49,11 @@
         "shrq",
         "syscall"
     ],
+
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",
     //VSCodeVim - Extension
+
     "vim.surround": false,
     "vim.useSystemClipboard": true,
     "vim.ignorecase": true,

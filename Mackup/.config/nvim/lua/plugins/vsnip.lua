@@ -1,11 +1,9 @@
 --"---------------------------------------------------------------------
 --"   PluginName: vim-vsnip
 --"   Github:     github.com/hrsh7th/vim-vsnip
---
 --"---------------------------------------------------------------------
 
-
-
+if not vim.g.vscode then
 
 --"---------------------------------------------------------------------
 --"       CONFIGS
@@ -31,10 +29,6 @@ require'lspconfig'.rust_analyzer.setup {
 --       end of CONFIGS
 ---------------------------------------------------------------------
 
-
-
-
-
 -----------------------------------------------------------------------
 --       MAPPINGS
 -----------------------------------------------------------------------
@@ -51,18 +45,13 @@ options = {silent=true, expr=true}
 
 -- Jump forward or backward
 -- pmenu and vim-vsnip
-keymap('i', '<Tab>',        "pumvisible() ? '<C-n>' : vsnip#jumpable(1)     ? '<Plug>(vsnip-jump-next)' : '<Tab>'",        options)
-keymap('i', '<S-Tab>',      "pumvisible() ? '<C-n>' : vsnip#jumpable(-1)    ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'",      options)
+keymap('i', '<Tab>', "pumvisible() ? '<C-n>' : vsnip#jumpable(1)     ? '<Plug>(vsnip-jump-next)' : '<Tab>'", options)
+keymap('i', '<S-Tab>', "pumvisible() ? '<C-n>' : vsnip#jumpable(-1)    ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'", options)
 -- vim-vsnip
-keymap('s', '<Tab>',        "vsnip#jumpable(1)  ? '<Plug>(vsnip-jump-next)' : '<Tab>'",                                     options)
-keymap('s', '<S-Tab>',      "vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)' : '<Tab>'",                                    options)
+keymap('s', '<Tab>', "vsnip#jumpable(1)  ? '<Plug>(vsnip-jump-next)' : '<Tab>'", options)
 ]]
 ---------------------------------------------------------------------
 --       enf of MAPPINGS
 ---------------------------------------------------------------------
-
-
-
-
-
+end
 

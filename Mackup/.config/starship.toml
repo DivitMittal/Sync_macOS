@@ -9,11 +9,11 @@
 format = """
 [ ╭─account─➜⇉❯>](bold blue) $username$sudo$time
 [ ┣─system───➜⇉❯>](bold yellow) $shell$status$cmd_duration$docker_context$hostname$battery
-[ ┣─project──➜⇉❯>](bold red) $directory$git_branch$git_status
+[ ┣─project──➜⇉❯>](bold red) $directory$git_branch$git_commit$git_status
 [ ╰─cmd─➜⇉❯](bold green) $character
 """
 # Right prompt format
-right_format = """$lua$rust$java$kotlin$dart$python$golang$swift$nodejs$php$conda${custom.docker}$package${custom.giturl} """
+right_format = """$lua$rust$java$kotlin$dart$python$golang$swift$nodejs$php$conda${custom.docker}$package """
 
 # Adds a new line after the prompt
 add_newline = true
@@ -100,13 +100,16 @@ threshold = 100
 # Services
 ##############################################################################
 
-#[git_commit]
+[git_commit]
+disabled = false
+only_detached = false
+tag_disabled = false
+style = "red"
 
 [git_branch]
 disabled = false
 always_show_remote = true
-style = "bold blue"
-format = "on 🌱:[$branch]($style) 🎋:[$remote_name/$remote_branch]($style) "
+format = "on 🌱:[$branch](bold yellow) 🎋:[$remote_name/$remote_branch](bold blue) "
 
 [git_status]
 disabled = false
@@ -120,15 +123,6 @@ stashed = "📦"
 staged = '🎤\([$count](bold blue)\)'
 renamed = "🐣"
 deleted = "🚮"
-
-[custom.giturl]
-disabled = false
-description = "Display symbol for remote Git server"
-command = "git ls-remote --get-url"
-when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
-shell = ["bash", "--noprofile", "--norc"]
-format = "remote:[$output]($style) "
-style = "bold blue"
 
 [docker_context]
 disabled = false

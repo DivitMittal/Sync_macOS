@@ -4,12 +4,11 @@
 --   Github:    github.com/kyazdani42/nvim-tree.lua
 -- ───────────────────────────────────────────────── --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
+if not vim.g.vscode then
 
-local gl = vim.g
-local keymap = vim.api.nvim_set_keymap
-local options = {noremap = true, silent = true}
+local g       = vim.g
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
-local cmd = vim.cmd -- execute Vim commands
+local cmd     = vim.cmd -- execute Vim commands
 --cmd('autocmd ColorScheme * highlight highlight NvimTreeBg guibg=None')
 --cmd('autocmd FileType NvimTree setlocal winhighlight=Normal:NvimTreeBg')
 
@@ -20,10 +19,10 @@ local cmd = vim.cmd -- execute Vim commands
 -- gl.nvim_tree_auto_ignore_ft        = { 'startify', 'dashboard' }   --empty by default, don't auto open tree on specific filetypes.
 -- gl.nvim_tree_quit_on_open          = 1   --0 by default, closes the tree when you open a file
 -- gl.nvim_tree_follow                = 1   --0 by default, this option allows the cursor to be updated when entering a buffer
-gl.nvim_tree_indent_markers = 1 -- 0 by default, this option shows indent markers when folders are open
+g.nvim_tree_indent_markers = 1 -- 0 by default, this option shows indent markers when folders are open
 -- gl.nvim_tree_hide_dotfiles         = 1   --0 by default, this option hides files and folders starting with a dot `.`
 -- gl.nvim_tree_git_hl                = 1   --0 by default, will enable file highlight for git attributes (can be used without the icons).
-gl.nvim_tree_highlight_opened_files = 1 -- 0 by default, will enable folder and file icon highlight for opened files/directories.
+g.nvim_tree_highlight_opened_files = 1 -- 0 by default, will enable folder and file icon highlight for opened files/directories.
 -- gl.nvim_tree_root_folder_modifier  = ':~'   --This is the default. See :help filename-modifiers for more options
 -- gl.nvim_tree_tab_open              = 1   --0 by default, will open the tree when entering a new tab and the tree was previously open
 -- gl.nvim_tree_auto_resize           = 0   --1 by default, will resize the tree to its saved width when opening a file
@@ -61,7 +60,7 @@ require'nvim-tree'.setup {
 		width = 25,
 		height = 30,
 		hide_root_folder = false,
-		side = 'left',
+		side = 'right',
 		auto_resize = true,
 		mappings = {
 			custom_only = false,
@@ -103,6 +102,13 @@ require'nvim-tree'.setup {
 	},
 }
 
+--------------------------------------------------------------------------------
+--  Mappings
+--------------------------------------------------------------------------------
+local keymap = vim.api.nvim_set_keymap
+local options = {noremap = true, silent = true}
 -- Toggle Nvim-Tree
 keymap('n', '<leader>f', ':NvimTreeToggle<CR>', options)
+
+end
 

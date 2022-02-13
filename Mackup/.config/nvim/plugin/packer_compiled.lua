@@ -75,6 +75,12 @@ _G.packer_plugins = {
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["FTerm.nvim"] = {
+    config = { " require('plugins/fterm_nvim') " },
+    loaded = true,
+    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/FTerm.nvim",
+    url = "https://github.com/numToStr/FTerm.nvim"
+  },
   LuaSnip = {
     config = { " require('plugins/LuaSnip') " },
     loaded = true,
@@ -227,45 +233,38 @@ _G.packer_plugins = {
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["vim-floaterm"] = {
-    config = { " require('plugins/vim-floaterm') " },
+  ["vim-easy-align"] = {
+    config = { " require('plugins/easy-align') " },
     loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/vim-floaterm",
-    url = "https://github.com/voldikss/vim-floaterm"
+    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/vim-easy-align",
+    url = "https://github.com/junegunn/vim-easy-align"
+  },
+  ["vim-indent-detect"] = {
+    config = { " require('plugins/indent-detect') " },
+    loaded = true,
+    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/vim-indent-detect",
+    url = "https://github.com/xi/vim-indent-detect"
+  },
+  ["vim-indent-object"] = {
+    loaded = true,
+    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/vim-indent-object",
+    url = "https://github.com/michaeljsmith/vim-indent-object"
   },
   ["vim-maximizer"] = {
     config = { " require('plugins/vim-maximizer') " },
     loaded = true,
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/vim-maximizer",
     url = "https://github.com/szw/vim-maximizer"
+  },
+  ["vim-sneak"] = {
+    config = { " require('plugins/sneak') " },
+    loaded = true,
+    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/vim-sneak",
+    url = "https://github.com/justinmk/vim-sneak"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: LuaSnip
-time([[Config for LuaSnip]], true)
- require('plugins/LuaSnip') 
-time([[Config for LuaSnip]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
- require('plugins/indent-blankline_nvim') 
-time([[Config for indent-blankline.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
- require('plugins/nvim-treesitter') 
-time([[Config for nvim-treesitter]], false)
--- Config for: rooter.nvim
-time([[Config for rooter.nvim]], true)
- require('plugins/rooter_nvim') 
-time([[Config for rooter.nvim]], false)
--- Config for: surround.nvim
-time([[Config for surround.nvim]], true)
- require('plugins/surround_nvim') 
-time([[Config for surround.nvim]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
- require('plugins/nvim-cmp') 
-time([[Config for nvim-cmp]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
  require('plugins/nvim-colorizer_lua') 
@@ -278,22 +277,26 @@ time([[Config for telescope.nvim]], false)
 time([[Config for nvim-tree.lua]], true)
  require('plugins/nvim-tree_lua') 
 time([[Config for nvim-tree.lua]], false)
--- Config for: vim-floaterm
-time([[Config for vim-floaterm]], true)
- require('plugins/vim-floaterm') 
-time([[Config for vim-floaterm]], false)
--- Config for: nvim-web-devicons
-time([[Config for nvim-web-devicons]], true)
- require('plugins/nvim-web-devicons') 
-time([[Config for nvim-web-devicons]], false)
+-- Config for: vim-easy-align
+time([[Config for vim-easy-align]], true)
+ require('plugins/easy-align') 
+time([[Config for vim-easy-align]], false)
+-- Config for: vim-indent-detect
+time([[Config for vim-indent-detect]], true)
+ require('plugins/indent-detect') 
+time([[Config for vim-indent-detect]], false)
 -- Config for: copilot.vim
 time([[Config for copilot.vim]], true)
  require('plugins/copilot') 
 time([[Config for copilot.vim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
- require('plugins/lualine')
-time([[Config for lualine.nvim]], false)
+-- Config for: nvim-web-devicons
+time([[Config for nvim-web-devicons]], true)
+ require('plugins/nvim-web-devicons') 
+time([[Config for nvim-web-devicons]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+ require('plugins/nvim-treesitter') 
+time([[Config for nvim-treesitter]], false)
 -- Config for: vim-maximizer
 time([[Config for vim-maximizer]], true)
  require('plugins/vim-maximizer') 
@@ -302,14 +305,46 @@ time([[Config for vim-maximizer]], false)
 time([[Config for Comment.nvim]], true)
  require('plugins/Comment_nvim') 
 time([[Config for Comment.nvim]], false)
+-- Config for: vim-sneak
+time([[Config for vim-sneak]], true)
+ require('plugins/sneak') 
+time([[Config for vim-sneak]], false)
+-- Config for: FTerm.nvim
+time([[Config for FTerm.nvim]], true)
+ require('plugins/fterm_nvim') 
+time([[Config for FTerm.nvim]], false)
 -- Config for: pop-punk.vim
 time([[Config for pop-punk.vim]], true)
  require('plugins/pop-punk') 
 time([[Config for pop-punk.vim]], false)
+-- Config for: LuaSnip
+time([[Config for LuaSnip]], true)
+ require('plugins/LuaSnip') 
+time([[Config for LuaSnip]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+ require('plugins/indent-blankline_nvim') 
+time([[Config for indent-blankline.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+ require('plugins/lualine')
+time([[Config for lualine.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
  require('plugins/nvim-autopairs') 
 time([[Config for nvim-autopairs]], false)
+-- Config for: surround.nvim
+time([[Config for surround.nvim]], true)
+ require('plugins/surround_nvim') 
+time([[Config for surround.nvim]], false)
+-- Config for: rooter.nvim
+time([[Config for rooter.nvim]], true)
+ require('plugins/rooter_nvim') 
+time([[Config for rooter.nvim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+ require('plugins/nvim-cmp') 
+time([[Config for nvim-cmp]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
@@ -322,5 +357,6 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
+  error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end

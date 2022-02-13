@@ -12,7 +12,7 @@
 	editor = nvim
 	autocrlf = input
     ignorecase = false
-	excludesfile = /Users/divitmittal/.gitignore
+	excludesfile = ~/.gitignore
 
 [init]
     defaultBranch = master
@@ -36,7 +36,7 @@
 [color "branch"]
 	current = yellow reverse
 	local = yellow
-	remote = green
+	remote = blue
 
 [color "diff"]
 	meta = yellow bold
@@ -46,12 +46,20 @@
 
 [color "status"]
 	added = yellow
-	changed = green
-	untracked = cyan
+	changed = red
+	untracked = white
 
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+
+[alias]
+	st = status
+	last = log -1 HEAD
+	gr = log --graph --all --full-history --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
+	url = ls-remote --get-url
+	ft = fetch --all
+	unstage = restore --staged
 

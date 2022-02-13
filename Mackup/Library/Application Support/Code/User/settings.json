@@ -29,6 +29,10 @@
         "markdown": true
     },
 
+    //Render Line Endings - Extension
+    "code-eol.highlightNonDefault": true,
+    "code-eol.highlightExtraWhitespace": true,
+
     //Code Spell Checker - Extension
     "cSpell.enableFiletypes": ["gas"],
     "cSpell.userWords": [
@@ -50,10 +54,10 @@
         "syscall"
     ],
 
+    //VSCode Neovim - Extension
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",
-    //VSCodeVim - Extension
 
+    //VSCodeVim - Extension
     "vim.surround": false,
     "vim.useSystemClipboard": true,
     "vim.ignorecase": true,
@@ -68,12 +72,8 @@
     "vim.neovimPath": "/usr/local/bin/nvim",
     "vim.enableNeovim": true,
     "vim.neovimUseConfigFile": true,
-    "vim.neovimConfigPath": "/Users/divitmittal/.config/nvim/init.lua",
+    "vim.neovimConfigPath": "~/.config/nvim/init.lua",
     "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["<leader>", "T"],
-            "commands": ["workbench.action.terminal.toggleTerminal"]
-        },
         {
             "before": ["/", "/"],
             "commands": [":nohlsearch"]
@@ -81,34 +81,6 @@
         {
             "before": ["<leader>", "t"],
             "commands": [":tabnew"]
-        },
-        {
-            "before": ["J"],
-            "after": ["5", "j"]
-        },
-        {
-            "before": ["K"],
-            "after": ["5", "k"]
-        },
-        {
-            "before": ["<leader>", "j"],
-            "after": ["J"]
-        },
-        {
-            "before": ["<leader>", "b"],
-            "commands": ["editor.debug.action.toggleBreakpoint"]
-        },
-        {
-            "before": ["<leader>", "f"],
-            "commands": ["workbench.view.explorer"]
-        },
-        {
-            "before": ["<leader>", "m"],
-            "commands": ["bookmarks.toggle"]
-        },
-        {
-            "before": ["<leader>", "m", "l"],
-            "commands": ["bookmarks.list"]
         },
         {
             "before": ["0"],
@@ -133,12 +105,6 @@
             "commands": ["editor.action.moveLinesUpAction"]
         }
     ],
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["q", "i"],
-            "after": ["<Esc>"]
-        }
-    ],
 
     //Python - Extension
     "python.defaultInterpreterPath": "/usr/local/Caskroom/miniconda/base/envs/gen__env/bin/python",
@@ -149,7 +115,8 @@
 
     //Jupyter IPython Notebook - Extension
     "jupyter.allowUnauthorizedRemoteConnection": true,
-    "jupyter.alwaysScrollOnNewCell": true,
+    "jupyter.alwaysScrollOnNewCell": false,
+    "jupyter.themeMatplotlibPlots": true,
 
     //Prettier - Extension
     "prettier.tabWidth": 4,
@@ -176,7 +143,18 @@
     },
 
     //Terminal
-    "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.profiles.osx": {
+        "Fish": {
+            "path": "/usr/local/bin/fish"
+        },
+        "Bash": {
+            "path": "/bin/bash"
+        },
+        "Shell": {
+            "path": "/bin/sh"
+        }
+    },
+    "terminal.integrated.defaultProfile.osx": "Fish",
     "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.inheritEnv": false,
@@ -191,12 +169,14 @@
     "workbench.view.alwaysShowHeaderActions": true,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Noctis High Contrast",
+    "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "none",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#1073cf2d",
         "editor.lineHighlightBorder": "#9fced11f",
         "editorCursor.foreground": "#ff0000",
-        "terminalCursor.foreground": "#ff0000"
+        "terminalCursor.foreground": "#ff0000",
+        "editorWhitespace.foreground": "#ff0000c8"
     },
 
     //Editor
@@ -212,8 +192,6 @@
     "editor.detectIndentation": true,
     "editor.wordWrap": "on",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
     "editor.accessibilitySupport": "off",
     "editor.inlayHints.enabled": false,
     "editor.inlineSuggest.enabled": true,
@@ -222,7 +200,11 @@
     "editor.tabCompletion": "on",
     "editor.stickyTabStops": true,
     "editor.scrollBeyondLastLine": false,
-    "editor.renderWhitespace": "boundary",
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "editor.tokenColorCustomizations": {
+        "comments": "#3c8cfa",
+    },
 
     //Explorer
     "explorer.confirmDelete": false,
@@ -292,5 +274,17 @@
 
     //Update
     "update.mode": "manual",
-    "update.showReleaseNotes": false
+    "update.showReleaseNotes": false,
+
+    //Bookmarks - Extension
+    "bookmarks.useWorkaroundForFormatters": true,
+
+    //File Specific
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+
+    //SCM
+    "scm.alwaysShowRepositories": true,
+    "scm.alwaysShowActions": true,
 }

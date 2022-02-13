@@ -33,10 +33,6 @@ keymap('n', '//', ':nohlsearch <CR>', silent)
 -- To toggle between relative line numbers and absolute line number
 keymap('n', '<leader>n', ':set relativenumber! <CR>', silent)
 
--- going back to normal mode which works even in vim's terminal
--- you will need this if you use floaterm to escape terminal
-keymap('t', '<Esc>', '<c-\\><c-n>', options)
-
 -- scroll window up/down even when in insert mode
 keymap('i', '<C-e>', '<ESC><C-e>', silent)
 keymap('i', '<C-y>', '<ESC><C-y>', silent)
@@ -44,4 +40,8 @@ keymap('i', '<C-y>', '<ESC><C-y>', silent)
 
 -- start of line
 keymap('n', '0', '^', options)
+
+-- new tab
+keymap('n', 'tn', ':tabnew <CR>', options)
+keymap('n', 'tq', ':tabclose <CR>', options)
 

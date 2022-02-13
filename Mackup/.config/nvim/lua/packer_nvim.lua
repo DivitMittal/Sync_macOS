@@ -16,14 +16,6 @@ return packer.startup {
 			'wbthomason/packer.nvim'
 		}
 
-		use { -- Speed up loading Lua modules in Neovim to improve startup time.
-			'lewis6991/impatient.nvim'
-		}
-
-		use { -- Easily speed up your neovim startup time!. A faster version of filetype.vim
-			'nathom/filetype.nvim'
-		}
-
 		use { -- Theme/Colorscheme
 			'bignimbus/pop-punk.vim',
 			config = [[ require('plugins/pop-punk') ]]
@@ -75,11 +67,6 @@ return packer.startup {
 			config = [[ require('plugins/telescope_nvim') ]],
 		}
 
-		use { -- Use (neo)vim terminal in the floating/popup window.
-			'voldikss/vim-floaterm',
-			config = [[ require('plugins/vim-floaterm') ]],
-		}
-
 		use { -- lua `fork` of vim-web-devicons for neovim
 			'kyazdani42/nvim-web-devicons',
 			config = [[ require('plugins/nvim-web-devicons') ]],
@@ -100,11 +87,6 @@ return packer.startup {
 			config = [[ require('plugins/indent-blankline_nvim') ]],
 		}
 
-		use { -- to change current working directory to project's root directory.
-			'ygm2/rooter.nvim',
-			config = [[ require('plugins/rooter_nvim') ]],
-		}
-
 		use { -- File Explorer
 			'kyazdani42/nvim-tree.lua',
 			config = [[ require('plugins/nvim-tree_lua') ]],
@@ -121,16 +103,52 @@ return packer.startup {
 			config = [[ require('plugins/copilot') ]],
 		}
 
-		use { -- Smart and powerful comment plugin for neovim. Supports commentstring, dot repeat, left-right/up-down motions, hooks, and more
+		use { -- Floating terminal window
+			'numToStr/FTerm.nvim',
+			config = [[ require('plugins/fterm_nvim') ]]
+		}
+
+		use { -- Fast motion in the buffer
+			'justinmk/vim-sneak',
+			config = [[ require('plugins/sneak') ]]
+		}
+
+		use { -- Speed up loading Lua modules in Neovim to improve startup time.
+			'lewis6991/impatient.nvim'
+		}
+
+		use { -- Easily speed up your neovim startup time
+			'nathom/filetype.nvim'
+		}
+
+		use { -- to change current working directory to project's root directory
+			'ygm2/rooter.nvim',
+			config = [[ require('plugins/rooter_nvim') ]],
+		}
+
+		use { -- Smart and powerful comment plugin
 			'numToStr/Comment.nvim',
 			config = [[ require('plugins/Comment_nvim') ]]
 		}
 
-		use { -- A surround text object plugin for neovim written in lua.
+		use { -- A surround text plugin
 			'blackcauldron7/surround.nvim',
 			config = [[ require('plugins/surround_nvim') ]]
 		}
 
+		use { -- Indentation select and modify plugin
+			'michaeljsmith/vim-indent-object',
+		}
+
+		use { -- Align text with respect to a character
+			'junegunn/vim-easy-align',
+			config = [[ require('plugins/easy-align') ]]
+		}
+
+		use { -- Detect
+			'xi/vim-indent-detect',
+			config = [[ require('plugins/indent-detect') ]]
+		}
 	end,
 
 	config = {

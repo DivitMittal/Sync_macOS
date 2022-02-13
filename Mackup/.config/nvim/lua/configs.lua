@@ -11,85 +11,90 @@
 --]]
 
 local exec = vim.api.nvim_exec -- execute Vimscript
-local set = vim.opt -- global options
-local cmd = vim.cmd -- execute Vim commands
-local fn = vim.fn    -- call Vim functions
--- local g     = vim.g             -- global variables
+local set  = vim.opt -- global options
+local cmd  = vim.cmd -- execute Vim commands
+local fn   = vim.fn    -- call Vim functions
+local g    = vim.g             -- global variables
 -- local b     = vim.bo            -- buffer-scoped options
 -- local w     = vim.wo            -- windows-scoped options
 
-set.termguicolors = true -- Enable GUI colors for the terminal to get truecolor
-set.list = true -- show whitespace
-set.listchars = {
-	nbsp = '⦸', -- CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
-	extends = '»', -- RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00BB, UTF-8: C2 BB)
-	precedes = '«', -- LEFT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00AB, UTF-8: C2 AB)
-	tab = '  ', -- '▷─' WHITE RIGHT-POINTING TRIANGLE (U+25B7, UTF-8: E2 96 B7) + BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL (U+2505, UTF-8: E2 94 85)
-	trail = '•', -- BULLET (U+2022, UTF-8: E2 80 A2)
-	space = ' ',
-}
+if not g.vscode then
+    set.termguicolors = true -- Enable GUI colors for the terminal to get truecolor
+    set.list          = true -- show whitespace
+    set.listchars     = {
+        nbsp          = '␣',
+        extends       = '»',
+        precedes      = '«',
+        tab           = '|-',
+        trail         = '•',
+        space         = '·',
+        eol           = 'ꜜ',
+    }
 
-set.fillchars = {
-	diff = '∙', -- BULLET OPERATOR (U+2219, UTF-8: E2 88 99)
-	eob = ' ', -- NO-BREAK SPACE (U+00A0, UTF-8: C2 A0) to suppress ~ at EndOfBuffer
-	fold = '·', -- MIDDLE DOT (U+00B7, UTF-8: C2 B7)
-	vert = ' ', -- remove ugly vertical lines on window division
-}
+    set.fillchars = {
+        diff      = '∙',
+        eob       = ' ', -- NO-BREAK SPACE (U+00A0, UTF-8: C2 A0) to suppress ~ at EndOfBuffer
+        fold      = '·',
+        vert      = ' ', -- remove ugly vertical lines on window division
+    }
 
-if root then
-	set.shada = '' -- Don't create root-owned files.
-	set.shadafile = 'NONE'
-else
-	local backup_dir = fn.expand('~/.cache/nvim')
-	set.backup = true -- make backups before writing
-	set.undofile = true -- persistent undos - undo after you re-open the file
-	set.writebackup = true -- Make backup before overwriting the current buffer
-	set.backupcopy = 'yes' -- Overwrite the original backup file
-	set.directory = backup_dir .. '/swap' -- directory to place swap files in
-	set.backupdir = backup_dir .. '/backedUP' -- where to put backup files
-	set.undodir = backup_dir .. '/undos' -- where to put undo files
-	set.viewdir = backup_dir .. '/view' -- where to store files for :mkview
-	set.shada = "'100,<50,f50,n~/.cache/nvim/shada/shada"
+    if root then
+        set.shada        = '' -- Don't create root-owned files.
+        set.shadafile    = 'NONE'
+    else
+        local backup_dir = fn.expand('~/.cache/nvim')
+        set.backup       = false -- make backups before writing
+        set.undofile     = false -- persistent undos - undo after you re-open the file
+        set.writebackup  = false -- Make backup before overwriting the current buffer
+        set.backupcopy   = 'yes' -- Overwrite the original backup file
+        set.directory    = backup_dir .. '/swap' -- directory to place swap files in
+        set.backupdir    = backup_dir .. '/backedUP' -- where to put backup files
+        set.undodir      = backup_dir .. '/undos' -- where to put undo files
+        set.viewdir      = backup_dir .. '/view' -- where to store files for :mkview
+        set.shada        = "'100,<50,f50,n~/.cache/nvim/shada/shada"
+    end
+
+    set.wrap           = true -- automatically wrap on load
+    set.breakindent    = true -- automatically break lines on load with respect to indent
+    set.showbreak      = '↪' -- prepend broken lines with this character
+    set.cursorcolumn   = true -- highlight current column
+    set.cursorline     = true -- highlight current line
+    set.number         = true -- show line numbers
+    set.relativenumber = true -- show relative line number
+    set.mouse          = 'a'		-- turn on mouse interaction
+    set.laststatus     = 2 -- always show status line
+    set.wildignore     = set.wildignore + '*.o,*.rej,*.so' -- patterns to ignore during file-navigation
+    --  set.scrolloff = 1 -- when scrolling, keep cursor 1 lines away from screen border
+    --  set.sidescrolloff = 2 -- keep 30 columns visible left and right of the cursor at all times
+    set.backspace      = 'indent,start,eol' -- make backspace behave like normal again
+    set.lazyredraw     = true -- faster scrolling
+    set.expandtab      = true -- expand tabs into spaces
+    set.updatetime     = 1000 -- CursorHold interval
+    set.completeopt    = 'menuone,noselect,noinsert' -- completion options
+    set.inccommand     = 'split' -- live preview of :s results
 end
 
-set.clipboard = set.clipboard + "unnamedplus" -- copy & paste
-set.wrap = false -- don't automatically wrap on load
-set.showmatch = true -- show the matching part of the pair for [] {} and ()
+set.clipboard   = set.clipboard + "unnamedplus" -- copy & paste
+set.showmatch   = true -- show the matching part of the pair for [] {} and ()
 
-set.cursorline = true -- highlight current line
-set.cursorcolumn = true -- highlight current column
-set.number = true -- show line numbers
-set.relativenumber = true -- show relative line number
+set.incsearch   = true -- incremental search
+set.hlsearch    = true -- highlighted search results
+set.ignorecase  = true -- ignore case sensetive while searching
+set.smartcase   = true -- being smart about ignoring case when using ignorecase
 
-set.incsearch = true -- incremental search
-set.hlsearch = true -- highlighted search results
-set.ignorecase = true -- ignore case sensetive while searching
-set.smartcase = true -- being smart about ignoring case when using ignorecase
+set.shiftround  = true -- round shiftwidth to the nearest multiple of shiftwidth
+set.shiftwidth  = 4 -- spaces per tab (when shifting), when using the >> or << commands, shift lines by 4 spaces
 
-set.scrolloff = 1 -- when scrolling, keep cursor 1 lines away from screen border
-set.sidescrolloff = 2 -- keep 30 columns visible left and right of the cursor at all times
-set.backspace = 'indent,start,eol' -- make backspace behave like normal again
-set.mouse = 'a'		-- turn on mouse interaction
-set.updatetime = 500 -- CursorHold interval
+set.tabstop     = 4 -- actual spaces which are considered a tab
+set.softtabstop = 4 -- how many spaces are inserted and delted when pressing tab and bs respectively
+set.smarttab    = true -- <tab>/<BS> indent/dedent in leading whitespace
+set.autoindent  = true -- maintain indent of current line
+set.smartindent = true -- indent the current line according to the previous line
 
-set.softtabstop = 4
-set.shiftwidth = 4 -- spaces per tab (when shifting), when using the >> or << commands, shift lines by 4 spaces
-set.tabstop = 4 -- spaces per tab
-set.smarttab = true -- <tab>/<BS> indent/dedent in leading whitespace
-set.autoindent = true -- maintain indent of current line
-set.expandtab = false -- don't expand tabs into spaces
-set.shiftround = true
+set.shell       = '/bin/bash' -- shell to use for `!`, `:!`, `system()` etc.
 
-set.shell = '/bin/bash' -- shell to use for `!`, `:!`, `system()` etc.
-set.lazyredraw = true -- faster scrolling
-set.inccommand = 'split' -- live preview of :s results
-
-set.splitbelow = true -- open horizontal splits below current window
-set.splitright = true -- open vertical splits to the right of the current window
-set.laststatus = 2 -- always show status line
-
-set.wildignore = set.wildignore + '*.o,*.rej,*.so' -- patterns to ignore during file-navigation
-set.completeopt = 'menuone,noselect,noinsert' -- completion options
+set.splitbelow  = true -- open horizontal splits below current window
+set.splitright  = true -- open vertical splits to the right of the current window
 
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━━❰ Automate ❱━━━━━━━━━━━━━━━━━━━━ --

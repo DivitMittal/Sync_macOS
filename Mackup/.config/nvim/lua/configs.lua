@@ -56,7 +56,6 @@ if not g.vscode then
 
     set.wrap           = true -- automatically wrap on load
     set.breakindent    = true -- automatically break lines on load with respect to indent
-    set.showbreak      = '↪' -- prepend broken lines with this character
     set.cursorcolumn   = true -- highlight current column
     set.cursorline     = true -- highlight current line
     set.number         = true -- show line numbers

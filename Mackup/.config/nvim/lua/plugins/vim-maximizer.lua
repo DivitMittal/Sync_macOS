@@ -20,7 +20,7 @@ vim.g.maximizer_set_default_mapping = 0
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 
 local keymap = vim.api.nvim_set_keymap
-keymap('n', 'm', ':MaximizerToggle <CR>', {silent = true, noremap = true})
+keymap('n', '<leader>m', ':MaximizerToggle <CR>', {silent = true, noremap = true})
 
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━❰ end Mappings ❱━━━━━━━━━━━━━━━━ --

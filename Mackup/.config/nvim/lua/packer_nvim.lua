@@ -145,7 +145,7 @@ return packer.startup {
 			config = [[ require('plugins/easy-align') ]]
 		}
 
-		use { -- Detect
+		use { -- Detect indentation style
 			'xi/vim-indent-detect',
 			config = [[ require('plugins/indent-detect') ]]
 		}

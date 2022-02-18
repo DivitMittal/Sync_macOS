@@ -265,50 +265,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
- require('plugins/nvim-colorizer_lua') 
-time([[Config for nvim-colorizer.lua]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
- require('plugins/telescope_nvim') 
-time([[Config for telescope.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
- require('plugins/nvim-tree_lua') 
-time([[Config for nvim-tree.lua]], false)
--- Config for: vim-easy-align
-time([[Config for vim-easy-align]], true)
- require('plugins/easy-align') 
-time([[Config for vim-easy-align]], false)
--- Config for: vim-indent-detect
-time([[Config for vim-indent-detect]], true)
- require('plugins/indent-detect') 
-time([[Config for vim-indent-detect]], false)
--- Config for: copilot.vim
-time([[Config for copilot.vim]], true)
- require('plugins/copilot') 
-time([[Config for copilot.vim]], false)
--- Config for: nvim-web-devicons
-time([[Config for nvim-web-devicons]], true)
- require('plugins/nvim-web-devicons') 
-time([[Config for nvim-web-devicons]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
- require('plugins/nvim-treesitter') 
-time([[Config for nvim-treesitter]], false)
--- Config for: vim-maximizer
-time([[Config for vim-maximizer]], true)
- require('plugins/vim-maximizer') 
-time([[Config for vim-maximizer]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
- require('plugins/Comment_nvim') 
-time([[Config for Comment.nvim]], false)
--- Config for: vim-sneak
-time([[Config for vim-sneak]], true)
- require('plugins/sneak') 
-time([[Config for vim-sneak]], false)
 -- Config for: FTerm.nvim
 time([[Config for FTerm.nvim]], true)
  require('plugins/fterm_nvim') 
@@ -329,22 +285,66 @@ time([[Config for indent-blankline.nvim]], false)
 time([[Config for lualine.nvim]], true)
  require('plugins/lualine')
 time([[Config for lualine.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
- require('plugins/nvim-autopairs') 
-time([[Config for nvim-autopairs]], false)
 -- Config for: surround.nvim
 time([[Config for surround.nvim]], true)
  require('plugins/surround_nvim') 
 time([[Config for surround.nvim]], false)
--- Config for: rooter.nvim
-time([[Config for rooter.nvim]], true)
- require('plugins/rooter_nvim') 
-time([[Config for rooter.nvim]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
  require('plugins/nvim-cmp') 
 time([[Config for nvim-cmp]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+ require('plugins/nvim-colorizer_lua') 
+time([[Config for nvim-colorizer.lua]], false)
+-- Config for: vim-indent-detect
+time([[Config for vim-indent-detect]], true)
+ require('plugins/indent-detect') 
+time([[Config for vim-indent-detect]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+ require('plugins/nvim-tree_lua') 
+time([[Config for nvim-tree.lua]], false)
+-- Config for: vim-easy-align
+time([[Config for vim-easy-align]], true)
+ require('plugins/easy-align') 
+time([[Config for vim-easy-align]], false)
+-- Config for: vim-maximizer
+time([[Config for vim-maximizer]], true)
+ require('plugins/vim-maximizer') 
+time([[Config for vim-maximizer]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+ require('plugins/telescope_nvim') 
+time([[Config for telescope.nvim]], false)
+-- Config for: copilot.vim
+time([[Config for copilot.vim]], true)
+ require('plugins/copilot') 
+time([[Config for copilot.vim]], false)
+-- Config for: vim-sneak
+time([[Config for vim-sneak]], true)
+ require('plugins/sneak') 
+time([[Config for vim-sneak]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+ require('plugins/nvim-treesitter') 
+time([[Config for nvim-treesitter]], false)
+-- Config for: rooter.nvim
+time([[Config for rooter.nvim]], true)
+ require('plugins/rooter_nvim') 
+time([[Config for rooter.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+ require('plugins/nvim-autopairs') 
+time([[Config for nvim-autopairs]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+ require('plugins/Comment_nvim') 
+time([[Config for Comment.nvim]], false)
+-- Config for: nvim-web-devicons
+time([[Config for nvim-web-devicons]], true)
+ require('plugins/nvim-web-devicons') 
+time([[Config for nvim-web-devicons]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads

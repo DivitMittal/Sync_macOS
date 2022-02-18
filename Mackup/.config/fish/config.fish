@@ -89,11 +89,6 @@ alias cleanup_DS="find . -type f -name '*.DS_Store' -ls -delete"
 # Also, clear Apple’s System Logs to improve shell startup speed.
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
-# Confirm before overwriting more than 3 files
-alias cp='cp -I'
-alias mv='mv -I'
-alias rm='rm -I'
-
 # Typing Test and you must have Lemnos/tt installed
 alias tt="command tt -t 30 -n 50 --theme homebrew"
 

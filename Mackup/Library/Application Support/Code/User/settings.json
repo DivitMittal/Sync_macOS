@@ -6,20 +6,16 @@
 
     //Security
     "security.workspace.trust.enabled": false,
-    "security.workspace.trust.banner": "never",
     "security.workspace.trust.emptyWindow": false,
+    "security.workspace.trust.banner": "never",
     "security.workspace.trust.startupPrompt": "never",
 
     //Telemetry
     "telemetry.telemetryLevel": "off",
 
     //Customize UI - Extension
-    "customizeUI.activityBar": "bottom",
     "customizeUI.titleBar": "frameless",
-    "customizeUI.listRowHeight": 20,
-    "customizeUI.stylesheet": {
-        ".monaco-workbench .part.statusbar>.items-container": "font-size: 14px;"
-    },
+    "customizeUI.activityBar": "bottom",
 
     //Github CoPilot - Extension
     "github.copilot.enable": {
@@ -28,10 +24,6 @@
         "plaintext": true,
         "markdown": true
     },
-
-    //Render Line Endings - Extension
-    "code-eol.highlightNonDefault": true,
-    "code-eol.highlightExtraWhitespace": true,
 
     //Code Spell Checker - Extension
     "cSpell.enableFiletypes": ["gas"],
@@ -57,59 +49,10 @@
     //VSCode Neovim - Extension
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
 
-    //VSCodeVim - Extension
-    "vim.surround": false,
-    "vim.useSystemClipboard": true,
-    "vim.ignorecase": true,
-    "vim.smartcase": true,
-    "vim.hlsearch": true,
-    "vim.leader": ";",
-    "vim.highlightedyank.enable": true,
-    "vim.incsearch": true,
-    "vim.showmodename": true,
-    "vim.showcmd": true,
-    "vim.useCtrlKeys": true,
-    "vim.neovimPath": "/usr/local/bin/nvim",
-    "vim.enableNeovim": true,
-    "vim.neovimUseConfigFile": true,
-    "vim.neovimConfigPath": "~/.config/nvim/init.lua",
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["/", "/"],
-            "commands": [":nohlsearch"]
-        },
-        {
-            "before": ["<leader>", "t"],
-            "commands": [":tabnew"]
-        },
-        {
-            "before": ["0"],
-            "after": ["^"]
-        }
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": [">"],
-            "commands": ["editor.action.indentLines"]
-        },
-        {
-            "before": ["<"],
-            "commands": ["editor.action.outdentLines"]
-        },
-        {
-            "before": ["J"],
-            "commands": ["editor.action.moveLinesDownAction"]
-        },
-        {
-            "before": ["K"],
-            "commands": ["editor.action.moveLinesUpAction"]
-        }
-    ],
-
     //Python - Extension
     "python.defaultInterpreterPath": "/usr/local/Caskroom/miniconda/base/envs/gen__env/bin/python",
-    "python.linting.pylintEnabled": false,
     "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": false,
     "python.linting.banditEnabled": true,
 
@@ -130,11 +73,11 @@
 
     //Files
     "files.eol": "\n",
+    "files.autoSave": "afterDelay",
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
     "files.simpleDialog.enable": true,
-    "files.autoSave": "afterDelay",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -162,49 +105,53 @@
 
     //Workbench
     "workbench.enableExperiments": false,
-    "workbench.activityBar.iconClickBehavior": "focus",
     "workbench.tips.enabled": false,
-    "workbench.editor.untitled.hint": "hidden",
-    "workbench.sideBar.location": "right",
     "workbench.view.alwaysShowHeaderActions": true,
+    "workbench.activityBar.iconClickBehavior": "focus",
+    "workbench.editor.untitled.hint": "hidden",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Noctis High Contrast",
     "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Noctis High Contrast",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#1073cf2d",
         "editor.lineHighlightBorder": "#9fced11f",
         "editorCursor.foreground": "#ff0000",
         "terminalCursor.foreground": "#ff0000",
-        "editorWhitespace.foreground": "#ff0000c8"
+        "editorWhitespace.foreground": "#ffffffc8"
     },
+    "workbench.sideBar.location": "right",
 
     //Editor
+    "editor.largeFileOptimizations": false,
     "editor.lineNumbers": "relative",
+    "editor.renderLineHighlight": "none",
     "editor.cursorBlinking": "smooth",
     "editor.minimap.renderCharacters": false,
-    "editor.minimap.maxColumn": 100,
+    "editor.minimap.enabled": false,
+    "editor.minimap.maxColumn": 50,
     "editor.quickSuggestionsDelay": 5,
     "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
     "editor.fontSize": 16,
     "editor.fontLigatures": true,
-    "editor.tabSize": 4,
-    "editor.detectIndentation": true,
-    "editor.wordWrap": "on",
+    "editor.wordWrap": "off",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.accessibilitySupport": "off",
-    "editor.inlayHints.enabled": false,
+    "editor.inlayHints.enabled": true,
     "editor.inlineSuggest.enabled": true,
     "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": "active",
+    //"editor.guides.bracketPairs": "active",
     "editor.tabCompletion": "on",
     "editor.stickyTabStops": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true,
     "editor.scrollBeyondLastLine": false,
     "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": true,
     "editor.tokenColorCustomizations": {
-        "comments": "#3c8cfa",
+        "comments": "#3c8cfa"
     },
+    "editor.colorDecorators": false,
 
     //Explorer
     "explorer.confirmDelete": false,
@@ -283,8 +230,16 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
 
     //SCM
     "scm.alwaysShowRepositories": true,
     "scm.alwaysShowActions": true,
+
+    //Render Line Endings - Extension
+    "code-eol.highlightExtraWhitespace": true,
+    "code-eol.highlightNonDefault": true,
+    "latex-workshop.view.pdf.viewer": "tab",
 }

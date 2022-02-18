@@ -2,7 +2,6 @@ local g = vim.g
 -- ───────────────────────────────────────────────── --
 -- ────────────────❰ Leader Mapping ❱─────────────── --
 -- mapping leader here. it will work for every mapped
-
 g.mapleader = ';'
 g.maplocalleader = '|'
 -- ───────────────────────────────────────────────── --

@@ -54,10 +54,10 @@ if not g.vscode then
         set.shada        = "'100,<50,f50,n~/.cache/nvim/shada/shada"
     end
 
-    set.wrap           = true -- automatically wrap on load
+    set.wrap           = false -- automatically wrap on load
     set.breakindent    = true -- automatically break lines on load with respect to indent
-    set.cursorcolumn   = true -- highlight current column
-    set.cursorline     = true -- highlight current line
+    -- set.cursorcolumn   = true -- highlight current column
+    -- set.cursorline     = true -- highlight current line
     set.number         = true -- show line numbers
     set.relativenumber = true -- show relative line number
     set.mouse          = 'a'		-- turn on mouse interaction
@@ -71,6 +71,32 @@ if not g.vscode then
     set.updatetime     = 1000 -- CursorHold interval
     set.completeopt    = 'menuone,noselect,noinsert' -- completion options
     set.inccommand     = 'split' -- live preview of :s results
+	set.tabstop     = 4 -- actual spaces which are considered a tab
+	set.smarttab    = true -- <tab>/<BS> indent/dedent in leading whitespace
+
+	-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
+	-- ━━━━━━━━━━━━━━━━━━━❰ Automate ❱━━━━━━━━━━━━━━━━━━━━ --
+
+	-- highlight on yank
+	exec([[
+		augroup YankHighlight
+			autocmd!
+			autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=500, on_visual=true}
+		augroup end
+	]], false)
+
+	-- jump to the last position when reopening a file
+	cmd([[
+		if has("autocmd")
+			au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+		endif
+	]])
+
+	-- remove whitespace on save
+	cmd([[au BufWritePre * :%s/\s\+$//e]])
+
+	-- don't auto commenting new lines
+	cmd([[au BufEnter * set fo-=c fo-=r fo-=o]])
 end
 
 set.clipboard   = set.clipboard + "unnamedplus" -- copy & paste
@@ -84,38 +110,12 @@ set.smartcase   = true -- being smart about ignoring case when using ignorecase
 set.shiftround  = true -- round shiftwidth to the nearest multiple of shiftwidth
 set.shiftwidth  = 4 -- spaces per tab (when shifting), when using the >> or << commands, shift lines by 4 spaces
 
-set.tabstop     = 4 -- actual spaces which are considered a tab
 set.softtabstop = 4 -- how many spaces are inserted and delted when pressing tab and bs respectively
-set.smarttab    = true -- <tab>/<BS> indent/dedent in leading whitespace
-set.autoindent  = true -- maintain indent of current line
 set.smartindent = true -- indent the current line according to the previous line
+set.autoindent  = true -- maintain indent of current line
 
 set.shell       = '/bin/bash' -- shell to use for `!`, `:!`, `system()` etc.
 
 set.splitbelow  = true -- open horizontal splits below current window
 set.splitright  = true -- open vertical splits to the right of the current window
-
--- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
--- ━━━━━━━━━━━━━━━━━━━❰ Automate ❱━━━━━━━━━━━━━━━━━━━━ --
-
--- highlight on yank
-exec([[
-	augroup YankHighlight
-		autocmd!
-    	autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=500, on_visual=true}
-	augroup end
-]], false)
-
--- jump to the last position when reopening a file
-cmd([[
-	if has("autocmd")
-		au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-	endif
-]])
-
--- remove whitespace on save
-cmd([[au BufWritePre * :%s/\s\+$//e]])
-
--- don't auto commenting new lines
-cmd([[au BufEnter * set fo-=c fo-=r fo-=o]])
 

@@ -101,7 +101,7 @@ threshold = 100
 ##############################################################################
 
 [git_commit]
-disabled = false
+disabled = true
 only_detached = false
 tag_disabled = false
 style = "red"
@@ -125,7 +125,7 @@ renamed = "🐣"
 deleted = "🚮"
 
 [docker_context]
-disabled = false
+disabled = true
 
 # To supress anaconda's own prompt moddifer, run,  conda config --set changeps1 False
 [conda]

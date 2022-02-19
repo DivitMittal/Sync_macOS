@@ -16,6 +16,14 @@ return packer.startup {
 			'wbthomason/packer.nvim'
 		}
 
+		use { -- Speed up loading Lua modules in Neovim to improve startup time.
+			'lewis6991/impatient.nvim'
+		}
+
+		use { -- Easily speed up your neovim startup time
+			'nathom/filetype.nvim'
+		}
+
 		use { -- Theme/Colorscheme
 			'bignimbus/pop-punk.vim',
 			config = [[ require('plugins/pop-punk') ]]
@@ -31,30 +39,12 @@ return packer.startup {
 			config = [[ require('plugins/nvim-treesitter') ]],
 		}
 
-		use { -- A completion plugin for neovim coded in Lua.
-			'hrsh7th/nvim-cmp',
-			requires = {
-				"hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for neovim builtin LSP client
-				{"hrsh7th/cmp-nvim-lua", ft = 'lua'}, -- nvim-cmp source for nvim lua
-				"hrsh7th/cmp-buffer", -- nvim-cmp source for buffer words.
-				"hrsh7th/cmp-path", -- nvim-cmp source for filesystem paths.
-				-- "hrsh7th/cmp-calc", -- nvim-cmp source for math calculation.
-				"saadparwaiz1/cmp_luasnip" -- luasnip completion source for nvim-cmp
-			},
-			config = [[ require('plugins/nvim-cmp') ]],
-		}
-
 		use { -- Snippet Engine for Neovim written in Lua.
 			'L3MON4D3/LuaSnip',
 			requires = {
 				"rafamadriz/friendly-snippets" -- Snippets collection for a set of different programming languages for faster development.
 			},
 			config = [[ require('plugins/LuaSnip') ]],
-		}
-
-		use { -- A super powerful autopairs for Neovim. It support multiple character.
-			'windwp/nvim-autopairs',
-			config = [[ require('plugins/nvim-autopairs') ]],
 		}
 
 		use { -- Find, Filter, Preview, Pick. All lua, all the time.
@@ -74,7 +64,7 @@ return packer.startup {
 
 		use { -- The fastest Neovim colorizer.
 			'norcalli/nvim-colorizer.lua',
-			config = [[ require('plugins/nvim-colorizer_lua') ]],
+			config = [[ require('plugins/nvim-colorizer') ]],
 		}
 
 		use { -- Maximizes and restores the current window in Vim
@@ -82,14 +72,9 @@ return packer.startup {
 			config = [[ require('plugins/vim-maximizer') ]],
 		}
 
-		use { -- Adds indentation lines
-			'lukas-reineke/indent-blankline.nvim',
-			config = [[ require('plugins/indent-blankline_nvim') ]],
-		}
-
 		use { -- File Explorer
 			'kyazdani42/nvim-tree.lua',
-			config = [[ require('plugins/nvim-tree_lua') ]],
+			config = [[ require('plugins/nvim-tree') ]],
 		}
 
 		use { -- Status Line
@@ -108,36 +93,14 @@ return packer.startup {
 			config = [[ require('plugins/fterm_nvim') ]]
 		}
 
-		use { -- Fast motion in the buffer
-			'justinmk/vim-sneak',
-			config = [[ require('plugins/sneak') ]]
+		use { -- Jump/Hop to a location in buffer
+			'phaazon/hop.nvim',
+			config = [[ require('plugins/hop') ]]
 		}
 
-		use { -- Speed up loading Lua modules in Neovim to improve startup time.
-			'lewis6991/impatient.nvim'
-		}
-
-		use { -- Easily speed up your neovim startup time
-			'nathom/filetype.nvim'
-		}
-
-		use { -- to change current working directory to project's root directory
+		use { -- Change current working directory to project's root directory
 			'ygm2/rooter.nvim',
 			config = [[ require('plugins/rooter_nvim') ]],
-		}
-
-		use { -- Smart and powerful comment plugin
-			'numToStr/Comment.nvim',
-			config = [[ require('plugins/Comment_nvim') ]]
-		}
-
-		use { -- A surround text plugin
-			'blackcauldron7/surround.nvim',
-			config = [[ require('plugins/surround_nvim') ]]
-		}
-
-		use { -- Indentation select and modify plugin
-			'michaeljsmith/vim-indent-object',
 		}
 
 		use { -- Align text with respect to a character
@@ -146,9 +109,15 @@ return packer.startup {
 		}
 
 		use { -- Detect indentation style
-			'xi/vim-indent-detect',
-			config = [[ require('plugins/indent-detect') ]]
+			'Darazaki/indent-o-matic',
+			config = [[ require('plugins/indent-o-matic') ]]
 		}
+
+		use { -- Bunch of nvim plugs
+			'echasnovski/mini.nvim',
+			config = [[ require('plugins/mini') ]]
+		}
+
 	end,
 
 	config = {

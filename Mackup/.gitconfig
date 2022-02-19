@@ -1,65 +1,65 @@
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+	smudge        = git-lfs smudge -- %f
+	process       = git-lfs filter-process
+	required      = true
+	clean         = git-lfs clean -- %f
 
 [user]
-	name = Divit Mittal
-	email = d.mittal-1@student.tudelft.nl
+	name          = Divit Mittal
+	email         = d.mittal-1@student.tudelft.nl
 
 [core]
-	editor = nvim
-	autocrlf = input
-    ignorecase = false
-	excludesfile = ~/.gitignore
+	editor        = nvim
+	autocrlf      = input
+	ignorecase    = false
+	excludesfile  = ~/.gitignore
 
 [init]
-    defaultBranch = master
+	defaultBranch = master
 
 [push]
-    default = simple
-    followTags = true
+	default       = simple
+	followTags    = true
 
 [fetch]
-    prune = true
+	prune         = true
 
 [grep]
-    lineNumber = true
+	lineNumber    = true
 
 [help]
-    autocorrect = 1
+	autocorrect   = 1
 
 [color]
-	ui = auto
+	ui            = auto
 
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = blue
+	current       = yellow reverse
+	local         = yellow
+	remote        = blue
 
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+	meta          = yellow bold
+	frag          = magenta bold
+	old           = red bold
+	new           = green bold
 
 [color "status"]
-	added = yellow
-	changed = red
-	untracked = white
+	added         = yellow
+	changed       = red
+	untracked     = white
 
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+	oldNormal     = red bold
+	oldHighlight  = red bold 52
+	newNormal     = green bold
+	newHighlight  = green bold 22
 
 [alias]
-	st = status
-	last = log -1 HEAD
-	gr = log --graph --all --full-history --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
-	url = ls-remote --get-url
-	ft = fetch --all
-	unstage = restore --staged
+	st            = status
+	last          = log -1 HEAD
+	gr            = log --graph --all --full-history --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
+	url           = ls-remote --get-url
+	ft            = fetch --all
+	unstage       = restore --staged
 

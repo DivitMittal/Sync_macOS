@@ -71,8 +71,8 @@ if not g.vscode then
     set.updatetime     = 1000 -- CursorHold interval
     set.completeopt    = 'menuone,noselect,noinsert' -- completion options
     set.inccommand     = 'split' -- live preview of :s results
-	set.tabstop     = 4 -- actual spaces which are considered a tab
-	set.smarttab    = true -- <tab>/<BS> indent/dedent in leading whitespace
+	set.tabstop        = 4 -- actual spaces which are considered a tab
+	set.smarttab       = true -- <tab>/<BS> indent/dedent in leading whitespace
 
 	-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 	-- ━━━━━━━━━━━━━━━━━━━❰ Automate ❱━━━━━━━━━━━━━━━━━━━━ --

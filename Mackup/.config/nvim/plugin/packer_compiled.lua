@@ -69,12 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["Comment.nvim"] = {
-    config = { " require('plugins/Comment_nvim') " },
-    loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/Comment.nvim",
-    url = "https://github.com/numToStr/Comment.nvim"
-  },
   ["FTerm.nvim"] = {
     config = { " require('plugins/fterm_nvim') " },
     loaded = true,
@@ -86,34 +80,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
-  },
-  ["cmp-buffer"] = {
-    loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/cmp-buffer",
-    url = "https://github.com/hrsh7th/cmp-buffer"
-  },
-  ["cmp-nvim-lsp"] = {
-    loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["cmp-nvim-lua"] = {
-    after_files = { "/Users/divitmittal/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lua/after/plugin/cmp_nvim_lua.lua" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lua",
-    url = "https://github.com/hrsh7th/cmp-nvim-lua"
-  },
-  ["cmp-path"] = {
-    loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
-  },
-  cmp_luasnip = {
-    loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
-    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["copilot.vim"] = {
     config = { " require('plugins/copilot') " },
@@ -131,16 +97,22 @@ _G.packer_plugins = {
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["hop.nvim"] = {
+    config = { " require('plugins/hop') " },
+    loaded = true,
+    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    url = "https://github.com/phaazon/hop.nvim"
+  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
   },
-  ["indent-blankline.nvim"] = {
-    config = { " require('plugins/indent-blankline_nvim') " },
+  ["indent-o-matic"] = {
+    config = { " require('plugins/indent-o-matic') " },
     loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
-    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/indent-o-matic",
+    url = "https://github.com/Darazaki/indent-o-matic"
   },
   ["lualine.nvim"] = {
     config = { " require('plugins/lualine')" },
@@ -148,26 +120,20 @@ _G.packer_plugins = {
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["nvim-autopairs"] = {
-    config = { " require('plugins/nvim-autopairs') " },
+  ["mini.nvim"] = {
+    config = { " require('plugins/mini') " },
     loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
-    url = "https://github.com/windwp/nvim-autopairs"
-  },
-  ["nvim-cmp"] = {
-    config = { " require('plugins/nvim-cmp') " },
-    loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/nvim-cmp",
-    url = "https://github.com/hrsh7th/nvim-cmp"
+    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/mini.nvim",
+    url = "https://github.com/echasnovski/mini.nvim"
   },
   ["nvim-colorizer.lua"] = {
-    config = { " require('plugins/nvim-colorizer_lua') " },
+    config = { " require('plugins/nvim-colorizer') " },
     loaded = true,
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-tree.lua"] = {
-    config = { " require('plugins/nvim-tree_lua') " },
+    config = { " require('plugins/nvim-tree') " },
     loaded = true,
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
@@ -216,12 +182,6 @@ _G.packer_plugins = {
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/rooter.nvim",
     url = "https://github.com/ygm2/rooter.nvim"
   },
-  ["surround.nvim"] = {
-    config = { " require('plugins/surround_nvim') " },
-    loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/surround.nvim",
-    url = "https://github.com/blackcauldron7/surround.nvim"
-  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -239,76 +199,67 @@ _G.packer_plugins = {
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/vim-easy-align",
     url = "https://github.com/junegunn/vim-easy-align"
   },
-  ["vim-indent-detect"] = {
-    config = { " require('plugins/indent-detect') " },
-    loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/vim-indent-detect",
-    url = "https://github.com/xi/vim-indent-detect"
-  },
-  ["vim-indent-object"] = {
-    loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/vim-indent-object",
-    url = "https://github.com/michaeljsmith/vim-indent-object"
-  },
   ["vim-maximizer"] = {
     config = { " require('plugins/vim-maximizer') " },
     loaded = true,
     path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/vim-maximizer",
     url = "https://github.com/szw/vim-maximizer"
-  },
-  ["vim-sneak"] = {
-    config = { " require('plugins/sneak') " },
-    loaded = true,
-    path = "/Users/divitmittal/.local/share/nvim/site/pack/packer/start/vim-sneak",
-    url = "https://github.com/justinmk/vim-sneak"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: hop.nvim
+time([[Config for hop.nvim]], true)
+ require('plugins/hop') 
+time([[Config for hop.nvim]], false)
 -- Config for: FTerm.nvim
 time([[Config for FTerm.nvim]], true)
  require('plugins/fterm_nvim') 
 time([[Config for FTerm.nvim]], false)
--- Config for: pop-punk.vim
-time([[Config for pop-punk.vim]], true)
- require('plugins/pop-punk') 
-time([[Config for pop-punk.vim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+ require('plugins/nvim-tree') 
+time([[Config for nvim-tree.lua]], false)
+-- Config for: rooter.nvim
+time([[Config for rooter.nvim]], true)
+ require('plugins/rooter_nvim') 
+time([[Config for rooter.nvim]], false)
 -- Config for: LuaSnip
 time([[Config for LuaSnip]], true)
  require('plugins/LuaSnip') 
 time([[Config for LuaSnip]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
- require('plugins/indent-blankline_nvim') 
-time([[Config for indent-blankline.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+ require('plugins/nvim-treesitter') 
+time([[Config for nvim-treesitter]], false)
+-- Config for: indent-o-matic
+time([[Config for indent-o-matic]], true)
+ require('plugins/indent-o-matic') 
+time([[Config for indent-o-matic]], false)
+-- Config for: copilot.vim
+time([[Config for copilot.vim]], true)
+ require('plugins/copilot') 
+time([[Config for copilot.vim]], false)
+-- Config for: nvim-web-devicons
+time([[Config for nvim-web-devicons]], true)
+ require('plugins/nvim-web-devicons') 
+time([[Config for nvim-web-devicons]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
  require('plugins/lualine')
 time([[Config for lualine.nvim]], false)
--- Config for: surround.nvim
-time([[Config for surround.nvim]], true)
- require('plugins/surround_nvim') 
-time([[Config for surround.nvim]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
- require('plugins/nvim-cmp') 
-time([[Config for nvim-cmp]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
- require('plugins/nvim-colorizer_lua') 
-time([[Config for nvim-colorizer.lua]], false)
--- Config for: vim-indent-detect
-time([[Config for vim-indent-detect]], true)
- require('plugins/indent-detect') 
-time([[Config for vim-indent-detect]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
- require('plugins/nvim-tree_lua') 
-time([[Config for nvim-tree.lua]], false)
 -- Config for: vim-easy-align
 time([[Config for vim-easy-align]], true)
  require('plugins/easy-align') 
 time([[Config for vim-easy-align]], false)
+-- Config for: pop-punk.vim
+time([[Config for pop-punk.vim]], true)
+ require('plugins/pop-punk') 
+time([[Config for pop-punk.vim]], false)
+-- Config for: mini.nvim
+time([[Config for mini.nvim]], true)
+ require('plugins/mini') 
+time([[Config for mini.nvim]], false)
 -- Config for: vim-maximizer
 time([[Config for vim-maximizer]], true)
  require('plugins/vim-maximizer') 
@@ -317,41 +268,10 @@ time([[Config for vim-maximizer]], false)
 time([[Config for telescope.nvim]], true)
  require('plugins/telescope_nvim') 
 time([[Config for telescope.nvim]], false)
--- Config for: copilot.vim
-time([[Config for copilot.vim]], true)
- require('plugins/copilot') 
-time([[Config for copilot.vim]], false)
--- Config for: vim-sneak
-time([[Config for vim-sneak]], true)
- require('plugins/sneak') 
-time([[Config for vim-sneak]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
- require('plugins/nvim-treesitter') 
-time([[Config for nvim-treesitter]], false)
--- Config for: rooter.nvim
-time([[Config for rooter.nvim]], true)
- require('plugins/rooter_nvim') 
-time([[Config for rooter.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
- require('plugins/nvim-autopairs') 
-time([[Config for nvim-autopairs]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
- require('plugins/Comment_nvim') 
-time([[Config for Comment.nvim]], false)
--- Config for: nvim-web-devicons
-time([[Config for nvim-web-devicons]], true)
- require('plugins/nvim-web-devicons') 
-time([[Config for nvim-web-devicons]], false)
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Filetype lazy-loads
-time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType lua ++once lua require("packer.load")({'cmp-nvim-lua'}, { ft = "lua" }, _G.packer_plugins)]]
-time([[Defining lazy-load filetype autocommands]], false)
-vim.cmd("augroup END")
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+ require('plugins/nvim-colorizer') 
+time([[Config for nvim-colorizer.lua]], false)
 if should_profile then save_profiles() end
 
 end)

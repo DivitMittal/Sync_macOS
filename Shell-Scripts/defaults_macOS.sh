@@ -134,11 +134,11 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
 
 #################################################################
-# Mission Control
+# Mission Control & Launhpad
 #################################################################
 
 # Speed up Mission Control animations
-defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock expose-animation-duration -float 0
 
 # Don’t group windows by application in Mission Control
 # (i.e. use the old Exposé behavior instead)
@@ -152,6 +152,13 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
+
+# showing and hiding Launchpad
+defaults write com.apple.dock springboard-show-duration -float 0
+defaults write com.apple.dock springboard-hide-duration -float 0
+
+# changing pages in Launchpad
+defaults write com.apple.dock springboard-page-duration -float 0
 
 ####################################################################
 # Hot Corners
@@ -276,7 +283,11 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
 # Increase window resize speed for Cocoa applications
+# float 0 doesn't work
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Opening and closing Quick Look windows animation duration
+defaults write -g QLPanelAnimationDuration -float 0
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
@@ -286,6 +297,12 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
+
+# showing a toolbar or menu bar in full screen
+defaults write -g NSToolbarFullScreenAnimationDuration -float 0
+
+# rubberband scrolling animation (doesn't affect web views)
+defaults write -g NSScrollViewRubberbanding -bool false
 
 #################################################################
 # Dock & Menu Bar

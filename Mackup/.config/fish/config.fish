@@ -24,10 +24,6 @@ alias l.='exa -a | egrep "^\."'a # hidden files
 alias dt='cd ~/Desktop'
 alias dl='cd ~/Downloads'
 
-# Path environment variable info
-alias paths='echo "Found '(count $PATH)' paths in PATH env var"'
-alias path='echo $PATH'
-
 # Get week number
 alias week='date +%V'
 

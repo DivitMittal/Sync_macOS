@@ -1,5 +1,10 @@
+General {
+	Accent color = Green
+	Highlight color = Green
+	Sidebar icon size = Small
+}
 Battery {
-	Turn off optimised battery charging
+		Turn off optimised battery charging
 }
 Accessibility {
 	increase display contrast

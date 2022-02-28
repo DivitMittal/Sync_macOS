@@ -2,14 +2,16 @@
 set --erase fish_user_paths
 fish_add_path /usr/local/bin
 fish_add_path (brew --prefix coreutils)/libexec/gnubin
+fish_add_path (brew --prefix make)/libexec/gnubin
+fish_add_path (brew --prefix findutils)/libexec/gnubin
 fish_add_path (brew --prefix file-formula)/bin
 
 # Removes the default fish greeting
 set fish_greeting
 
 # Sets the default editor to neovim
-set -U EDITOR "nvim"
-set -U VISUAL "nvim"
+set EDITOR "nvim"
+set VISUAL "nvim"
 
 ### Aliases ####
 # Changing "ls" to "exa" ( must have exa installed )
@@ -52,11 +54,14 @@ alias tobash="sudo chsh -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh -s /usr/local/bin/fish && echo 'Now log out.'"
 
+# Java
+set JAVA_HOME /Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home
+fish_add_path $JAVA_HOME/bin
+set -gx CPPFLAGS "-I/usr/local/opt/openjdk/include"
+
+# Python
 # Conda - miniconda (python package and environment manager)
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
 eval /usr/local/Caskroom/miniconda/base/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<
 
 # Run Neofetch - keep it second last command to run
 neofetch

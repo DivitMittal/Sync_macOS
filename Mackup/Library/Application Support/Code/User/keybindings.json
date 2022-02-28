@@ -88,7 +88,7 @@
         "command": "-workbench.action.switchWindow"
     },
     {
-        "key": "right",
+        "key": "cmd+right",
         "command": "editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
     },

@@ -1,0 +1,44 @@
+{
+  "timeStamp": 1645775105493,
+  "version": "1.41.4",
+  "userSettings": {
+    "uiAccentCustom": true,
+    "uiAccentCustom0": "#f75782",
+    "uiTheme": "dark",
+    "ignoreGenericCosmeticFilters": true,
+    "importedLists": [],
+    "popupPanelSections": 31
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-abuse",
+    "ublock-unbreak",
+    "easylist",
+    "easyprivacy",
+    "urlhaus-1",
+    "ublock-annoyances",
+    "dpollock-0",
+    "mvps-0",
+    "plowe-0",
+    "DEU-0",
+    "NLD-0"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "about-scheme",
+    "chrome-extension-scheme",
+    "chrome-scheme",
+    "edge-scheme",
+    "moz-extension-scheme",
+    "opera-scheme",
+    "vivaldi-scheme",
+    "wyciwyg-scheme"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false",
+  "userFilters": "! 2021-10-23 https://www.geeksforgeeks.org\nwww.geeksforgeeks.org##.login-modal-div > .modal-content\nwww.geeksforgeeks.org##.login-modal-div\n\n! 2022-02-25 https://duckduckgo.com\nduckduckgo.com##.js-feedback-prompt-generic.feedback-prompt__link\nduckduckgo.com##.js-feedback-start.feedback-btn__send\nduckduckgo.com##.feedback-btn.btn\n||duckduckgo.com/assets/logo_header.alt.v108.svg$image\nduckduckgo.com##.footer\nduckduckgo.com##.js-header-aside.header--aside\n\n! 2022-02-25 https://brightspace.tudelft.nl\nbrightspace.tudelft.nl##div.homepage-col-12 > div.d2l-widget-collapsed.d2l-tile.d2l-widget\n"
+}

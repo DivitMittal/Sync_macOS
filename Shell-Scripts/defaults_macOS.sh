@@ -75,39 +75,39 @@ sudo nvram SystemAudioVolume=" "
 # Keyboard
 #####################################################
 
-# key rates, normal minimum is 15 (225 ms)
-defaults write -g InitialKeyRepeat -float 10.0
-defaults write NSGlobalDomain InitialKeyRepeat -float 10.0
+# key rates, normal minimum is 15 (225 ms); 1 = 15ms
+defaults write NSGlobalDomain InitialKeyRepeat -float 13.0
+# or
+# defaults write -g InitialKeyRepeat -float 10.0
 
-# key rates, normal minimum is 2 (30 ms)
+# key rates, normal minimum is 2 (30 ms); 1 = 15ms
 defaults write NSGlobalDomain KeyRepeat -float 1.0
-defaults write -g KeyRepeat -float 1.0
+# or
+# defaults write -g KeyRepeat -float 1.0
 
-# Disable smart quotes and dashes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-
-# Enable full keyboard access for all controls
-# (e.g. enable Tab in modal dialogs)
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+# Disable press-and-hold for keys in favor of key repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# to restore above settings changed above
+# defaults delete -g ApplePressAndHoldEnabled
 
 # Hides the dialog box that appears for Dictation on multiple fn key presses
 defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 1
 
-# Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-
-# to restore above settings changed above
-# defaults delete -g ApplePressAndHoldEnabled                                           # If necessary, reset global default
+# Enable full keyboard access for all controls, i.e, enable Tab in modal dialogs
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-# Disable automatic capitalization as it’s annoying when typing code
+# Disable automatic capitalization
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
-# Disable automatic period substitution as it’s annoying when typing code
+# Disable automatic period substitution
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Disable smart quotes and dashes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 ###################################################################
 # Trackpad

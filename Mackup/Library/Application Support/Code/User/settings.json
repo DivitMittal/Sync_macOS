@@ -31,6 +31,7 @@
         "asciz",
         "cmpq",
         "decq",
+        "Divit",
         "divitmittal",
         "dotenv",
         "dtype",
@@ -230,8 +231,19 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
+
+    //Java
     "[java]": {
         "editor.defaultFormatter": "redhat.java"
+    },
+    "redhat.telemetry.enabled": false,
+    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home",
+    "java.import.gradle.java.home": "/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home",
+    "spring-boot.ls.java.home": "/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home",
+
+    //XML
+    "[xml]": {
+        "editor.defaultFormatter": "DotJoshJohnson.xml"
     },
 
     //SCM
@@ -240,6 +252,5 @@
 
     //Render Line Endings - Extension
     "code-eol.highlightExtraWhitespace": true,
-    "code-eol.highlightNonDefault": true,
-    "latex-workshop.view.pdf.viewer": "tab",
+    "code-eol.highlightNonDefault": true
 }

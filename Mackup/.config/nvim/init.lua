@@ -1,4 +1,4 @@
-local g = vim.g
+local g = vim.g -- global vim variable
 -- ───────────────────────────────────────────────── --
 -- ────────────────❰ Leader Mapping ❱─────────────── --
 -- mapping leader here. it will work for every mapped

@@ -56,10 +56,16 @@
 	newHighlight  = green bold 22
 
 [alias]
-	st            = status
-	last          = log -1 HEAD
-	gr            = log --graph --all --full-history --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
-	url           = ls-remote --get-url
-	ft            = fetch --all
-	unstage       = restore --staged
+	last       = log -1 HEAD
+	graph      = log --graph --all --full-history --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
+	url        = ls-remote --get-url
+	ft         = fetch --all --prune
+	unstage    = restore --staged
+	clean-U-dr = clean -d -x f -n
+	clean-U    = clean -d -x -f
+	reset-HEAD = reset --hard HEAD
+	branches   = branch -a
+	st         = status
+	bcl-dr     = !nu \"/Users/divitmittal/Sync_macOS/Shell-Scripts/nu/gitalias_bcl-dr.nu\"
+	bcl        = !nu \"/Users/divitmittal/Sync_macOS/Shell-Scripts/nu/gitalias_bcl.nu\"
 

@@ -208,6 +208,38 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: copilot.vim
+time([[Config for copilot.vim]], true)
+ require('plugins/copilot') 
+time([[Config for copilot.vim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+ require('plugins/lualine')
+time([[Config for lualine.nvim]], false)
+-- Config for: indent-o-matic
+time([[Config for indent-o-matic]], true)
+ require('plugins/indent-o-matic') 
+time([[Config for indent-o-matic]], false)
+-- Config for: hop.nvim
+time([[Config for hop.nvim]], true)
+ require('plugins/hop') 
+time([[Config for hop.nvim]], false)
+-- Config for: mini.nvim
+time([[Config for mini.nvim]], true)
+ require('plugins/mini') 
+time([[Config for mini.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+ require('plugins/telescope_nvim') 
+time([[Config for telescope.nvim]], false)
+-- Config for: FTerm.nvim
+time([[Config for FTerm.nvim]], true)
+ require('plugins/fterm_nvim') 
+time([[Config for FTerm.nvim]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+ require('plugins/nvim-colorizer') 
+time([[Config for nvim-colorizer.lua]], false)
 -- Config for: vim-easy-align
 time([[Config for vim-easy-align]], true)
  require('plugins/easy-align') 
@@ -224,14 +256,14 @@ time([[Config for nvim-tree.lua]], false)
 time([[Config for vim-maximizer]], true)
  require('plugins/vim-maximizer') 
 time([[Config for vim-maximizer]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+ require('plugins/nvim-treesitter') 
+time([[Config for nvim-treesitter]], false)
 -- Config for: LuaSnip
 time([[Config for LuaSnip]], true)
  require('plugins/LuaSnip') 
 time([[Config for LuaSnip]], false)
--- Config for: indent-o-matic
-time([[Config for indent-o-matic]], true)
- require('plugins/indent-o-matic') 
-time([[Config for indent-o-matic]], false)
 -- Config for: nvim-web-devicons
 time([[Config for nvim-web-devicons]], true)
  require('plugins/nvim-web-devicons') 
@@ -240,38 +272,6 @@ time([[Config for nvim-web-devicons]], false)
 time([[Config for rooter.nvim]], true)
  require('plugins/rooter_nvim') 
 time([[Config for rooter.nvim]], false)
--- Config for: copilot.vim
-time([[Config for copilot.vim]], true)
- require('plugins/copilot') 
-time([[Config for copilot.vim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
- require('plugins/lualine')
-time([[Config for lualine.nvim]], false)
--- Config for: hop.nvim
-time([[Config for hop.nvim]], true)
- require('plugins/hop') 
-time([[Config for hop.nvim]], false)
--- Config for: mini.nvim
-time([[Config for mini.nvim]], true)
- require('plugins/mini') 
-time([[Config for mini.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
- require('plugins/nvim-treesitter') 
-time([[Config for nvim-treesitter]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
- require('plugins/telescope_nvim') 
-time([[Config for telescope.nvim]], false)
--- Config for: FTerm.nvim
-time([[Config for FTerm.nvim]], true)
- require('plugins/fterm_nvim') 
-time([[Config for FTerm.nvim]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
- require('plugins/nvim-colorizer') 
-time([[Config for nvim-colorizer.lua]], false)
 if should_profile then save_profiles() end
 
 end)

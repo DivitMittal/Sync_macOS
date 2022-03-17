@@ -1,26 +1,25 @@
 {
-    "title": "mod_tab",
+    "title": "mod_delete_or_backspace",
     "rules": [
         {
-            "description": "Change tab to option/alt if pressed with other keys, to horizontal tab (\\t) if pressed alone",
+            "description": "Change delete_or_backspace to fn if pressed with other keys and forward",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "tab",
+                        "key_code": "delete_or_backspace",
                         "modifiers": {
                             "optional": ["any"]
                         }
                     },
                     "to": [
                         {
-                            "key_code": "right_option"
+                            "key_code": "fn"
                         }
                     ],
                     "to_if_alone": [
                         {
-                            "repeat": false,
-                            "key_code": "tab"
+                            "key_code": "delete_forward"
                         }
                     ]
                 }

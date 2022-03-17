@@ -1,8 +1,8 @@
 {
-    "title": "Map fn + number keys to function keys (rev 2)",
+    "title": "fn + numbers = fnumbers",
     "rules": [
         {
-            "description": "Map fn + number keys to their corresponding function keys (rev 1)",
+            "description": "Map fn + number keys to their corresponding function keys",
             "manipulators": [
                 {
                     "type": "basic",

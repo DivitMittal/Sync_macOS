@@ -44,6 +44,7 @@
         "scanf",
         "shlq",
         "shrq",
+        "spacebar",
         "syscall"
     ],
 
@@ -69,7 +70,7 @@
     "vscode-edge-devtools.mirrorEdits": true,
 
     //Window
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 1.5,
     "window.titleBarStyle": "native",
 
     //Files
@@ -110,7 +111,7 @@
     "workbench.view.alwaysShowHeaderActions": true,
     "workbench.activityBar.iconClickBehavior": "focus",
     "workbench.editor.untitled.hint": "hidden",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "vscode-big-icons",
     "workbench.productIconTheme": "material-product-icons",
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Noctis High Contrast",
@@ -133,7 +134,7 @@
     "editor.minimap.maxColumn": 50,
     "editor.quickSuggestionsDelay": 5,
     "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Courier New', monospace",
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "editor.fontLigatures": true,
     "editor.wordWrap": "off",
     "editor.defaultFormatter": "esbenp.prettier-vscode",

@@ -93,11 +93,6 @@
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
     },
     {
-        "key": "tab",
-        "command": "-editor.action.inlineSuggest.commit",
-        "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
-    },
-    {
         "key": "ctrl+; m",
         "command": "bookmarks.toggle",
         "when": "editorTextFocus"

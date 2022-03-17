@@ -21,10 +21,13 @@ Keyboard {
 	set press fn/globe key to do nothing
 	set press and hold fn/globe key to show spaces
 	map mission control to ctrl+up
+	map show launchpad to ctrl+cmd+l
 	map left space to ctrl+left
 	map right space to ctrl+right
 	map move fcous to menu bar to ctrl+cmd+m
 	map notification centre to ctrl+cmd+n
+	map move left a space to ctrl+left
+	map move right a space to ctrl+right
 	map move focus to the dock to ctrl+cmd+d
 	map move focus to active or next window to ctrl+cmd+w #w for window #cycles across all windows on the desktop space
 	map move focus to next window to cmd+` #tilde # cycles across all active windows of the current active application

@@ -1,5 +1,5 @@
 {
-	"title": "Change shift key (rev 2)",
+	"title": "Change shift key",
 	"rules": [
 		{
 			"description": "Change left_shift to caps_lock if pressed alone (rev 2)",

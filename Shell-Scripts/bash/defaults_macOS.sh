@@ -75,20 +75,20 @@ sudo nvram SystemAudioVolume=" "
 # Keyboard
 #####################################################
 
-# key rates, normal minimum is 15 (225 ms); 1 = 15ms
-defaults write NSGlobalDomain InitialKeyRepeat -float 13.0
-# or
-# defaults write -g InitialKeyRepeat -float 10.0
-
-# key rates, normal minimum is 2 (30 ms); 1 = 15ms
-defaults write NSGlobalDomain KeyRepeat -float 1.0
-# or
-# defaults write -g KeyRepeat -float 1.0
-
-# Disable press-and-hold for keys in favor of key repeat
+# Enable key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # to restore above settings changed above
 # defaults delete -g ApplePressAndHoldEnabled
+
+# first key repeat delay, normal minimum is 15 (225 ms); 1 = 15ms
+defaults write NSGlobalDomain InitialKeyRepeat -float 17.0
+# or
+# defaults write -g InitialKeyRepeat -float 10.0
+
+# subsequent key repeat delay, normal minimum is 2 (30 ms); 1 = 15ms
+defaults write NSGlobalDomain KeyRepeat -float 1.0
+# or
+# defaults write -g KeyRepeat -float 1.0
 
 # Hides the dialog box that appears for Dictation on multiple fn key presses
 defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 1

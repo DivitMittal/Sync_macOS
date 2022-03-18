@@ -3,7 +3,7 @@
 
 # Folder view configuration files
 .DS_Store
-Desktop.inia
+Desktop.ini
 
 # Shell_history
 .bash_history
@@ -33,4 +33,3 @@ logs/
 
 # Docker
 .dockerignore
-

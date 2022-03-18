@@ -1,32 +1,30 @@
 {
-	"title": "right_command+v to paste without formatting",
-	"rules": [
-		{
-			"description": "right_command+v does special paste without formatting",
-			"manipulators": [
-				{
-					"type": "basic",
-
-					"from": {
-						"key_code": "v",
-						"modifiers": {
-							"mandatory": ["right_command"],
-							"optional": ["any"]
-						}
-					},
-
-					"to": [
-						{
-							"key_code": "v",
-							"modifiers": [
-								"left_command",
-								"left_option",
-								"left_shift"
-							]
-						}
-					]
-				}
-			]
-		}
-	]
+    "title": "Paste without formatting",
+    "rules": [
+        {
+            "description": "right_command+v does special paste without formatting",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "v",
+                        "modifiers": {
+                            "mandatory": ["right_command"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "v",
+                            "modifiers": [
+                                "left_command",
+                                "left_option",
+                                "left_shift"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

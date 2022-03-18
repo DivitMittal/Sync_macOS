@@ -72,4 +72,5 @@ cask "vivaldi"
 cask "whatsapp"
 cask "zoom"
 mas "Microsoft OneNote", id: 784801555
+mas "Numbers", id: 409203825
 mas "Pages", id: 409201541

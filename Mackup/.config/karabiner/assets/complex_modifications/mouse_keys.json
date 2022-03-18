@@ -1,9 +1,9 @@
 {
-    "title": "Mouse Keys Mode v4 (rev 2) - modified dm",
+    "title": "Mouse Keys Mod",
     "maintainers": ["tekezo", "dm"],
     "rules": [
         {
-            "description": "Mouse Keys Mode v4 (rev 2) - modified dm",
+            "description": "Mouse Keys Mode v4 (rev 2) - modified",
             "available_since": "13.6.0",
             "manipulators": [
                 {
@@ -857,7 +857,7 @@
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "i",
+                        "key_code": "g",
                         "modifiers": {
                             "optional": ["any"]
                         }
@@ -889,7 +889,7 @@
                                 "key_code": "d"
                             },
                             {
-                                "key_code": "i"
+                                "key_code": "g"
                             }
                         ],
                         "simultaneous_options": {
@@ -927,87 +927,6 @@
                                     "x": "50%",
                                     "y": "50%",
                                     "screen": 0
-                                }
-                            }
-                        }
-                    ],
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    }
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "o",
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "software_function": {
-                                "set_mouse_cursor_position": {
-                                    "x": "50%",
-                                    "y": "50%",
-                                    "screen": 1
-                                }
-                            }
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "mouse_keys_mode_v4",
-                            "value": 1
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "d"
-                            },
-                            {
-                                "key_code": "o"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "key_up_order": "strict_inverse",
-                            "to_after_key_up": [
-                                {
-                                    "set_variable": {
-                                        "name": "mouse_keys_mode_v4",
-                                        "value": 0
-                                    }
-                                },
-                                {
-                                    "set_variable": {
-                                        "name": "mouse_keys_mode_v4_scroll",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "mouse_keys_mode_v4",
-                                "value": 1
-                            }
-                        },
-                        {
-                            "software_function": {
-                                "set_mouse_cursor_position": {
-                                    "x": "50%",
-                                    "y": "50%",
-                                    "screen": 1
                                 }
                             }
                         }

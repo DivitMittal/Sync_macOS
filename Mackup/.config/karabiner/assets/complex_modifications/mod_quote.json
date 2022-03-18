@@ -1,0 +1,55 @@
+{
+    "title": "mod_quote",
+    "rules": [
+        {
+            "description": "left_control+' -> '; left_shift + ' -> \"; ' ->  backspace",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "optional": [
+                                "caps_lock",
+                                "fn",
+                                "command",
+                                "left_option"
+                            ]
+                        },
+                        "key_code": "quote"
+                    },
+                    "to": [
+                        { "repeat": true, "key_code": "delete_or_backspace" }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "mandatory": ["left_control"],
+                            "optional": ["caps_lock"]
+                        },
+                        "key_code": "quote"
+                    },
+                    "to": [{ "repeat": true, "key_code": "quote" }]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "mandatory": ["left_shift"],
+                            "optional": ["caps_lock"]
+                        },
+                        "key_code": "quote"
+                    },
+                    "to": [
+                        {
+                            "repeat": true,
+                            "key_code": "quote",
+                            "modifiers": ["left_shift"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -2,7 +2,7 @@
     "title": "mod_quote",
     "rules": [
         {
-            "description": "left_control+' -> '; left_shift + ' -> \"; ' ->  backspace",
+            "description": "Lctrl+'->'; Lshift+'->\"; '->BS",
             "manipulators": [
                 {
                     "type": "basic",
@@ -10,9 +10,11 @@
                         "modifiers": {
                             "optional": [
                                 "caps_lock",
+                                "left_command",
+                                "right_command",
                                 "fn",
-                                "command",
-                                "left_option"
+                                "left_option",
+                                "right_option"
                             ]
                         },
                         "key_code": "quote"
@@ -30,7 +32,7 @@
                         },
                         "key_code": "quote"
                     },
-                    "to": [{ "repeat": true, "key_code": "quote" }]
+                    "to": [{ "repeat": false, "key_code": "quote" }]
                 },
                 {
                     "type": "basic",
@@ -43,7 +45,7 @@
                     },
                     "to": [
                         {
-                            "repeat": true,
+                            "repeat": false,
                             "key_code": "quote",
                             "modifiers": ["left_shift"]
                         }

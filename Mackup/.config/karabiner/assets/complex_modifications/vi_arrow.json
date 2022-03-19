@@ -3,7 +3,7 @@
     "maintainers": ["dm"],
     "rules": [
         {
-            "description": "f + hjkl as arrow keys",
+            "description": "f+hjkl [Arrow]",
             "manipulators": [
                 {
                     "type": "basic",
@@ -44,7 +44,7 @@
                         }
                     ],
                     "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 250
+                        "basic.simultaneous_threshold_milliseconds": 500
                     }
                 },
                 {
@@ -107,7 +107,7 @@
                         }
                     ],
                     "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 250
+                        "basic.simultaneous_threshold_milliseconds": 500
                     }
                 },
                 {
@@ -170,7 +170,7 @@
                         }
                     ],
                     "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 250
+                        "basic.simultaneous_threshold_milliseconds": 500
                     }
                 },
                 {
@@ -233,7 +233,7 @@
                         }
                     ],
                     "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 250
+                        "basic.simultaneous_threshold_milliseconds": 500
                     }
                 },
                 {

@@ -2,7 +2,7 @@
     "title": "Paste without formatting",
     "rules": [
         {
-            "description": "right_command+v does special paste without formatting",
+            "description": "Rcmd+v->paste(no format)",
             "manipulators": [
                 {
                     "type": "basic",

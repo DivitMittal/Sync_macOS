@@ -2,7 +2,7 @@
     "title": "Prevent unintended application quit",
     "rules": [
         {
-            "description": "Quit application by pressing command-q twice",
+            "description": "cmd+q+q->cmd+q",
             "manipulators": [
                 {
                     "type": "basic",
@@ -62,28 +62,6 @@
                             }
                         ]
                     }
-                }
-            ]
-        },
-        {
-            "description": "Quit application by holding command-q",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "q",
-                        "modifiers": {
-                            "mandatory": ["command"],
-                            "optional": ["caps_lock"]
-                        }
-                    },
-                    "to_if_held_down": [
-                        {
-                            "key_code": "q",
-                            "modifiers": ["left_command"],
-                            "repeat": false
-                        }
-                    ]
                 }
             ]
         }

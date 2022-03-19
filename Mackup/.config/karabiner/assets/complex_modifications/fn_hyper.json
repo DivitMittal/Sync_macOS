@@ -1,8 +1,8 @@
 {
-    "title": "fn → Hyper Key (⌃⌥⇧⌘)",
+    "title": "fn->Hyper Key (⌃⌥⇧⌘)",
     "rules": [
         {
-            "description": "fn → ctrl+option+shift+cmd",
+            "description": "fn->ctrl+option+shift+cmd",
             "manipulators": [
                 {
                     "from": {

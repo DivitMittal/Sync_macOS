@@ -3,7 +3,7 @@
     "maintainers": ["tekezo", "dm"],
     "rules": [
         {
-            "description": "Mouse Keys Mode v4 (rev 2) - modified",
+            "description": "d+(s/f/v/b/n/g)+hjkl->mouse",
             "available_since": "13.6.0",
             "manipulators": [
                 {

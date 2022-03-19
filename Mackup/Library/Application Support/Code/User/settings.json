@@ -68,9 +68,6 @@
 
     //Edge Dev Tools - Extension
     "vscode-edge-devtools.mirrorEdits": true,
-
-    //Window
-    "window.zoomLevel": 1.5,
     "window.titleBarStyle": "native",
 
     //Files
@@ -253,5 +250,6 @@
 
     //Render Line Endings - Extension
     "code-eol.highlightExtraWhitespace": true,
-    "code-eol.highlightNonDefault": true
+    "code-eol.highlightNonDefault": true,
+    "window.zoomLevel": 1
 }

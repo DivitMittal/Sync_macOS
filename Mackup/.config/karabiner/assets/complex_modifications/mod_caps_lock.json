@@ -2,7 +2,7 @@
     "title": "mod_caps_lock",
     "rules": [
         {
-            "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
+            "description": "capslk->esc; capslk+->ctrl; Lshift+Rshift->capslk",
             "manipulators": [
                 {
                     "type": "basic",
@@ -20,6 +20,46 @@
                     "to_if_alone": [
                         {
                             "key_code": "escape"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "left_shift",
+                        "modifiers": {
+                            "mandatory": ["right_shift"],
+                            "optional": ["caps_lock"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "caps_lock"
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "left_shift"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_shift",
+                        "modifiers": {
+                            "mandatory": ["left_shift"],
+                            "optional": ["caps_lock"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "caps_lock"
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "right_shift"
                         }
                     ]
                 }

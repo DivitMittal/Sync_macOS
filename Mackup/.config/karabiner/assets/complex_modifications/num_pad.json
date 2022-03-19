@@ -2,31 +2,12 @@
     "title": "Numeric Keypad",
     "rules": [
         {
-            "description": "Numeric Keypad Trigger [a as trigger key]",
+            "description": "tab+ [Numpad]",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "a"
-                            },
-                            {
-                                "key_code": "spacebar"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "key_up_order": "strict_inverse",
-                            "to_after_key_up": [
-                                {
-                                    "set_variable": {
-                                        "name": "numeric_keypad_mode",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
+                        "key_code": "tab",
                         "modifiers": {
                             "optional": ["any"]
                         }
@@ -37,398 +18,22 @@
                                 "name": "numeric_keypad_mode",
                                 "value": 1
                             }
-                        },
-                        {
-                            "key_code": "keypad_0"
                         }
                     ],
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    }
+                    "to_if_alone": [
+                        {
+                            "key_code": "tab"
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "numeric_keypad_mode",
+                                "value": 0
+                            }
+                        }
+                    ]
                 },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "a"
-                            },
-                            {
-                                "key_code": "j"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "key_up_order": "strict_inverse",
-                            "to_after_key_up": [
-                                {
-                                    "set_variable": {
-                                        "name": "numeric_keypad_mode",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "numeric_keypad_mode",
-                                "value": 1
-                            }
-                        },
-                        {
-                            "key_code": "keypad_4"
-                        }
-                    ],
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    }
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "a"
-                            },
-                            {
-                                "key_code": "k"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "key_up_order": "strict_inverse",
-                            "to_after_key_up": [
-                                {
-                                    "set_variable": {
-                                        "name": "numeric_keypad_mode",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "numeric_keypad_mode",
-                                "value": 1
-                            }
-                        },
-                        {
-                            "key_code": "keypad_5"
-                        }
-                    ],
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    }
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "a"
-                            },
-                            {
-                                "key_code": "l"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "key_up_order": "strict_inverse",
-                            "to_after_key_up": [
-                                {
-                                    "set_variable": {
-                                        "name": "numeric_keypad_mode",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "numeric_keypad_mode",
-                                "value": 1
-                            }
-                        },
-                        {
-                            "key_code": "keypad_6"
-                        }
-                    ],
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    }
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "a"
-                            },
-                            {
-                                "key_code": "m"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "key_up_order": "strict_inverse",
-                            "to_after_key_up": [
-                                {
-                                    "set_variable": {
-                                        "name": "numeric_keypad_mode",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "numeric_keypad_mode",
-                                "value": 1
-                            }
-                        },
-                        {
-                            "key_code": "keypad_1"
-                        }
-                    ],
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    }
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "a"
-                            },
-                            {
-                                "key_code": "comma"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "key_up_order": "strict_inverse",
-                            "to_after_key_up": [
-                                {
-                                    "set_variable": {
-                                        "name": "numeric_keypad_mode",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "numeric_keypad_mode",
-                                "value": 1
-                            }
-                        },
-                        {
-                            "key_code": "keypad_2"
-                        }
-                    ],
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    }
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "a"
-                            },
-                            {
-                                "key_code": "period"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "key_up_order": "strict_inverse",
-                            "to_after_key_up": [
-                                {
-                                    "set_variable": {
-                                        "name": "numeric_keypad_mode",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "numeric_keypad_mode",
-                                "value": 1
-                            }
-                        },
-                        {
-                            "key_code": "keypad_3"
-                        }
-                    ],
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    }
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "a"
-                            },
-                            {
-                                "key_code": "u"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "key_up_order": "strict_inverse",
-                            "to_after_key_up": [
-                                {
-                                    "set_variable": {
-                                        "name": "numeric_keypad_mode",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "numeric_keypad_mode",
-                                "value": 1
-                            }
-                        },
-                        {
-                            "key_code": "keypad_7"
-                        }
-                    ],
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    }
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "a"
-                            },
-                            {
-                                "key_code": "i"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "key_up_order": "strict_inverse",
-                            "to_after_key_up": [
-                                {
-                                    "set_variable": {
-                                        "name": "numeric_keypad_mode",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "numeric_keypad_mode",
-                                "value": 1
-                            }
-                        },
-                        {
-                            "key_code": "keypad_8"
-                        }
-                    ],
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    }
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "a"
-                            },
-                            {
-                                "key_code": "o"
-                            }
-                        ],
-                        "simultaneous_options": {
-                            "key_down_order": "strict",
-                            "key_up_order": "strict_inverse",
-                            "to_after_key_up": [
-                                {
-                                    "set_variable": {
-                                        "name": "numeric_keypad_mode",
-                                        "value": 0
-                                    }
-                                }
-                            ]
-                        },
-                        "modifiers": {
-                            "optional": ["any"]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "numeric_keypad_mode",
-                                "value": 1
-                            }
-                        },
-                        {
-                            "key_code": "keypad_9"
-                        }
-                    ],
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    }
-                }
-            ]
-        },
-        {
-            "description": "Numeric Keypad Mode",
-            "manipulators": [
                 {
                     "type": "basic",
                     "from": {
@@ -612,6 +217,24 @@
                 {
                     "type": "basic",
                     "from": {
+                        "key_code": "n"
+                    },
+                    "to": [
+                        {
+                            "key_code": "keypad_1"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "numeric_keypad_mode",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
                         "key_code": "m"
                     },
                     "to": [
@@ -689,6 +312,42 @@
                     "to": [
                         {
                             "key_code": "keypad_0"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "numeric_keypad_mode",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_option"
+                    },
+                    "to": [
+                        {
+                            "key_code": "keypad_period"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "numeric_keypad_mode",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_shift"
+                    },
+                    "to": [
+                        {
+                            "key_code": "keypad_equal_sign"
                         }
                     ],
                     "conditions": [

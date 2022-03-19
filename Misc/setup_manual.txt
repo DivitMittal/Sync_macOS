@@ -20,17 +20,18 @@ Keyboard {
 	set keyboard layout to Unicode Hex Input
 	set press fn/globe key to do nothing
 	set press and hold fn/globe key to show spaces
-	map mission control to ctrl+up
+	map mission control to ctrl+cmd+up
 	map show launchpad to ctrl+cmd+l
-	map left space to ctrl+left
-	map right space to ctrl+right
-	map move fcous to menu bar to ctrl+cmd+m
+	map left space to ctrl+cmd+left
+	map right space to ctrl+cmd+right
+	map move focus to menu bar to ctrl+cmd+t
+	map move focus to status menu to ctrl+cmd+m
 	map notification centre to ctrl+cmd+n
-	map move left a space to ctrl+left
-	map move right a space to ctrl+right
+	map move left a space to ctrl+cmd+left
+	map move right a space to ctrl+cmd+right
 	map move focus to the dock to ctrl+cmd+d
-	map move focus to active or next window to ctrl+cmd+w #w for window #cycles across all windows on the desktop space
-	map move focus to next window to cmd+` #tilde # cycles across all active windows of the current active application
+	map move focus to active or next window to ctrl+cmd+w #cycles across all windows on the desktop space
+	map move focus to next window to cmd+` #cycles across all active windows of the current active application
 	remove unnecessary keyboard bindings
 }
 

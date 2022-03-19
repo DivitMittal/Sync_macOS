@@ -309,7 +309,7 @@ defaults write -g NSScrollViewRubberbanding -bool false
 #################################################################
 
 # To Enable Autohide Dock
-# defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide -bool true
 
 # To Autohide Menu Bar
 defaults write NSGlobalDomain _HIHideMenuBar -bool true

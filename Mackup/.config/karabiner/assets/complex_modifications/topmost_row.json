@@ -172,6 +172,21 @@
                 {
                     "type": "basic",
                     "from": {
+                        "key_code": "equal_sign",
+                        "modifiers": {
+                            "optional": ["caps_lock"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "equal_sign",
+                            "modifiers": ["left_shift"]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
                         "key_code": "1",
                         "modifiers": {
                             "mandatory": ["shift"],
@@ -331,6 +346,21 @@
                     "to": [
                         {
                             "key_code": "hyphen"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "equal_sign",
+                        "modifiers": {
+                            "mandatory": ["shift"],
+                            "optional": ["caps_lock"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "equal_sign"
                         }
                     ]
                 },

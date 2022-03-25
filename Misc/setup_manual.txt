@@ -3,16 +3,24 @@ General {
 	Highlight color = Green
 	Sidebar icon size = Small
 }
+
 Battery {
 		Turn off optimised battery charging
 }
+
 Accessibility {
 	increase display contrast
 	turn off shake mouse pointer to locate
 }
 
+Sound {
+		Turn off - Play sound on startup
+		Turn off - Play UI sound effects
+		Turn off - Play feedback when volume is changed
+}
+
 Display {
-	Turn off true tone
+	Turn off - true tone
 	Increase scaling
 }
 

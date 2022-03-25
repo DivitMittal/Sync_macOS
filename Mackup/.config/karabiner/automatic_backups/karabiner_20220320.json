@@ -1412,6 +1412,279 @@
                         ]
                     },
                     {
+                        "description": "f+hjkl [Arrow]",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    },
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "f"
+                                        },
+                                        {
+                                            "key_code": "h"
+                                        }
+                                    ],
+                                    "simultaneous_options": {
+                                        "key_down_order": "strict",
+                                        "key_up_order": "strict_inverse",
+                                        "to_after_key_up": [
+                                            {
+                                                "set_variable": {
+                                                    "name": "vi_arrow_key_mode",
+                                                    "value": 0
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.simultaneous_threshold_milliseconds": 500
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "vi_arrow_key_mode",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "vi_arrow_key_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    },
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "f"
+                                        },
+                                        {
+                                            "key_code": "j"
+                                        }
+                                    ],
+                                    "simultaneous_options": {
+                                        "key_down_order": "strict",
+                                        "key_up_order": "strict_inverse",
+                                        "to_after_key_up": [
+                                            {
+                                                "set_variable": {
+                                                    "name": "vi_arrow_key_mode",
+                                                    "value": 0
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.simultaneous_threshold_milliseconds": 500
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "vi_arrow_key_mode",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "vi_arrow_key_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    },
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "f"
+                                        },
+                                        {
+                                            "key_code": "k"
+                                        }
+                                    ],
+                                    "simultaneous_options": {
+                                        "key_down_order": "strict",
+                                        "key_up_order": "strict_inverse",
+                                        "to_after_key_up": [
+                                            {
+                                                "set_variable": {
+                                                    "name": "vi_arrow_key_mode",
+                                                    "value": 0
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.simultaneous_threshold_milliseconds": 500
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "vi_arrow_key_mode",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "vi_arrow_key_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    },
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "f"
+                                        },
+                                        {
+                                            "key_code": "l"
+                                        }
+                                    ],
+                                    "simultaneous_options": {
+                                        "key_down_order": "strict",
+                                        "key_up_order": "strict_inverse",
+                                        "to_after_key_up": [
+                                            {
+                                                "set_variable": {
+                                                    "name": "vi_arrow_key_mode",
+                                                    "value": 0
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.simultaneous_threshold_milliseconds": 500
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "vi_arrow_key_mode",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "vi_arrow_key_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Rcmd + h/j/k/l/;/'/i/o -> switch tab/window/application",
                         "manipulators": [
                             {
@@ -1669,273 +1942,6 @@
                         ]
                     },
                     {
-                        "description": "fn->ctrl+option+shift+cmd",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "fn",
-                                    "modifiers": {
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "cmd+q+q->cmd+q",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "command-q",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "q",
-                                        "modifiers": "left_command"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "command-q",
-                                            "value": 1
-                                        }
-                                    }
-                                ],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [
-                                        {
-                                            "set_variable": {
-                                                "name": "command-q",
-                                                "value": 0
-                                            }
-                                        }
-                                    ],
-                                    "to_if_invoked": [
-                                        {
-                                            "set_variable": {
-                                                "name": "command-q",
-                                                "value": 0
-                                            }
-                                        }
-                                    ]
-                                },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Rcmd+v->paste(no format)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "v",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_command"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "v",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_option",
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "alt->cmd; Lctrl->hyper; app->Ropt; Lcmd-> Lopt [ext_key]",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "vendor_id": 7847
-                                            }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "left_option",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_command"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "vendor_id": 7847
-                                            }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "right_option",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_command"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "vendor_id": 7847
-                                            }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "left_control",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "vendor_id": 7847
-                                            }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "application",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_option"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "vendor_id": 7847
-                                            }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "left_command",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_option"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "tab+ [Numpad]",
                         "manipulators": [
                             {
@@ -1983,61 +1989,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "keypad_asterisk"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "numeric_keypad_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "7"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "keypad_7"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "numeric_keypad_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "8"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "keypad_8"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "numeric_keypad_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "9"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "keypad_9"
+                                        "key_code": "keypad_slash"
                                     }
                                 ],
                                 "type": "basic"
@@ -2055,7 +2007,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "keypad_hyphen"
+                                        "key_code": "keypad_asterisk"
                                     }
                                 ],
                                 "type": "basic"
@@ -2073,7 +2025,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "keypad_4"
+                                        "key_code": "keypad_7"
                                     }
                                 ],
                                 "type": "basic"
@@ -2091,7 +2043,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "keypad_5"
+                                        "key_code": "keypad_8"
                                     }
                                 ],
                                 "type": "basic"
@@ -2109,7 +2061,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "keypad_6"
+                                        "key_code": "keypad_9"
                                     }
                                 ],
                                 "type": "basic"
@@ -2127,25 +2079,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "keypad_plus"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "numeric_keypad_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "m"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "keypad_0"
+                                        "key_code": "keypad_hyphen"
                                     }
                                 ],
                                 "type": "basic"
@@ -2163,7 +2097,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "keypad_1"
+                                        "key_code": "keypad_4"
                                     }
                                 ],
                                 "type": "basic"
@@ -2181,7 +2115,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "keypad_2"
+                                        "key_code": "keypad_5"
                                     }
                                 ],
                                 "type": "basic"
@@ -2199,6 +2133,96 @@
                                 },
                                 "to": [
                                     {
+                                        "key_code": "keypad_6"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "numeric_keypad_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "slash"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_plus"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "numeric_keypad_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "n"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_1"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "numeric_keypad_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "m"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_1"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "numeric_keypad_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "comma"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_2"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "numeric_keypad_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "period"
+                                },
+                                "to": [
+                                    {
                                         "key_code": "keypad_3"
                                     }
                                 ],
@@ -2213,11 +2237,47 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "return_or_enter"
+                                    "key_code": "right_option"
                                 },
                                 "to": [
                                     {
                                         "key_code": "keypad_enter"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "numeric_keypad_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "spacebar"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_0"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "numeric_keypad_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_period"
                                     }
                                 ],
                                 "type": "basic"
@@ -2236,6 +2296,32 @@
                                 "to": [
                                     {
                                         "key_code": "keypad_equal_sign"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "fn->ctrl+option+shift+cmd",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "fn",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -2456,25 +2542,6 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "equal_sign",
-                                    "modifiers": {
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "equal_sign",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
                                     "key_code": "1",
                                     "modifiers": {
                                         "mandatory": [
@@ -2678,25 +2745,6 @@
                                 "to": [
                                     {
                                         "key_code": "hyphen"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "equal_sign",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ],
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "equal_sign"
                                     }
                                 ],
                                 "type": "basic"
@@ -3042,48 +3090,131 @@
                         ]
                     },
                     {
-                        "description": "f+hjklu.on [Arrow]",
+                        "description": "cmd+q+q->cmd+q",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "command-q",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "q",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "q",
+                                        "modifiers": "left_command"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "q",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ],
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "command-q",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_delayed_action": {
+                                    "to_if_canceled": [
+                                        {
+                                            "set_variable": {
+                                                "name": "command-q",
+                                                "value": 0
+                                            }
+                                        }
+                                    ],
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "command-q",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Rcmd+v->paste(no format)",
                         "manipulators": [
                             {
                                 "from": {
+                                    "key_code": "v",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "v",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_option",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "alt->cmd; Lctrl->hyper; app->Ropt; Lcmd-> Lopt [ext_key]",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 7847
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_option",
                                     "modifiers": {
                                         "optional": [
                                             "any"
                                         ]
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "f"
-                                        },
-                                        {
-                                            "key_code": "h"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "vi_arrow_key_mode",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
                                     }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "vi_arrow_key_mode",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "left_arrow"
+                                        "key_code": "left_command"
                                     }
                                 ],
                                 "type": "basic"
@@ -3091,66 +3222,25 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "vi_arrow_key_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "f"
-                                        },
-                                        {
-                                            "key_code": "j"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
+                                        "identifiers": [
                                             {
-                                                "set_variable": {
-                                                    "name": "vi_arrow_key_mode",
-                                                    "value": 0
-                                                }
+                                                "vendor_id": 7847
                                             }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "vi_arrow_key_mode",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "down_arrow"
+                                        "key_code": "right_command"
                                     }
                                 ],
                                 "type": "basic"
@@ -3158,66 +3248,30 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "vi_arrow_key_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "f"
-                                        },
-                                        {
-                                            "key_code": "k"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
+                                        "identifiers": [
                                             {
-                                                "set_variable": {
-                                                    "name": "vi_arrow_key_mode",
-                                                    "value": 0
-                                                }
+                                                "vendor_id": 7847
                                             }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "vi_arrow_key_mode",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -3225,66 +3279,25 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "vi_arrow_key_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "f"
-                                        },
-                                        {
-                                            "key_code": "l"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
+                                        "identifiers": [
                                             {
-                                                "set_variable": {
-                                                    "name": "vi_arrow_key_mode",
-                                                    "value": 0
-                                                }
+                                                "vendor_id": 7847
                                             }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "application",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
                                         ]
                                     }
                                 },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "vi_arrow_key_mode",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "right_arrow"
+                                        "key_code": "right_option"
                                     }
                                 ],
                                 "type": "basic"
@@ -3292,83 +3305,16 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "vi_arrow_key_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "f"
-                                        },
-                                        {
-                                            "key_code": "period"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
+                                        "identifiers": [
                                             {
-                                                "set_variable": {
-                                                    "name": "vi_arrow_key_mode",
-                                                    "value": 0
-                                                }
+                                                "vendor_id": 7847
                                             }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "vi_arrow_key_mode",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "right_arrow"
-                                    },
-                                    {
-                                        "key_code": "down_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "vi_arrow_key_mode",
-                                        "type": "variable_if",
-                                        "value": 1
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "period",
+                                    "key_code": "left_command",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -3377,229 +3323,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_arrow"
-                                    },
-                                    {
-                                        "key_code": "down_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "f"
-                                        },
-                                        {
-                                            "key_code": "o"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "vi_arrow_key_mode",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "vi_arrow_key_mode",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "right_arrow"
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "vi_arrow_key_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow"
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "f"
-                                        },
-                                        {
-                                            "key_code": "u"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "vi_arrow_key_mode",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "vi_arrow_key_mode",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "left_arrow"
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "vi_arrow_key_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow"
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "f"
-                                        },
-                                        {
-                                            "key_code": "n"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "vi_arrow_key_mode",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "vi_arrow_key_mode",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "left_arrow"
-                                    },
-                                    {
-                                        "key_code": "down_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "vi_arrow_key_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow"
-                                    },
-                                    {
-                                        "key_code": "down_arrow"
+                                        "key_code": "left_option"
                                     }
                                 ],
                                 "type": "basic"

@@ -68,24 +68,21 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 # Disable audio feedback when volume is changed
 defaults write com.apple.sound.beep.feedback -bool false
 
-# Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
-
 #####################################################
 # Keyboard
 #####################################################
 
-# Enable key repeat
+# Enable key repeat on press and hold
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # to restore above settings changed above
 # defaults delete -g ApplePressAndHoldEnabled
 
-# first key repeat delay, normal minimum is 15 (225 ms); 1 = 15ms
+# First key repeat delay, default is 15 (225 ms); 1 = 15ms
 defaults write NSGlobalDomain InitialKeyRepeat -float 17.0
 # or
 # defaults write -g InitialKeyRepeat -float 10.0
 
-# subsequent key repeat delay, normal minimum is 2 (30 ms); 1 = 15ms
+# Subsequent key repeat delay, default is 2 (30 ms); 1 = 15ms
 defaults write NSGlobalDomain KeyRepeat -float 1.0
 # or
 # defaults write -g KeyRepeat -float 1.0
@@ -153,11 +150,11 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
-# showing and hiding Launchpad
+# Instantaneous showing and hiding Launchpad
 defaults write com.apple.dock springboard-show-duration -float 0
 defaults write com.apple.dock springboard-hide-duration -float 0
 
-# changing pages in Launchpad
+# Instantaneous changing pages in Launchpad
 defaults write com.apple.dock springboard-page-duration -float 0
 
 ####################################################################
@@ -176,11 +173,11 @@ defaults write com.apple.dock springboard-page-duration -float 0
 # 12: Notification Center
 # 13: Lock Screen
 
-# Top left screen corner → Start screen saver
+# Top left screen corner
 defaults write com.apple.dock wvous-tl-corner -int 5
 defaults write com.apple.dock wvous-tl-modifier -int 0
-# Top right screen corner → Desktop
-defaults write com.apple.dock wvous-tr-corner -int 4
+# Top right screen corner
+defaults write com.apple.dock wvous-tr-corner -int 10
 defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom left screen corner
 defaults write com.apple.dock wvous-bl-corner -int 0
@@ -298,10 +295,10 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
 
-# showing a toolbar or menu bar in full screen
+# Disable showing menu bar in full screen
 defaults write -g NSToolbarFullScreenAnimationDuration -float 0
 
-# rubberband scrolling animation (doesn't affect web views)
+# Disable rubberband scrolling animation (doesn't affect web views)
 defaults write -g NSScrollViewRubberbanding -bool false
 
 #################################################################
@@ -348,8 +345,6 @@ defaults write com.apple.dock mineffect -string "scale"
 defaults write com.apple.dock minimize-to-application -bool true
 
 # Wipe all (default) app icons from the Dock
-# This is only really useful when setting up a new Mac, or if you don’t use
-# the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
 
 # Show only open applications in the Dock
@@ -394,9 +389,8 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # Enable the WebKit Developer Tools in the Mac App Store
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 
-# Enable Debug Menu in the Mac App Store
-# Turn Spotlight Off using Raycast instead
+# Turn Spotlight Off (use Raycast)
 sudo mdutil -a -i off
 # Also, disable all spotlight indexing and add root directory as an exception from System Preferences
 
-echo "Done. Note that some of these changes require a logout/restart to take effect."
+echo "Done. Note that some of these changes require a logout/restart/killall to take effect."

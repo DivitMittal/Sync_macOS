@@ -3,7 +3,7 @@
     "maintainers": ["dm"],
     "rules": [
         {
-            "description": "f+hjkl [Arrow]",
+            "description": "f+hjklu.on [Arrow]",
             "manipulators": [
                 {
                     "type": "basic",
@@ -247,6 +247,282 @@
                     "to": [
                         {
                             "key_code": "right_arrow"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "vi_arrow_key_mode",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f"
+                            },
+                            {
+                                "key_code": "period"
+                            }
+                        ],
+                        "simultaneous_options": {
+                            "key_down_order": "strict",
+                            "key_up_order": "strict_inverse",
+                            "to_after_key_up": [
+                                {
+                                    "set_variable": {
+                                        "name": "vi_arrow_key_mode",
+                                        "value": 0
+                                    }
+                                }
+                            ]
+                        },
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "vi_arrow_key_mode",
+                                "value": 1
+                            }
+                        },
+                        {
+                            "key_code": "right_arrow"
+                        },
+                        {
+                            "key_code": "down_arrow"
+                        }
+                    ],
+                    "parameters": {
+                        "basic.simultaneous_threshold_milliseconds": 500
+                    }
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow"
+                        },
+                        {
+                            "key_code": "down_arrow"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "vi_arrow_key_mode",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f"
+                            },
+                            {
+                                "key_code": "o"
+                            }
+                        ],
+                        "simultaneous_options": {
+                            "key_down_order": "strict",
+                            "key_up_order": "strict_inverse",
+                            "to_after_key_up": [
+                                {
+                                    "set_variable": {
+                                        "name": "vi_arrow_key_mode",
+                                        "value": 0
+                                    }
+                                }
+                            ]
+                        },
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "vi_arrow_key_mode",
+                                "value": 1
+                            }
+                        },
+                        {
+                            "key_code": "right_arrow"
+                        },
+                        {
+                            "key_code": "up_arrow"
+                        }
+                    ],
+                    "parameters": {
+                        "basic.simultaneous_threshold_milliseconds": 500
+                    }
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "o",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow"
+                        },
+                        {
+                            "key_code": "up_arrow"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "vi_arrow_key_mode",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f"
+                            },
+                            {
+                                "key_code": "u"
+                            }
+                        ],
+                        "simultaneous_options": {
+                            "key_down_order": "strict",
+                            "key_up_order": "strict_inverse",
+                            "to_after_key_up": [
+                                {
+                                    "set_variable": {
+                                        "name": "vi_arrow_key_mode",
+                                        "value": 0
+                                    }
+                                }
+                            ]
+                        },
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "vi_arrow_key_mode",
+                                "value": 1
+                            }
+                        },
+                        {
+                            "key_code": "left_arrow"
+                        },
+                        {
+                            "key_code": "up_arrow"
+                        }
+                    ],
+                    "parameters": {
+                        "basic.simultaneous_threshold_milliseconds": 500
+                    }
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "o",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow"
+                        },
+                        {
+                            "key_code": "up_arrow"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "vi_arrow_key_mode",
+                            "value": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f"
+                            },
+                            {
+                                "key_code": "n"
+                            }
+                        ],
+                        "simultaneous_options": {
+                            "key_down_order": "strict",
+                            "key_up_order": "strict_inverse",
+                            "to_after_key_up": [
+                                {
+                                    "set_variable": {
+                                        "name": "vi_arrow_key_mode",
+                                        "value": 0
+                                    }
+                                }
+                            ]
+                        },
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "vi_arrow_key_mode",
+                                "value": 1
+                            }
+                        },
+                        {
+                            "key_code": "left_arrow"
+                        },
+                        {
+                            "key_code": "down_arrow"
+                        }
+                    ],
+                    "parameters": {
+                        "basic.simultaneous_threshold_milliseconds": 500
+                    }
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "n",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow"
+                        },
+                        {
+                            "key_code": "down_arrow"
                         }
                     ],
                     "conditions": [
